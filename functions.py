@@ -9,6 +9,11 @@ import numpy as np
 def displayImage(img, w, h):
     display(img.resize((w,h), resample=Image.NEAREST))
 
+def makeSquare(sides_value, center_value):
+    square = np.full(shape=(3,3), fill_value=sides_value, dtype=np.uint8)
+    square[square.shape[0]//2,square.shape[1]//2] = center_value
+    return square
+
 def tileImage(img, w_tile, h_tile):
     w, h = img.size
     im_mat = np.asarray(img)
