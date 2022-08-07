@@ -1,6 +1,9 @@
+import imp
 from importlib.resources import path
+from operator import imod
 from IPython.display import display
 from PIL import Image
+from skimage.measure import block_reduce
 import numpy as np
 
 def displayImage(img, w, h):
@@ -16,6 +19,5 @@ def tileImage(img, w_tile, h_tile):
 def pickPixelfromTile(img_tiled, pixel_pos):
     return img_tiled[:,:,pixel_pos[0],pixel_pos[1]]
 
-# Buscar la forma de usar mean() sin usar for!!!
 def avgTiles(img_tiled):
-    return np.array([img_tiled[i,j].mean() for i in range(0, img_tiled.shape[0]) for j in range(0, img_tiled.shape[1])]).reshape(64,64).astype(np.uint8)
+    return img_tiled.mean(axis=(2,3)).astype(np.uint8)
