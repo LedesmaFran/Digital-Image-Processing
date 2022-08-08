@@ -5,6 +5,7 @@ from IPython.display import display
 from PIL import Image
 from skimage.measure import block_reduce
 import numpy as np
+import math
 
 def displayImage(img, w, h):
     display(img.resize((w,h), resample=Image.NEAREST))
@@ -26,3 +27,10 @@ def pickPixelfromTile(img_tiled, pixel_pos):
 
 def avgTiles(img_tiled):
     return img_tiled.mean(axis=(2,3)).astype(np.uint8)
+
+
+def getPixelSize(s_width, s_height, diagonal):
+    factor = 0.0254 #m/inch
+    degree = math.atan(s_height/s_width) #rad
+    pixel_side = diagonal*math.sin(degree)*factor/s_height #meter
+    print("lado pixel:",round(pixel_side*1e6,4),"µm")
