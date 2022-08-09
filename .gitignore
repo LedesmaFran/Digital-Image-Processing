@@ -13796,3 +13796,7 @@ venv/share/doc/networkx-2.8.5/examples/subclass/plot_printgraph.py
 venv/share/doc/networkx-2.8.5/examples/subclass/README.txt
 venv/share/doc/networkx-2.8.5/examples/subclass/__pycache__/plot_antigraph.cpython-310.pyc
 venv/share/doc/networkx-2.8.5/examples/subclass/__pycache__/plot_printgraph.cpython-310.pyc
+.vscode/configurationCache.log
+.vscode/dryrun.log
+.vscode/settings.json
+.vscode/targets.log
