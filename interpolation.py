@@ -9,11 +9,11 @@ def bilinear_interpolation(img_in, target_size):
     width_out = target_size[0]
     height_out = target_size[1]
 
-    for i in range(width_out):
-        for j in range(height_out):
-            # Coordinates of the pixel in input space
-            x_in = i  * width_in / width_out
-            y_in = j  * height_in / height_out
+    for i in range(height_out):
+        for j in range(width_out):
+            # Absolute coordinates of the pixel in input space
+            x_in = j * width_in/width_out 
+            y_in = i * height_in/height_out 
 
             # Nearest neighbours coordinates in input space
             x1 = int(np.floor(x_in))
@@ -22,31 +22,18 @@ def bilinear_interpolation(img_in, target_size):
             y2 = y1 + 1
 
             # Sanitize bounds - no need to check for < 0
-            x1 = min(x1, width_in - 1)
+            x1 = min(x1, width_in - 2)
             x2 = min(x2, width_in - 1)
-            y1 = min(y1, height_in - 1)
+            y1 = min(y1, height_in - 2)
             y2 = min(y2, height_in - 1)
             
-
             # Distances between neighbour nodes in input space
-            Dy_next = y2 - y_in
-            Dy_prev = 1. - Dy_next # because next - prev = 1
-            Dx_next = x2 - x_in
-            Dx_prev = 1. - Dx_next; # because next - prev = 1
+            dy2 = y2 - y_in
+            dy1 = 1. - dy2 # because next - prev = 1
+            dx2 = x2 - x_in
+            dx1 = 1. - dx2 # because next - prev = 1
             
-            # Interpolate
-            img_out[i][j] = Dy_prev * (img_in[x2][y1] * Dx_next + img_in[x2][y2] * Dx_prev) \
-            + Dy_next * (img_in[x1][y1] * Dx_next + img_in[x1][y2] * Dx_prev)
-            '''
-            x1_out = x1*width_out/width_in
-            x2_out = x2*width_out/width_in
-            y1_out = y1*height_out/height_in
-            y2_out = y2*height_out/height_in
-            
-            img_out[i][j] = (img_in[x1][y1] * (x2_out - i) * (y2_out - j) +
-                            img_in[x2][y1]  * (i - x1_out) * (y2_out - j) +
-                            img_in[x1][y2] * (x2_out - i) * (j - y1_out) +
-                            img_in[x2][y2] * (j - x1_out) * (j - y1_out)
-                            ) / ((x2_out - x1_out) * (y2_out - y1_out) + 0.0)
-            '''
+            img_out[j][i] = dy1 * (img_in[x1][y2] * dx2 + img_in[x2][y2] * dx1) \
+            + dy2 * (img_in[x1][y1] * dx2 + img_in[x2][y1] * dx1)
+                
     return img_out
