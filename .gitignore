@@ -18053,6 +18053,7 @@ __pycache__/functions.cpython-38.pyc
 __pycache__/functions.cpython-38.pyc
 __pycache__/functions.cpython-38.pyc
 __pycache__/functions.cpython-38.pyc
+<<<<<<< HEAD
 venv/Lib/site-packages/asttokens/py.typed
 venv/Lib/site-packages/asttokens-2.0.7.dist-info/INSTALLER
 venv/Lib/site-packages/asttokens-2.0.7.dist-info/LICENSE
@@ -18079,3 +18080,9 @@ __pycache__/interpolation.cpython-310.pyc
 __pycache__/functions.cpython-38.pyc
 __pycache__/functions.cpython-38.pyc
 __pycache__/functions.cpython-38.pyc
+=======
+.vscode/configurationCache.log
+.vscode/dryrun.log
+.vscode/settings.json
+.vscode/targets.log
+>>>>>>> 2d3180b840ad048c3888c489d9e66c6b4c67ec5b
