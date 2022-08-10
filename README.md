@@ -1,2 +1,3 @@
-# DIP-TP1-Vision
-Digital Image Processing - coursework 1
+# Digital - Image - Processing
+Digital Image Processing - courseworks
+~ TP1 - Vision
