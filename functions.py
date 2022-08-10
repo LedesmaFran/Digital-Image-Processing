@@ -32,5 +32,5 @@ def avgTiles(img_tiled):
 def getPixelSize(s_width, s_height, diagonal):
     factor = 0.0254 #m/inch
     degree = math.atan(s_height/s_width) #rad
-    pixel_side = diagonal*math.sin(degree)*factor/s_height #meter
+    pixel_side = diagonal*math.sin(degree)*factor/s_height #meter/pixel
     print("lado pixel:",round(pixel_side*1e6,4),"µm")
