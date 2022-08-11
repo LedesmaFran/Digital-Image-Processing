@@ -5,6 +5,8 @@ from IPython.display import display
 from PIL import Image
 from skimage.measure import block_reduce
 import numpy as np
+import math
+
 
 def makeSquare(sides_value, center_value):
     square = np.full(shape=(3,3), fill_value=sides_value, dtype=np.uint8)
