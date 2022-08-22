@@ -1,5 +1,5 @@
 import skimage
-import PIL
+from PIL import Image
 import numpy as np
 import scipy.fft as fft
 import plotly.graph_objects as go
@@ -36,3 +36,25 @@ def freqz2(h,title,N=256):
     
 def conv2(x, y, mode='same'):
     return np.rot90(ss.convolve2d(np.rot90(x, 2), np.rot90(y, 2), mode=mode), 2)
+
+# Downsample the square image img by a factor of m
+def downsampling(img, m, filter):
+    N,M = img.size
+    if N != M:
+        N = min(N, M)
+        img = img.crop((0,0,N-1,N-1))   # Correct if not square
+    
+    if filter == 'FILTER_ON':
+        w = 1.0/m
+        F = fft.fftshift(fft.fft2(np.asarray(img), [N, N]))
+
+        for i in range(N):
+            for j in range(N):
+                r2 = (i-N//2)**2 + (j-N//2)**2
+                if r2 > int((N/2*w)**2): 
+                    F[i,j] = 0
+        
+        img = np.real(fft.ifft2(fft.fftshift(F)))
+        img = Image.fromarray(img.astype(np.uint8))
+
+    return img.resize((N//m,N//m), resample=Image.NEAREST)
