@@ -5,7 +5,8 @@ import scipy.fft as fft
 import plotly.graph_objects as go
 import plotly.express as px
 import scipy.signal as ss
-
+import scipy.ndimage
+import numpy as np
 
 def laplacian(alpha=0.2):
     lc = -4/(alpha+1)
