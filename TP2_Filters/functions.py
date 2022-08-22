@@ -58,3 +58,29 @@ def downsampling(img, m, filter):
         img = Image.fromarray(img.astype(np.uint8))
 
     return img.resize((N//m,N//m), resample=Image.NEAREST)
+
+# Upsample the square image img by a factor of m
+def upsampling(img, m):
+    N,M = img.size
+    if N != M:
+        N = min(N, M)
+        img = img.crop((0,0,N-1,N-1))   # Correct if not square
+    
+    N = m*N
+    img_up = np.zeros((N, N))
+
+    # Expand input image
+    img_up[::m, ::m] = np.asarray(img)
+    
+    # Ideal filter
+    w = 1.0/m
+    F = fft.fftshift(fft.fft2(img_up, [N, N]))
+
+    for i in range(N):
+        for j in range(N):
+            r2 = (i-N//2)**2 + (j-N//2)**2
+            if r2 > int((N/2*w)**2): 
+                F[i,j] = 0
+    
+    img = (m**2)*np.real(fft.ifft2(fft.fftshift(F)))
+    return Image.fromarray(img.astype(np.uint8))
