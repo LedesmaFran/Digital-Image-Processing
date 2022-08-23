@@ -7,6 +7,24 @@ import plotly.express as px
 import scipy.signal as ss
 import scipy.ndimage
 import numpy as np
+import cv2
+
+def plotImage(img_f,w,h):
+    fig = px.imshow(img_f,binary_string=True)
+    fig.update_layout(width=w, height=h, margin=dict(l=0, r=0, b=0, t=0))
+    fig.show()
+
+
+def disk(radius):
+    N=2*int(radius)+1
+    F = np.zeros((N,N))
+    for i in range(N):
+        for j in range(N):
+            r2 = (i-N//2)**2 + (j-N//2)**2
+            if r2 <= radius**2:
+                F[i,j]=1/(np.pi*radius**2)
+    return F
+
 
 def laplacian(alpha=0.2):
     lc = -4/(alpha+1)
