@@ -7,6 +7,24 @@ import plotly.express as px
 import scipy.signal as ss
 import scipy.ndimage
 import numpy as np
+import cv2
+
+def plotImage(img_f,w,h):
+    fig = px.imshow(img_f,binary_string=True)
+    fig.update_layout(width=w, height=h, margin=dict(l=0, r=0, b=0, t=0))
+    fig.show()
+
+
+def disk(radius):
+    N=2*int(radius)+1
+    F = np.zeros((N,N))
+    for i in range(N):
+        for j in range(N):
+            r2 = (i-N//2)**2 + (j-N//2)**2
+            if r2 <= radius**2:
+                F[i,j]=1/(np.pi*radius**2)
+    return F
+
 
 def laplacian(alpha=0.2):
     lc = -4/(alpha+1)
@@ -44,9 +62,12 @@ def downsampling(img, m, filter):
         N = min(N, M)
         img = img.crop((0,0,N-1,N-1))   # Correct if not square
     
+    img = np.asarray(img)   # Cast to numpy array for processing
+    
+    # Ideal filter
     if filter == 'FILTER_ON':
         w = 1.0/m
-        F = fft.fftshift(fft.fft2(np.asarray(img), [N, N]))
+        F = fft.fftshift(fft.fft2(img, [N, N]))
 
         for i in range(N):
             for j in range(N):
@@ -55,9 +76,9 @@ def downsampling(img, m, filter):
                     F[i,j] = 0
         
         img = np.real(fft.ifft2(fft.fftshift(F)))
-        img = Image.fromarray(img.astype(np.uint8))
-
-    return img.resize((N//m,N//m), resample=Image.NEAREST)
+    
+    img = img[::m, ::m] # Downsampling proper
+    return Image.fromarray(img.astype(np.uint8))
 
 # Upsample the square image img by a factor of m
 def upsampling(img, m):
