@@ -1,3 +1,4 @@
+from pickletools import uint8
 from IPython.display import display
 from PIL import Image
 from skimage.measure import block_reduce
@@ -6,6 +7,10 @@ import cv2
 
 def displayImage(img, w, h):
     display(img.resize((w,h), resample=Image.NEAREST))
+
+def displayImage_fromcv2(img, w, h):
+    img = Image.fromarray(img.astype(np.uint8))
+    displayImage(img, w, h)
 
 def tileImage(img, w_tile, h_tile):
     w, h = img.size
