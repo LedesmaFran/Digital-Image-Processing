@@ -2,6 +2,7 @@ from IPython.display import display
 from PIL import Image
 from skimage.measure import block_reduce
 import numpy as np
+import cv2
 
 def displayImage(img, w, h):
     display(img.resize((w,h), resample=Image.NEAREST))
