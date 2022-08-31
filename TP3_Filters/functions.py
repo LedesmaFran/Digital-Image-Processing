@@ -23,3 +23,9 @@ def salt_and_pepper_noise(img, d=0.05):
     img_sp[salt] = 255
     img_sp[pepper] = 0
     return img_sp
+
+def HB_Filter(A,img):
+    n = 3
+    kernel = np.ones((n,n))*(-1)
+    kernel[n//2,n//2] = A+8
+    return filter2D(src=img, ddepth=-1, kernel=kernel)
