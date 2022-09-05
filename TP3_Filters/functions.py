@@ -1,4 +1,6 @@
 import numpy as np
+from scipy import fft
+import matplotlib.pyplot as plt
 from cv2 import filter2D
 
 def lowpass_unit_kernel(img, n):
@@ -29,3 +31,34 @@ def HB_Filter(A,img):
     kernel = np.ones((n,n))*(-1)
     kernel[n//2,n//2] = A+8
     return filter2D(src=img, ddepth=-1, kernel=kernel)
+
+def homomorphic_filter(img, gamma_h=0.4, gamma_l=1.6, c=1, D0=0.1, plot_filter=False):
+    
+    m = np.log(img + 0.1)
+
+    M = fft.fft2(m)
+
+    # Center of the image
+    d_center = (np.array(M.shape) - 1) / 2
+    
+    # Distance from each point in the image to the center
+    d = np.array([np.sqrt((range(img.shape[0]) - d_center[0])**2 + (i - d_center[1])**2) for i in range(img.shape[1])]).T
+    
+    # Gaussian high-pass filter
+    H = (gamma_h - gamma_l) * (1 - np.exp(-c * d**2 / (D0 * img.shape[0])**2)) + gamma_l
+    
+    # Normalize between the minimum and 1
+    H = np.interp(H, (H.min(), H.max()), (H.min(), 1))
+
+    if (plot_filter):
+        plt.imshow(H)
+        plt.colorbar()
+
+    N = np.multiply(M, H)
+
+    n = np.exp(fft.ifft2(N, s=np.shape(img)).real)
+
+    # Normalize to the [0,255] range
+    n = np.uint8((n - n.min()) / (n.max() - n.min()) * 255)
+
+    return n
