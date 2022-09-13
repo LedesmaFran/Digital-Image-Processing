@@ -38,22 +38,26 @@ def build_gamma_comparison():
 
 def calc_prob(data,plot=False,figsize=(16,8)):
     pdf, bins = np.histogram(data.flatten(), bins=int(data.max()-data.min()), density=True)
-    cdf = np.cumsum(pdf)
+    cdf = np.cumsum(pdf)/pdf.sum()
 
     if plot:
         fig, ax1 = plt.subplots(1, 1, figsize=figsize)
         ax2 = ax1.twinx()
-        ax1.bar(bins[:-1]+0.5, pdf, width=1.0, label='Densidad de probabilidad')
+        n, bins, patches  = ax1.hist(data.flatten(),256,[0,256], width=1.0, label='Histograma')
         ax1.set_xlabel('$r$', fontsize=16)
         ax1.set_ylabel('$p_r(r)$', fontsize=16)
-        ax1.legend(fontsize=16)
+        # ax1.legend(fontsize=16)
         # ax1.grid()
 
-        ax2.plot(cdf,'r-',label='Distribución de probabilidad')
+        cdf_line, = ax2.plot(cdf,'r-',label='cdf')
         ax2.set_xlabel('$r$', fontsize=16)
         ax2.set_ylabel('$P_r(r)$', fontsize=16)
-        ax2.legend(fontsize=16)
+        # ax2.legend(fontsize=16)
         # ax2.grid()
+        # lns = patches + cdf_line
+        # labs = [l.get_label() for l in lns]
+        # ax1.legend(lns, labs, fontsize=16)
+
 
         plt.show()
     
