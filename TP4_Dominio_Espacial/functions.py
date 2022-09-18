@@ -75,3 +75,27 @@ def logaritmic(coefficient, max_value, input_pixel):
 
 def exponential_logaritmic(coefficient, gamma, max_value, input_pixel):
     return coefficient * ((input_pixel / max_value) ** gamma)
+
+def modify_brightness(img, delta: int):
+    if -256 < delta < 256:
+        tempimg = img.copy()
+        tempimg = tempimg.astype(np.int16)
+        tempimg = tempimg + delta
+        tempimg = (tempimg.clip(0, 255)).astype(np.uint8)
+    else:
+        raise ValueError("Delta value out of range")
+    return tempimg
+
+def modify_contrast(data: np.ndarray, as_type=np.uint8, inf=0.0, sup=1.0) -> np.ndarray:
+    if data.dtype == np.uint8:
+        return data.astype(as_type, copy=False)
+    elif np.can_cast(data.dtype, np.uint8, casting='safe'):
+        return data.astype(as_type, copy=False)
+    else:
+        amax = data.max()
+        amin = data.min()
+        if amax - amin == 0:
+            return np.full(data.shape, min(abs(int(data[0, 0])), 255))
+        else:
+            ret = ((data - amin) / (amax - amin) * (sup - inf) + inf) * 255
+            return ret.astype(as_type, copy=False)
