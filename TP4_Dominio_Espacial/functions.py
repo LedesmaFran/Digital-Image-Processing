@@ -88,14 +88,11 @@ def modify_brightness(img, delta: int):
 
 def modify_contrast(data: np.ndarray, as_type=np.uint8, inf=0.0, sup=1.0) -> np.ndarray:
     if data.dtype == np.uint8:
-        return data.astype(as_type, copy=False)
-    elif np.can_cast(data.dtype, np.uint8, casting='safe'):
-        return data.astype(as_type, copy=False)
+        data = data.astype(float, copy=False)/255
+    amax = data.max()
+    amin = data.min()
+    if amax - amin == 0:
+        return np.full(data.shape, min(abs(int(data[0, 0])), 255))
     else:
-        amax = data.max()
-        amin = data.min()
-        if amax - amin == 0:
-            return np.full(data.shape, min(abs(int(data[0, 0])), 255))
-        else:
-            ret = ((data - amin) / (amax - amin) * (sup - inf) + inf) * 255
-            return ret.astype(as_type, copy=False)
+        ret = ((data - amin) / (amax - amin) * (sup - inf) + inf) * 255
+        return ret.astype(as_type, copy=False)
