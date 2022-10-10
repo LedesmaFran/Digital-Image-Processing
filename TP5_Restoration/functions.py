@@ -23,14 +23,17 @@ def apply_inverse_filter(G,H):
     res = np.fft.fftshift(np.fft.fft2(G)/(np.fft.fft2(H)))
     return np.real(np.fft.fftshift(np.fft.ifft2(np.fft.ifftshift(res))))
 
-def plot_images(original,txt1,degraded,txt2,restored,txt3):
+
+def compare(images):
     fig=plt.figure(figsize=(14, 10))
-    fig.add_subplot(1, 3, 1)
-    plt.title(txt1)
-    plt.imshow(original,cmap='gray')
-    fig.add_subplot(1, 3, 2)
-    plt.title(txt2)
-    plt.imshow(degraded,cmap='gray')
-    fig.add_subplot(1, 3, 3)
-    plt.title(txt3)
-    plt.imshow(restored,cmap='gray')
+    n_images = len(images)
+    i=1
+    for key, value in images.items():
+        fig.add_subplot(1, n_images, i)
+        plt.title(key)
+        plt.imshow(value,cmap='gray')
+        i+=1
+
+def normal_noise(img,snr):
+    # return np.random.normal(0,np.sqrt(((img.std())**2) * (10**(-snr/10))), img.shape )
+    return np.random.normal(0,20, img.shape)
