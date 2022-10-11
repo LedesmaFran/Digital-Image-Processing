@@ -36,4 +36,17 @@ def compare(images):
 
 def normal_noise(img,snr):
     # return np.random.normal(0,np.sqrt(((img.std())**2) * (10**(-snr/10))), img.shape )
-    return np.random.normal(0,20, img.shape)
+    img_std = img.std()
+    noise_std = np.sqrt(((img_std)**2) * (10**(-snr/10)))
+    return np.random.normal(0,noise_std, img.shape)
+
+
+def apply_wiener_filter(img, deg_img, noise, kernel):
+    H = np.fft.fft2(kernel)
+    D = np.fft.fft2(deg_img)
+    Snn = np.square(np.abs(np.fft.fft2(noise)))
+    Sff = np.square(np.abs(np.fft.fft2(img)))
+    W = np.conj(H)/(np.square(np.abs(H)) + Snn/Sff)
+    F_hat = np.fft.fftshift(W*D)
+    f = np.real(np.fft.fftshift(np.fft.ifft2(np.fft.ifftshift(F_hat))))
+    return f
