@@ -54,9 +54,16 @@ def apply_wiener_filter(img, deg_img, noise, kernel):
     return f
 
 
-
-
-
+def motion_kernel(d, angle, size=None):
+    kernel = np.zeros((d, d), dtype=np.float32)
+    kernel[(d-1)// 2,:] = np.ones(d, dtype=np.float32)
+    kernel = cv2.warpAffine(kernel, cv2.getRotationMatrix2D((d/2-0.5,d/2-0.5) , angle, 1.0), (d, d))  
+    kernel = kernel * ( 1.0 / np.sum(kernel) )
+    if size is not None:
+        if size > d:
+            pad_len = (size - d)//2
+            kernel = np.pad(kernel, pad_len, mode='constant')
+    return kernel
 
 
 new_float_type = {
