@@ -3,6 +3,7 @@ from scipy import fft,ndimage
 from scipy.signal import convolve
 from collections.abc import Iterable
 import matplotlib.pyplot as plt
+import plotly.express as px
 import cv2
 import math
 
@@ -165,3 +166,6 @@ def richardson_lucy(image, psf, num_iter=50, clip=True, filter_epsilon=None):
         im_deconv[im_deconv < -1] = -1
 
     return im_deconv
+
+def distance(x, y, cx, cy):
+    return (x - cx)**2 + (y - cy)**2
