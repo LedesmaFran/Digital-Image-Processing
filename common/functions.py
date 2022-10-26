@@ -4,6 +4,7 @@ from PIL import Image
 from skimage.measure import block_reduce
 import numpy as np
 import cv2
+import matplotlib.pyplot as plt
 
 def displayImage(img, w, h):
     display(img.resize((w,h), resample=Image.NEAREST))
@@ -26,3 +27,13 @@ def downscaleImage(img, new_w, new_h):
     mat = block_reduce(np.asarray(img), block_size=(img.size[0]//new_w, img.size[1]//new_h), func=lambda blocks, pixel_pos, axis: pickPixelfromTile(blocks, pixel_pos), func_kwargs={'pixel_pos': (0,0)})
     img = Image.fromarray(mat)
     return img
+
+def compare(images):
+    fig=plt.figure(figsize=(14, 10))
+    n_images = len(images)
+    i=1
+    for key, value in images.items():
+        fig.add_subplot(1, n_images, i)
+        plt.title(key)
+        plt.imshow(value,cmap='gray')
+        i+=1
