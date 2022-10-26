@@ -28,8 +28,8 @@ def downscaleImage(img, new_w, new_h):
     img = Image.fromarray(mat)
     return img
 
-def compare(images):
-    fig=plt.figure(figsize=(14, 10))
+def compare(images,size=(14,10)):
+    fig=plt.figure(figsize=size)
     n_images = len(images)
     i=1
     for key, value in images.items():
