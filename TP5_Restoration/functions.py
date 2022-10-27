@@ -79,6 +79,35 @@ new_float_type = {
     'G': np.complex128,   # np.complex256 ; doesn't exist on windows
 }
 
+def restore_regularization(img, deg_img, kernel, gamma):
+    H = np.fft.fft2(kernel)
+    G = np.fft.fft2(deg_img)
+    
+    # Realizo regularización de Tikhinov-Miller usando el Laplaciano
+    p = [[0,1,0],[1,-4,1],[0,1,0]]      # Kernel Laplaciano
+    P = np.fft.fft2(p, s=img.size)
+    R = np.conj(H)/(np.square(np.abs(H)) + gamma*np.square(np.abs(P))) # SoluciÃƒÂ³n de regularizaciÃƒÂ³n de Tikhinov-Miller
+
+    # Aplico el filtro obtenido
+    F_hat = np.fft.fftshift(R*G)
+    f_hat = np.real(np.fft.fftshift(np.fft.ifft2(np.fft.ifftshift(F_hat))))
+
+    return f_hat
+
+def reg_iter(deg_img, kernel, iterations):
+    H = np.fft.rfft2(kernel)
+    G = np.fft.rfft2(deg_img)
+    beta = 2/((np.square(np.abs(H))).max()+0.1)     # |1 - beta*|H|^2)| < 1
+    
+    F_hat = np.empty_like(H)
+    H_conj = np.conj(H)
+    for i in range(iterations):
+        F_hat = F_hat + beta*H_conj*(G - H*F_hat)
+
+    f_hat = np.real(np.fft.fftshift(np.fft.irfft2((F_hat))))
+
+    return f_hat
+
 def _supported_float_type(input_dtype, allow_complex=False):
     """Return an appropriate floating-point dtype for a given dtype.
     float32, float64, complex64, complex128 are preserved.
