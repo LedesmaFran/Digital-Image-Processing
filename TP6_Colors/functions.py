@@ -50,3 +50,30 @@ def segment_fish(image):
     # Clean up the segmentation using a blur
     blur = cv2.GaussianBlur(result, (7, 7), 0)
     return blur
+
+def modify_contrast_rgb(data: np.ndarray, as_type=np.uint8, inf=0.0, sup=1.0) -> np.ndarray:
+    if data.dtype == np.uint8:
+        data = data.astype(float, copy=False)/255
+    
+    result = np.zeros_like(data)
+    
+    for color in range(3):
+        cdata = data[:,:,color] # Pick channel
+        amax = data.max()
+        amin = data.min()
+        if amax - amin == 0:
+            result[:,:,color] = np.full(cdata.shape, min(abs(int(cdata[0, 0])), 255))
+        else:
+            result[:,:,color] = ((cdata - amin) / (amax - amin) * (sup - inf) + inf)
+    
+    return result.astype(as_type, copy=False)
+
+def compare(images):
+    fig=plt.figure(figsize=(28, 20))
+    n_images = len(images)
+    i=1
+    for key, value in images.items():
+        fig.add_subplot(1, n_images, i)
+        plt.title(key)
+        plt.imshow(value,cmap='gray')
+        i+=1
