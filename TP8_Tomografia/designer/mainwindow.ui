@@ -54,16 +54,6 @@
      <attribute name="title">
       <string>Phantom</string>
      </attribute>
-     <widget class="QOpenGLWidget" name="openGL_display">
-      <property name="geometry">
-       <rect>
-        <x>460</x>
-        <y>20</y>
-        <width>521</width>
-        <height>531</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
@@ -206,6 +196,9 @@
        </property>
        <property name="maximum">
         <double>1.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.000000000000000</double>
        </property>
       </widget>
       <widget class="QDoubleSpinBox" name="inclinacion_box">
@@ -389,6 +382,31 @@
         </rect>
        </property>
       </widget>
+     </widget>
+     <widget class="QLabel" name="img_box">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>20</y>
+        <width>500</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>500</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="visualizer_tab">
