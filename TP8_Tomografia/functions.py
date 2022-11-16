@@ -23,7 +23,7 @@ def iradon_g4(image, sinogram, theta, filter_name='ramp', interpolation='linear'
     my_image = image.copy()
     if len(my_image.shape) == 3:
         my_image = cv2.cvtColor(my_image, cv2.COLOR_RGB2GRAY)
-    my_image = rescale(my_image, scale=0.4, mode='reflect', channel_axis=None)
+    #my_image = rescale(my_image, scale=0.4, mode='reflect', channel_axis=None)
     reconstruction = iradon(sinogram, theta=theta, filter_name=filter_name, interpolation=interpolation, circle=False)
     error_rms = np.sqrt(np.mean((reconstruction - my_image)**2))
     return reconstruction, error_rms

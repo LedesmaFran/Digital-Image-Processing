@@ -11,7 +11,7 @@ class Ellipse():
         self.centro_y = centro_y
         self.img = img
         b = self.norm_intensity()
-        self.color = (b, b, 0)
+        self.color = (b, b, b)
 
     def draw(self):
         imag = cv2.imread(self.img)
