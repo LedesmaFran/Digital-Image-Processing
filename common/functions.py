@@ -37,3 +37,13 @@ def compare(images,size=(14,10)):
         plt.title(key)
         plt.imshow(value,cmap='gray')
         i+=1
+        
+def compare(images):
+    fig=plt.figure(figsize=(14, 10))
+    n_images = len(images)
+    i=1
+    for key, value in images.items():
+        fig.add_subplot(1, n_images, i)
+        plt.title(key)
+        plt.imshow(value,cmap='gray')
+        i+=1
