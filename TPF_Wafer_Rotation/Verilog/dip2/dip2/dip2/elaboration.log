@@ -1,0 +1,25 @@
+Active-HDL 13.0.376.8320 2023-01-18 21:00:33
+
+Elaboration top modules:
+Verilog Module                tb_simulation
+
+
+-------------------------------------------------------------------------------------------
+Verilog Module          | Library | Info | Compiler Version          | Compilation Options
+-------------------------------------------------------------------------------------------
+tb_simulation           | dip2    |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+image_read              | dip2    |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+image_write             | dip2    |      | 13.0.376.8320 (Windows64) | -O2 -sv2k12
+-------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------
+Library                 | Comment
+-------------------------------------------------------------------------------------------
+dip2                    | None
+-------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+tb_simulation tb_simulation
+
+
+The performance of simulation is reduced. Version Student Edition

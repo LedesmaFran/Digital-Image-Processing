@@ -1,0 +1,29 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=dip2
+[Library]
+dip2=.\dip2\dip2.lib
+[$LibMap$]
+dip2=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\My_Designs\dip2\dip2\src
+[Files]
+/image_read.v=-1
+/image_write.v=-1
+/parameter.v=-1
+/tb_simulation.v=-1
+[Files.Data]
+.\src\image_read.v=Verilog Source Code
+.\src\image_write.v=Verilog Source Code
+.\src\parameter.v=Verilog Source Code
+.\src\tb_simulation.v=Verilog Source Code

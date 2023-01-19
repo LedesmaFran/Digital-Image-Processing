@@ -1,0 +1,20 @@
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+Built-in symbols=0
+dip=0
+dip2=0
+[COMPILESTATUS|.\src\image_read.v]
+FileTimeLow=695399896
+FileTimeHigh=31009689
+Status=Modified
+[COMPILESTATUS|.\src\image_write.v]
+FileTimeLow=3635902723
+FileTimeHigh=31009688
+Status=Compiled
+[COMPILESTATUS|.\src\parameter.v]
+FileTimeLow=4207882727
+FileTimeHigh=31009688
+Status=Warning
+[COMPILESTATUS|.\src\tb_simulation.v]
+FileTimeLow=3719429835
+FileTimeHigh=31009685
+Status=Compiled
