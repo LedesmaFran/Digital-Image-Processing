@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2023-01-18 21:00:33
+Active-HDL 13.0.376.8320 2023-01-18 22:09:06
 
 Elaboration top modules:
 Verilog Module                tb_simulation
@@ -17,9 +17,3 @@ Library                 | Comment
 -------------------------------------------------------------------------------------------
 dip2                    | None
 -------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +access +r +m+tb_simulation tb_simulation
-
-
-The performance of simulation is reduced. Version Student Edition

@@ -27,3 +27,7 @@ fileopenfolder=C:\My_Designs\dip2\dip2\src
 .\src\image_write.v=Verilog Source Code
 .\src\parameter.v=Verilog Source Code
 .\src\tb_simulation.v=Verilog Source Code
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

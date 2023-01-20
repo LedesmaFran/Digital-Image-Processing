@@ -1,0 +1,28 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=images_in_fpga
+[Library]
+images_in_fpga=.\images_in_fpga\images_in_fpga.lib
+[$LibMap$]
+images_in_fpga=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+[Files]
+/read_image_tb.vhd=-1
+/read_image.vhd=-1
+[Files.Data]
+.\src\read_image_tb.vhd=VHDL Source Code
+.\src\read_image.vhd=VHDL Source Code
+[HierarchyViewer]
+HierarchyInformation=read_image_vhdl|behavioral|0 tb_read_image_vhdl|behavior|0
+ShowHide=ShowTopLevel
+Selected=
