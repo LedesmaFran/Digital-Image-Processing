@@ -10,8 +10,8 @@ ENTITY tb_read_image_vhdl IS
 	    DATA_WIDTH     		: integer := 8;
 	    IMAGE_HEIGHT		: integer := 256;
 		IMAGE_WIDTH			: integer := 256;
-		IMAGE_SIZE  		: integer := 256*256;
-		IMAGE_FILE_NAME 	: string  :="linea.mif"       
+		IMAGE_SIZE  		: integer := 16;
+		IMAGE_FILE_NAME 	: string  :="test_img.mif"       
   	);
 END tb_read_image_vhdl;
 
@@ -27,6 +27,14 @@ ARCHITECTURE behavior OF tb_read_image_vhdl IS
 		q 			: OUT  std_logic_vector(DATA_WIDTH-1 downto 0)
 	);
     END COMPONENT;
+	COMPONENT binarization is
+	PORT (
+		not_enable	: IN STD_LOGIC;
+		clock		: IN STD_LOGIC;
+		data_in		: IN std_logic_vector ((DATA_WIDTH-1) DOWNTO 0);
+		data_out	: OUT std_logic_vector ((DATA_WIDTH-1) DOWNTO 0)
+	);
+	end COMPONENT;
   
 	--Inputs
 	signal clock 		: std_logic := '0';
@@ -42,6 +50,8 @@ ARCHITECTURE behavior OF tb_read_image_vhdl IS
    	-- Clock period definitions
    	constant clock_period 	: time := 10 ns;
    	signal i				: integer;
+	signal enable			: std_logic := '0';
+	signal data_out			: std_logic_vector(DATA_WIDTH-1 downto 0); 
 	   
 BEGIN
 	-- Read image in VHDL
@@ -53,6 +63,13 @@ BEGIN
 		we => we,
 		re => re,
 		q => q
+	);
+	
+	bin: binarization PORT MAP (
+		not_enable => enable,
+		clock => clock,
+		data_in => q,
+		data_out => data_out
 	);
 
 	-- Clock process definitions
@@ -66,7 +83,7 @@ BEGIN
    
 	-- Stimulus process
    	stim_proc: process
-	file test_vector      : text open write_mode is "output_file.txt";
+	file test_vector      : text open write_mode is "binarization_test.txt";
 	variable row          : line;
    	begin  
 		data <= x"00";
@@ -79,7 +96,7 @@ BEGIN
 	  	for i in 0 to IMAGE_SIZE-1 loop
 		  	rdaddress <= std_logic_vector(to_unsigned(i, ADDR_WIDTH));
   			wait for 20 ns;
-			write(row,q);
+			write(row,data_out);
 			writeline(test_vector,row);
 		end loop;
 		wait;

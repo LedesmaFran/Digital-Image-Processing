@@ -9,8 +9,8 @@ entity read_image_VHDL is
 		DATA_WIDTH     	: integer := 8;
 		IMAGE_HEIGHT	: integer := 256;
 		IMAGE_WIDTH		: integer := 256;
-		IMAGE_SIZE  	: integer := 256*256;
-		IMAGE_FILE_NAME : string :="linea.mif"
+		IMAGE_SIZE  	: integer := 16;
+		IMAGE_FILE_NAME : string :="test_img.mif"
 	);
 	port(
 		clock		: IN STD_LOGIC;
