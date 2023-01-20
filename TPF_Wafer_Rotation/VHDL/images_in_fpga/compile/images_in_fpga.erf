@@ -1,0 +1,8 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd" 
+MESSAGE "Compile Entity "read_image_VHDL"" 
+MESSAGE "Compile Architecture "behavioral" of Entity "read_image_VHDL"" 
+MESSAGE "File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd" 
+MESSAGE "Compile Entity "tb_read_image_vhdl"" 
+MESSAGE "Compile Architecture "behavior" of Entity "tb_read_image_vhdl"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]" 

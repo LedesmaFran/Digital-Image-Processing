@@ -1,0 +1,5 @@
+76
+~E 1 "../src/read_image.vhd" 6 read_image_VHDL
+~A 1 "../src/read_image.vhd" 26 behavioral
+~E 1 "../src/read_image_tb.vhd" 7 tb_read_image_vhdl
+~A 1 "../src/read_image_tb.vhd" 18 behavior
