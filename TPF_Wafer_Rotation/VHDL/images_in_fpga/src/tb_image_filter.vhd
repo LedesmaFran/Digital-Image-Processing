@@ -8,9 +8,9 @@ ENTITY tb_image_filter IS
 	GENERIC (
 	    ADDR_WIDTH     		: integer := 16;        
 	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 6;
-		IMAGE_WIDTH			: integer := 6;
-		IMAGE_FILE_NAME 	: string  := "test_img.mif"       
+	    IMAGE_HEIGHT		: integer := 7;
+		IMAGE_WIDTH			: integer := 7;
+		IMAGE_FILE_NAME 	: string  := "test_img2.mif"       
   	);
 END tb_image_filter;
 
@@ -21,7 +21,7 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	    DATA_WIDTH     		: integer := DATA_WIDTH;
 	    IMAGE_HEIGHT		: integer := IMAGE_HEIGHT;
 		IMAGE_WIDTH			: integer := IMAGE_WIDTH;
-		IMAGE_FILE_NAME 	: string  := "test_img.mif"       
+		IMAGE_FILE_NAME 	: string  := "test_img2.mif"       
   	);	
 	PORT (
 		clock 		: IN  std_logic;
@@ -69,7 +69,7 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	signal q 			: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 
    	-- Clock period definitions
-   	constant clock_period 	: time := 10 ns;
+   	constant clock_period 	: time := 50 ns;
    	
 	-- Filter signals
 	signal enable			: std_logic := '1';

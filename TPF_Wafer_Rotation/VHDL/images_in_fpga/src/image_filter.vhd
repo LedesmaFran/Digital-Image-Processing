@@ -7,8 +7,8 @@ use std.textio.all;
 
 entity image_filter is
 	generic(
-		IMAGE_WIDTH 	: integer := 4+2;
-		IMAGE_HEIGHT 	: integer := 4+2;
+		IMAGE_WIDTH 	: integer := 7;
+		IMAGE_HEIGHT 	: integer := 7;
 		LENGTH_BITS		: integer := 16;
 		KERNEL_WIDTH 	: integer := 3;
 		DATA_WIDTH		: integer := 8
@@ -163,6 +163,7 @@ begin
 		if (not_enable = '0') then
 			not_enable1 <= '0';
 			not_enable2 <= '0';
+			kernel_not_enable <= '0';
 		else null;
 		end if;
 	end process;
@@ -219,34 +220,29 @@ begin
 	begin
 		if (rising_edge(clock) and not_enable = '0' and stage_3_enable = '0') then
 			counter := counter + 1;
-			if (counter >= (2*IMAGE_WIDTH + KERNEL_WIDTH)) then
+			if (counter >= (2*IMAGE_WIDTH + KERNEL_WIDTH) + 6) then
 				stage_3_enable <= '1';
-				kernel_not_enable <= '0';
 			else null;
 			end if;
 		else null;
-		end if;
-		
-		
+		end if;	
 	end process;	
 	
 	-- stage 3: output
 	Stage3: process (clock, not_enable, stage_3_enable)
-	variable counter 	: std_logic_vector(16 downto 0) := (others => '0');
-	variable i 		: integer := 0;
+	variable counter 	: integer := 0;
+	variable i 		: integer := 1;
 	variable j 		: integer := 0;
 	begin
 		if (rising_edge(clock) and (not_enable = '0') and (stage_3_enable = '1')) then		
-			counter := counter + 1;
-			j := to_integer(unsigned(counter)) mod IMAGE_WIDTH; 
+			counter := counter + 1; 
+			j := counter mod IMAGE_WIDTH; 
 			if (j = 0) then
 				i := i + 1;
 			else null;
 			end if;
 			
 			pixel_out <= kernel_out_reg;
-		
-			
 			
 			if ((j > 0) and (j < (IMAGE_WIDTH-1)) and (i > 0) and (i < (IMAGE_HEIGHT-1))) then
 				out_valid <= '1';
@@ -255,7 +251,7 @@ begin
 			end if;
 		else null;
 		end if;
-	counter_out <= counter;
+	counter_out <= std_logic_vector(to_unsigned(counter, 17));
 	end process;	
 
 end behavioral;
