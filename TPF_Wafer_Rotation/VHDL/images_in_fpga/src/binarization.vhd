@@ -18,17 +18,18 @@ end binarization;
 
 architecture behavioral of binarization is
 
-begin
-	process (clock)
 	begin
-		if (rising_edge(clock)) then
+		process (clock, not_enable, data_in)
+		begin
 			if (not_enable = '0') then
-				if (unsigned(data_in) >= THRESHOLD) then
-					data_out <= x"ff";
-				else
-					data_out <= x"00";
+				if (rising_edge(clock)) then
+					if (unsigned(data_in) >= THRESHOLD) then
+						data_out <= x"ff";
+					else
+						data_out <= x"00";
+					end if;
 				end if;
+			else null;	
 			end if;
-		end if;
-	end process;	
+		end process;	
 end behavioral;

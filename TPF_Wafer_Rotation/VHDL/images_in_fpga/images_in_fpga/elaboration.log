@@ -1,30 +1,41 @@
-Active-HDL 13.0.376.8320 2023-01-19 22:31:35
+Active-HDL 13.0.376.8320 2023-01-29 14:04:05
 
 Elaboration top modules:
-Architecture                  behavior(tb_read_image_vhdl)
+Architecture                  behavior(tb_image_filter)
 
 
-------------------------------------------------------------------------------------------------------------
-Entity             | Architecture | Library        | Info | Compiler Version          | Compilation Options
-------------------------------------------------------------------------------------------------------------
-tb_read_image_vhdl | behavior     | images_in_fpga |      | 13.0.376.8320 (Windows64) | -O3
-read_image_VHDL    | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -O3
-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Entity          | Architecture | Library        | Info | Compiler Version          | Compilation Options
+---------------------------------------------------------------------------------------------------------
+tb_image_filter | behavior     | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
+RAM_block       | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
+image_filter    | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
+fifo            | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
+kernel_mac      | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
+---------------------------------------------------------------------------------------------------------
 
-------------------------------------------------------------------------------------------------------------
-VHDL Package                      | Library        | Info | Compiler Version          | Compilation Options
-------------------------------------------------------------------------------------------------------------
-standard                          | std            |      |                           | <unavailable>
-TEXTIO                            | std            |      | 13.0.376.8320 (Windows64) |  -2019
-std_logic_1164                    | ieee           |      | 13.0.376.8320 (Windows64) |  -2008
-STD_LOGIC_TEXTIO                  | ieee           |      | 13.0.376.8320 (Windows64) | <unavailable>
-NUMERIC_STD                       | ieee           |      | 13.0.376.8320 (Windows64) |  -2008
-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+VHDL Package                   | Library        | Info | Compiler Version          | Compilation Options
+---------------------------------------------------------------------------------------------------------
+standard                       | std            |      |                           | <unavailable>
+TEXTIO                         | std            |      | 13.0.376.8320 (Windows64) |  -2019
+std_logic_1164                 | ieee           |      | 13.0.376.8320 (Windows64) |  -2008
+STD_LOGIC_TEXTIO               | ieee           |      | 13.0.376.8320 (Windows64) | <unavailable>
+NUMERIC_STD                    | ieee           |      | 13.0.376.8320 (Windows64) |  -2008
+std_logic_arith                | ieee           |      | 13.0.376.8320 (Windows64) | <unavailable>
+STD_LOGIC_UNSIGNED             | ieee           |      | 13.0.376.8320 (Windows64) | <unavailable>
+---------------------------------------------------------------------------------------------------------
 
-------------------------------------------------------------------------------------------------------------
-Library                           | Comment
-------------------------------------------------------------------------------------------------------------
-ieee                              | Standard IEEE packages library
-images_in_fpga                    | None
-std                               | Standard VHDL library
-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Library                        | Comment
+---------------------------------------------------------------------------------------------------------
+ieee                           | Standard IEEE packages library
+images_in_fpga                 | None
+std                            | Standard VHDL library
+---------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+
+
+The performance of simulation is reduced. Version Student Edition

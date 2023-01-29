@@ -1,2 +1,10 @@
 i<>.\src\read_image.vhd
 i<>.\src\read_image_tb.vhd
+i<>.\src\binarization.vhd
+i<>.\src\fifo.vhd
+i<>.\src\tb_fifo.vhd
+i<>.\src\image_filter.vhd
+i<>.\src\kernel_multiply_adder.vhd
+i<>.\src\tb_image_filter.vhd
+i<>.\src\RAM_block.vhd
+i<>.\src\register.vhd

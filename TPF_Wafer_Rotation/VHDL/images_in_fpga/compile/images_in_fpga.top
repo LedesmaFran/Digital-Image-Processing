@@ -1,1 +1,3 @@
+tb_fifo ENTITY
+tb_image_filter ENTITY
 tb_read_image_vhdl ENTITY

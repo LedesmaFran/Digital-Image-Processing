@@ -1,21 +1,7 @@
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image.vhd $dsn/src/read_image_tb.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
+# ELBREAD: Elaboration time 0.2 [s].
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
@@ -31,247 +17,187 @@ asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
 # SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5700 kB (elbread=427 elab2=5004 kernel=268 sdf=0)
+# Allocation: Simulator allocated 6843 kB (elbread=427 elab2=6132 kernel=283 sdf=0)
 # KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:14 PM, Thursday, January 19, 2023
+#  12:32 PM, Sunday, January 29, 2023
 #  Simulation has been initialized
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5700 kB (elbread=427 elab2=5004 kernel=268 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:14 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image.vhd $dsn/src/read_image_tb.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5700 kB (elbread=427 elab2=5004 kernel=268 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:14 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run 100 ns
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
 # KERNEL: stopped at time: 100 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5700 kB (elbread=427 elab2=5004 kernel=268 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:15 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5700 kB (elbread=427 elab2=5004 kernel=268 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:17 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image.vhd $dsn/src/read_image_tb.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5700 kB (elbread=427 elab2=5004 kernel=268 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:17 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
 # KERNEL: stopped at time: 200 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+run 10 ns
+# KERNEL: stopped at time: 260 ns
+run 10 ns
+# KERNEL: stopped at time: 270 ns
+run 10 ns
+# KERNEL: stopped at time: 280 ns
+run 10 ns
+# KERNEL: stopped at time: 290 ns
+run 10 ns
+# KERNEL: stopped at time: 300 ns
+run 10 ns
+# KERNEL: stopped at time: 310 ns
+run 10 ns
+# KERNEL: stopped at time: 320 ns
+run 10 ns
+# KERNEL: stopped at time: 330 ns
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
 # File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
 # Compile Entity "tb_read_image_vhdl"
 # Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
 # File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
 # Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: COMP96_0098: image_filter.vhd : (232, 11): 'BOOLEAN' type expected.
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  1.0 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: COMP96_0049: image_filter.vhd : (232, 67): Syntax error in expression.
+# Error: COMP96_0015: image_filter.vhd : (232, 67): ')' expected.
+# Error: COMP96_0019: image_filter.vhd : (232, 69): Keyword 'then' expected.
+# Error: COMP96_0019: image_filter.vhd : (242, 3): Keyword 'end' expected.
+# Error: COMP96_0015: image_filter.vhd : (243, 7): ';' expected.
+# Error: COMP96_0016: image_filter.vhd : (243, 9): Design unit declaration expected.
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
 endsim
 # VSIM: Simulation has finished.
-asim -O5 +access +r +m+read_image_VHDL read_image_VHDL behavioral
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5700 kB (elbread=427 elab2=5004 kernel=268 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:23 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Error: COMP96_0015: read_image_tb.vhd : (19, 7): '(' expected.
-# Error: COMP96_0028: read_image_tb.vhd : (19, 7): Identifier or keyword expected.
-# Error: COMP96_0015: read_image_tb.vhd : (19, 7): ';' expected.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile failure 3 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
@@ -291,47 +217,1015 @@ asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5741 kB (elbread=427 elab2=5044 kernel=269 sdf=0)
+# Allocation: Simulator allocated 6844 kB (elbread=427 elab2=6133 kernel=284 sdf=0)
 # KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:28 PM, Thursday, January 19, 2023
+#  12:57 PM, Sunday, January 29, 2023
 #  Simulation has been initialized
-run 100 ns
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6845 kB (elbread=427 elab2=6133 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:00 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+# Error: COMP96_0098: image_filter.vhd : (232, 11): 'BOOLEAN' type expected.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: COMP96_0019: image_filter.vhd : (238, 5): Keyword 'end' expected.
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6845 kB (elbread=427 elab2=6133 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:02 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
 # KERNEL: stopped at time: 100 ns
-# VSIM: 1 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
-run 20 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
 # KERNEL: stopped at time: 120 ns
-run 20 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6845 kB (elbread=427 elab2=6133 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:09 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+run 10 ns
+# KERNEL: stopped at time: 260 ns
+run 10 ns
+# KERNEL: stopped at time: 270 ns
+run 10 ns
+# KERNEL: stopped at time: 280 ns
+run 10 ns
+# KERNEL: stopped at time: 290 ns
+run 10 ns
+# KERNEL: stopped at time: 300 ns
+run 10 ns
+# KERNEL: stopped at time: 310 ns
+run 10 ns
+# KERNEL: stopped at time: 320 ns
+run 10 ns
+# KERNEL: stopped at time: 330 ns
+run 10 ns
+# KERNEL: stopped at time: 340 ns
+run 10 ns
+# KERNEL: stopped at time: 350 ns
+run 10 ns
+# KERNEL: stopped at time: 360 ns
+run 10 ns
+# KERNEL: stopped at time: 370 ns
+run 10 ns
+# KERNEL: stopped at time: 380 ns
+run 10 ns
+# KERNEL: stopped at time: 390 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6845 kB (elbread=427 elab2=6134 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:16 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6845 kB (elbread=427 elab2=6134 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:16 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+run 10 ns
+# KERNEL: stopped at time: 260 ns
+run 10 ns
+# KERNEL: stopped at time: 270 ns
+run 10 ns
+# KERNEL: stopped at time: 280 ns
+run 10 ns
+# KERNEL: stopped at time: 290 ns
+run 10 ns
+# KERNEL: stopped at time: 300 ns
+run 10 ns
+# KERNEL: stopped at time: 310 ns
+run 10 ns
+# KERNEL: stopped at time: 320 ns
+run 10 ns
+# KERNEL: stopped at time: 330 ns
+run 10 ns
+# KERNEL: stopped at time: 340 ns
+run 10 ns
+# KERNEL: stopped at time: 350 ns
+run 10 ns
+# KERNEL: stopped at time: 360 ns
+run 10 ns
+# KERNEL: stopped at time: 370 ns
+run 10 ns
+# KERNEL: stopped at time: 380 ns
+run 10 ns
+# KERNEL: stopped at time: 390 ns
+run 10 ns
+# KERNEL: stopped at time: 400 ns
+run 10 ns
+# KERNEL: stopped at time: 410 ns
+run 10 ns
+# KERNEL: stopped at time: 420 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6847 kB (elbread=427 elab2=6135 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:28 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+step
+step
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6847 kB (elbread=427 elab2=6135 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:29 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6847 kB (elbread=427 elab2=6135 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:29 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+step
+step
+step
+step
+step
+step
+step
+step
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+step
+step
+step
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+step
+step
+step
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+step
+step
+step
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+step
+step
+step
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+step
+step
+step
+step
+step
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+step
+step
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6843 kB (elbread=427 elab2=6132 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:37 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" at line 223 in process of instance "/tb_image_filter/filter/Stage3".
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6844 kB (elbread=427 elab2=6132 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:39 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
 # KERNEL: stopped at time: 140 ns
 endsim
 # VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Error: COMP96_0078: read_image_tb.vhd : (68, 26): Unknown identifier "text".
-# Error: COMP96_0064: read_image_tb.vhd : (68, 26): Unknown type.
-# Error: COMP96_0078: read_image_tb.vhd : (69, 26): Unknown identifier "line".
-# Error: COMP96_0064: read_image_tb.vhd : (69, 26): Unknown type.
-# Error: COMP96_0078: read_image_tb.vhd : (80, 17): Unknown identifier "right".
-# Error: COMP96_0078: read_image_tb.vhd : (81, 4): Unknown identifier "writeline".
-# Error: COMP96_0066: read_image_tb.vhd : (81, 4): Cannot find "writeline" procedure declaration.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile failure 7 Errors 0 Warnings  Analysis time :  63.0 [ms]
-# ULM: Warning: ULM_0021 Architecture "behavior" of entity "images_in_fpga.tb_read_image_vhdl" is not up-to-date. Please recompile file "D:\Documents\Aldec Files\image_in_fpga\images_in_fpga/src/read_image_tb.vhd".
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
 # File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
 # Compile Entity "tb_read_image_vhdl"
 # Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
 # File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
 # Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: COMP96_0015: image_filter.vhd : (222, 76): ')' expected.
+# Error: COMP96_0019: image_filter.vhd : (223, 5): Keyword 'then' expected.
+# Error: COMP96_0019: image_filter.vhd : (226, 3): Keyword 'end' expected.
+# Error: COMP96_0015: image_filter.vhd : (227, 7): ';' expected.
+# Error: COMP96_0016: image_filter.vhd : (227, 9): Design unit declaration expected.
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: COMP96_0019: image_filter.vhd : (261, 3): Keyword 'end' expected.
+# Error: COMP96_0015: image_filter.vhd : (262, 7): ';' expected.
+# Error: COMP96_0016: image_filter.vhd : (262, 9): Design unit declaration expected.
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: COMP96_0149: image_filter.vhd : (222, 29): Explicit type conversions are allowed between closely related types only.
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: COMP96_0019: image_filter.vhd : (222, 52): Keyword 'then' expected.
+# Error: COMP96_0019: image_filter.vhd : (226, 3): Keyword 'end' expected.
+# Error: COMP96_0015: image_filter.vhd : (227, 7): ';' expected.
+# Error: COMP96_0016: image_filter.vhd : (227, 9): Design unit declaration expected.
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
@@ -347,232 +1241,91 @@ asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
 # SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76911 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
+# Allocation: Simulator allocated 6845 kB (elbread=427 elab2=6134 kernel=284 sdf=0)
 # KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:32 PM, Thursday, January 19, 2023
+#  1:47 PM, Sunday, January 29, 2023
 #  Simulation has been initialized
-run 100 ns
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
 # KERNEL: stopped at time: 100 ns
-run
-endsim
-# KERNEL: stopped at time: 65498480 ns
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Warning: DAGGEN_0001: read_image_tb.vhd : (87, 0): Process without explicit or implicit wait statement - possible infinite loop.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 1 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76912 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:54 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 18254815 ns
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76912 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  9:56 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 92354625 ns
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.3 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76912 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:01 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 13930950 ns
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76912 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:01 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 20 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
 # KERNEL: stopped at time: 120 ns
-run 20 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
 # KERNEL: stopped at time: 140 ns
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-run
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+run 10 ns
+# KERNEL: stopped at time: 260 ns
+run 10 ns
+# KERNEL: stopped at time: 270 ns
+run 10 ns
+# KERNEL: stopped at time: 280 ns
+run 10 ns
+# KERNEL: stopped at time: 290 ns
+run 10 ns
+# KERNEL: stopped at time: 300 ns
+run 10 ns
+# KERNEL: stopped at time: 310 ns
+run 10 ns
+# KERNEL: stopped at time: 320 ns
 endsim
-# KERNEL: stopped at time: 13046810 ns
 # VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76911 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:04 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 4725725 ns
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
 # Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
@@ -586,146 +1339,90 @@ acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
 # SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76911 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
+# Allocation: Simulator allocated 6844 kB (elbread=427 elab2=6133 kernel=284 sdf=0)
 # KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:07 PM, Thursday, January 19, 2023
+#  1:51 PM, Sunday, January 29, 2023
 #  Simulation has been initialized
-run
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+run 10 ns
+# KERNEL: stopped at time: 260 ns
+run 10 ns
+# KERNEL: stopped at time: 270 ns
+run 10 ns
+# KERNEL: stopped at time: 280 ns
+run 10 ns
+# KERNEL: stopped at time: 290 ns
+run 10 ns
+# KERNEL: stopped at time: 300 ns
 endsim
-# KERNEL: stopped at time: 2995240 ns
 # VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76911 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:07 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 1575680 ns
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: The contents of entity 'images_in_fpga.read_image_vhdl' instantiated in architecture 'behavior:tb_read_image_vhdl' differ from the contents available during the compilation of this architecture.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-# Error: VSIM: cannot select specified top-level
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: The contents of entity 'images_in_fpga.read_image_vhdl' instantiated in architecture 'behavior:tb_read_image_vhdl' differ from the contents available during the compilation of this architecture.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# RUNTIME: Fatal Error: RUNTIME_0048 read_image.vhd (37): Cannot open file "img_test.mif"; no such file or directory.
-# KERNEL: Time: 0 ps,  Iteration: 1,  TOP instance.
-# ELAB2: Last instance before error: /tb_read_image_vhdl/uut
-# KERNEL: Error: E8005 : Kernel process initialization failed.
-# VSIM: Error: Simulation initialization failed.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: The contents of entity 'images_in_fpga.read_image_vhdl' instantiated in architecture 'behavior:tb_read_image_vhdl' differ from the contents available during the compilation of this architecture.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-# Error: VSIM: cannot select specified top-level
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: The contents of entity 'images_in_fpga.read_image_vhdl' instantiated in architecture 'behavior:tb_read_image_vhdl' differ from the contents available during the compilation of this architecture.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
 # ELAB2: Elaboration final pass...
@@ -740,99 +1437,64 @@ asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5743 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
+# Allocation: Simulator allocated 6844 kB (elbread=427 elab2=6133 kernel=284 sdf=0)
 # KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:09 PM, Thursday, January 19, 2023
+#  1:52 PM, Sunday, January 29, 2023
 #  Simulation has been initialized
-run
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
 endsim
-# KERNEL: stopped at time: 1428640 ns
 # VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Error: COMP96_0015: read_image_tb.vhd : (87, 4): ';' expected.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile failure 1 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  93.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5744 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:12 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 2576500 ns
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5744 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:13 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 1334300 ns
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
@@ -852,15 +1514,216 @@ asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5744 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
+# Allocation: Simulator allocated 6844 kB (elbread=427 elab2=6133 kernel=284 sdf=0)
 # KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:14 PM, Thursday, January 19, 2023
+#  1:54 PM, Sunday, January 29, 2023
 #  Simulation has been initialized
-run
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" at line 83 in process of instance "/tb_image_filter/filter/k_mac/line__72".
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" at line 83 in process of instance "/tb_image_filter/filter/k_mac/line__72".
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" at line 83 in process of instance "/tb_image_filter/filter/k_mac/line__72".
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" at line 83 in process of instance "/tb_image_filter/filter/k_mac/line__72".
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" at line 83 in process of instance "/tb_image_filter/filter/k_mac/line__72".
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" at line 83 in process of instance "/tb_image_filter/filter/k_mac/line__72".
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" at line 83 in process of instance "/tb_image_filter/filter/k_mac/line__72".
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+# Stopped in "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" at line 83 in process of instance "/tb_image_filter/filter/k_mac/line__72".
 endsim
-# KERNEL: stopped at time: 1965600 ns
 # VSIM: Simulation has finished.
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/image_filter.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6844 kB (elbread=427 elab2=6133 kernel=284 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
+#  1:59 PM, Sunday, January 29, 2023
+#  Simulation has been initialized
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+run 10 ns
+# KERNEL: stopped at time: 260 ns
+run 10 ns
+# KERNEL: stopped at time: 270 ns
+run 10 ns
+# KERNEL: stopped at time: 280 ns
+run 10 ns
+# KERNEL: stopped at time: 290 ns
+run 10 ns
+# KERNEL: stopped at time: 300 ns
+run 10 ns
+# KERNEL: stopped at time: 310 ns
+run 10 ns
+# KERNEL: stopped at time: 320 ns
+run 10 ns
+# KERNEL: stopped at time: 330 ns
+run 10 ns
+# KERNEL: stopped at time: 340 ns
+run 10 ns
+# KERNEL: stopped at time: 350 ns
+run 10 ns
+# KERNEL: stopped at time: 360 ns
+run 10 ns
+# KERNEL: stopped at time: 370 ns
+run 10 ns
+# KERNEL: stopped at time: 380 ns
+run 10 ns
+# KERNEL: stopped at time: 390 ns
+run 10 ns
+# KERNEL: stopped at time: 400 ns
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
@@ -880,195 +1743,108 @@ asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5744 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
+# Allocation: Simulator allocated 6844 kB (elbread=427 elab2=6132 kernel=284 sdf=0)
 # KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:14 PM, Thursday, January 19, 2023
+#  2:04 PM, Sunday, January 29, 2023
 #  Simulation has been initialized
-run
+# Waveform file 'D:/Documents/AldecFiles/image_in_fpga/images_in_fpga/src/filter_test_wave.awc' connected to 'D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/wave.asdb'.
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+run 10 ns
+# KERNEL: stopped at time: 260 ns
+run 10 ns
+# KERNEL: stopped at time: 270 ns
+run 10 ns
+# KERNEL: stopped at time: 280 ns
+run 10 ns
+# KERNEL: stopped at time: 290 ns
+run 10 ns
+# KERNEL: stopped at time: 300 ns
+run 10 ns
+# KERNEL: stopped at time: 310 ns
+run 10 ns
+# KERNEL: stopped at time: 320 ns
+run 10 ns
+# KERNEL: stopped at time: 330 ns
+run 10 ns
+# KERNEL: stopped at time: 340 ns
+run 10 ns
+# KERNEL: stopped at time: 350 ns
+run 10 ns
+# KERNEL: stopped at time: 360 ns
+run 10 ns
+# KERNEL: stopped at time: 370 ns
+run 10 ns
+# KERNEL: stopped at time: 380 ns
+run 10 ns
+# KERNEL: stopped at time: 390 ns
+run 10 ns
+# KERNEL: stopped at time: 400 ns
+run 10 ns
+# KERNEL: stopped at time: 410 ns
+run 10 ns
+# KERNEL: stopped at time: 420 ns
+run 10 ns
+# KERNEL: stopped at time: 430 ns
+run 10 ns
+# KERNEL: stopped at time: 440 ns
+run 10 ns
+# KERNEL: stopped at time: 450 ns
+run 10 ns
+# KERNEL: stopped at time: 460 ns
+run 10 ns
+# KERNEL: stopped at time: 470 ns
+run 10 ns
+# KERNEL: stopped at time: 480 ns
+run 10 ns
+# KERNEL: stopped at time: 490 ns
 endsim
-# KERNEL: stopped at time: 942 us
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5744 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:16 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 1149660 ns
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5744 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:17 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 1483555 ns
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5744 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:19 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 6260805 ns
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5744 kB (elbread=427 elab2=5045 kernel=271 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:20 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 6572790 ns
-# VSIM: Simulation has finished.
-asim -O5 +access +r +m+tb_read_image_vhdl tb_read_image_vhdl behavior
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-acom -O3 -e 100 -work images_in_fpga -2002  $dsn/src/read_image.vhd $dsn/src/read_image_tb.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "behavioral" of Entity "read_image_VHDL"
-# File: D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 76912 kB (elbread=427 elab2=75701 kernel=783 sdf=0)
-# KERNEL: ASDB file was created in location D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src\wave.asdb
-#  10:31 PM, Thursday, January 19, 2023
-#  Simulation has been initialized
-run
-endsim
-# KERNEL: stopped at time: 13237350 ns
 # VSIM: Simulation has finished.

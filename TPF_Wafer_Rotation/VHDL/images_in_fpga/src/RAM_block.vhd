@@ -3,7 +3,7 @@ use ieee.std_logic_1164.ALL;
 use ieee.numeric_std.ALL;
 use std.textio.all;
 
-entity read_image_VHDL is
+entity RAM_block is
 	generic (
 		ADDR_WIDTH     	: integer := 16;        
 		DATA_WIDTH     	: integer := 8;
@@ -18,11 +18,11 @@ entity read_image_VHDL is
 		wraddress	: IN STD_logic_vector((ADDR_WIDTH-1) downto 0);
 		we			: IN STD_LOGIC;
 		re			: IN STD_LOGIC;
-		q			: OUT std_logic_vector ((DATA_WIDTH-1) DOWNTO 0)
+		q			: OUT std_logic_vector((DATA_WIDTH-1) DOWNTO 0)
 	);
-end read_image_VHDL;
+end RAM_block;
 
-architecture rtl of read_image_VHDL is
+architecture behavioral of RAM_block is
 
 	TYPE mem_type IS ARRAY(0 TO (IMAGE_HEIGHT*IMAGE_WIDTH)-1) OF std_logic_vector((DATA_WIDTH-1) DOWNTO 0);
 	
@@ -58,4 +58,4 @@ architecture rtl of read_image_VHDL is
 	    end if;
 	  end process;
 
-end rtl;
+end behavioral;

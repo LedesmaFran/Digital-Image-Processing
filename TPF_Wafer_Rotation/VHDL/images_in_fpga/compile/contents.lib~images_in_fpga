@@ -1,5 +1,27 @@
-76
+291
+~E 1 "../src/binarization.vhd" 6 binarization
+~A 1 "../src/binarization.vhd" 19 behavioral
+~A 1 "../src/binarization.vhd" 19 rtl
+~E 1 "../src/fifo.vhd" 8 fifo
+~A 1 "../src/fifo.vhd" 24 behavioral
+~A 1 "../src/fifo.vhd" 24 rtl
+~E 1 "../src/image_filter.vhd" 8 image_filter
+~A 1 "../src/image_filter.vhd" 27 behavioral
+~A 1 "../src/image_filter.vhd" 27 rtl
+~E 1 "../src/kernel_multiply_adder.vhd" 6 kernel_mac
+~A 1 "../src/kernel_multiply_adder.vhd" 26 behavioral
+~A 1 "../src/kernel_multiply_adder.vhd" 26 rtl
+~E 1 "../src/RAM_block.vhd" 6 RAM_block
+~A 1 "../src/RAM_block.vhd" 25 behavioral
+~A 1 "../src/RAM_block.vhd" 25 rtl
 ~E 1 "../src/read_image.vhd" 6 read_image_VHDL
 ~A 1 "../src/read_image.vhd" 26 behavioral
+~A 1 "../src/read_image.vhd" 25 rtl
+~E 1 "../src/register.vhd" 5 reg
+~A 1 "../src/register.vhd" 17 behavioral
+~E 1 "../src/tb_fifo.vhd" 8 tb_fifo
+~A 1 "../src/tb_fifo.vhd" 16 behavior
+~E 1 "../src/tb_image_filter.vhd" 7 tb_image_filter
+~A 1 "../src/tb_image_filter.vhd" 17 behavior
 ~E 1 "../src/read_image_tb.vhd" 7 tb_read_image_vhdl
-~A 1 "../src/read_image_tb.vhd" 18 behavior
+~A 1 "../src/read_image_tb.vhd" 17 behavior

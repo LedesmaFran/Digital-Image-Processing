@@ -8,9 +8,8 @@ ENTITY tb_read_image_vhdl IS
 	GENERIC (
 	    ADDR_WIDTH     		: integer := 16;        
 	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 256;
-		IMAGE_WIDTH			: integer := 256;
-		IMAGE_SIZE  		: integer := 16;
+	    IMAGE_HEIGHT		: integer := 4;
+		IMAGE_WIDTH			: integer := 4;
 		IMAGE_FILE_NAME 	: string  :="test_img.mif"       
   	);
 END tb_read_image_vhdl;
@@ -49,7 +48,9 @@ ARCHITECTURE behavior OF tb_read_image_vhdl IS
 
    	-- Clock period definitions
    	constant clock_period 	: time := 10 ns;
-   	signal i				: integer;
+   	
+	--Auxiliary signals
+	signal i				: integer;
 	signal enable			: std_logic := '0';
 	signal data_out			: std_logic_vector(DATA_WIDTH-1 downto 0); 
 	   
@@ -73,7 +74,7 @@ BEGIN
 	);
 
 	-- Clock process definitions
-	clock_process :process
+	clock_process: 	process
    	begin
 		clock <= '0';
 	  	wait for clock_period/2;
@@ -93,7 +94,7 @@ BEGIN
 	  	re <= '0';
 	  	wait for 100 ns;
 	  	re <= '1';
-	  	for i in 0 to IMAGE_SIZE-1 loop
+	  	for i in 0 to (IMAGE_HEIGHT*IMAGE_WIDTH)-1 loop
 		  	rdaddress <= std_logic_vector(to_unsigned(i, ADDR_WIDTH));
   			wait for 20 ns;
 			write(row,data_out);
