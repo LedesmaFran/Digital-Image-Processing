@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2023-01-30 12:40:03
+Active-HDL 13.0.376.8320 2023-01-30 20:31:52
 
 Elaboration top modules:
 Architecture                  behavior(tb_image_filter)
@@ -33,9 +33,3 @@ ieee                           | Standard IEEE packages library
 images_in_fpga                 | None
 std                            | Standard VHDL library
 ---------------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
-
-
-The performance of simulation is reduced. Version Student Edition

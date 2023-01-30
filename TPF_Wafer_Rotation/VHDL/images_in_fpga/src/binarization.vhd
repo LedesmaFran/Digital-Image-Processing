@@ -6,7 +6,7 @@ use std.textio.all;
 entity binarization is
 	generic(
 		THRESHOLD	: integer := 127;
-		DATA_WIDTH	: integer  := 8
+		DATA_WIDTH	: integer := 8
 	);
 	port(
 		not_enable	: IN STD_LOGIC;

@@ -1,11 +1,2 @@
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image_tb.vhd" VHDL images_in_fpga 1 0 0 -02
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/read_image.vhd" VHDL images_in_fpga 1 0 0 -02
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/binarization.vhd" VHDL images_in_fpga 1 0 0 -02
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/fifo.vhd" VHDL images_in_fpga 1 0 0 -02
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_fifo.vhd" VHDL images_in_fpga 1 0 0 -02
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/image_filter.vhd" VHDL images_in_fpga 1 0 0 -02
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/kernel_multiply_adder.vhd" VHDL images_in_fpga 1 0 0 -02
 "D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/tb_image_filter.vhd" VHDL images_in_fpga 1 0 0 -02
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/RAM_block.vhd" VHDL images_in_fpga 1 0 0 -02
-"D:/Documents/Aldec Files/image_in_fpga/images_in_fpga/src/register.vhd" VHDL images_in_fpga 1 0 0 -02
 . . 0 0 0

@@ -19,7 +19,7 @@ entity image_filter is
 		pixel_in	: IN std_logic_vector(DATA_WIDTH-1 downto 0);
 		filter_sel	: IN std_logic_vector(1 downto 0);
 		pixel_out	: OUT std_logic_vector(DATA_WIDTH-1 downto 0);		  
-		counter_out	: OUT std_logic_vector(16 downto 0) := (others => '0');
+		counter_out	: OUT std_logic_vector(17 downto 0) := (others => '0');
 		out_valid	: OUT std_logic := '0'
 		);
 end image_filter;	
@@ -49,16 +49,17 @@ architecture behavioral of image_filter is
 		DATA_WIDTH		: integer := DATA_WIDTH
 		);
 	port(
+		clock		: IN std_logic;
 		not_enable	: IN std_logic;
-		top0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		top1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		top2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		mid0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		mid1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		mid2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		bot0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		bot1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		bot2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top0			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top1			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top2			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid0			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid1			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid2			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot0			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot1			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot2			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 		filter_sel	: IN std_logic_vector(1 downto 0);
 		sum_out		: OUT std_logic_vector(DATA_WIDTH-1 downto 0)
 		);
@@ -143,6 +144,7 @@ begin
 		DATA_WIDTH => DATA_WIDTH
 	)
 	port map (
+		clock => clock,
 		not_enable => kernel_not_enable,
 		top0 => top0_reg,
 		top1 => top1_reg,
@@ -220,7 +222,7 @@ begin
 	begin
 		if (rising_edge(clock) and not_enable = '0' and stage_3_enable = '0') then
 			counter := counter + 1;
-			if (counter >= (2*IMAGE_WIDTH + KERNEL_WIDTH) + 6) then
+			if (counter >= (2*IMAGE_WIDTH + KERNEL_WIDTH) + 7) then
 				stage_3_enable <= '1';
 			else null;
 			end if;
@@ -251,7 +253,7 @@ begin
 			end if;
 		else null;
 		end if;
-	counter_out <= std_logic_vector(to_unsigned(counter, 17));
+	counter_out <= std_logic_vector(to_unsigned(counter, 18));
 	end process;	
 
 end behavioral;

@@ -8,9 +8,9 @@ ENTITY tb_image_filter IS
 	GENERIC (
 	    ADDR_WIDTH     		: integer := 16;        
 	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 7;
-		IMAGE_WIDTH			: integer := 7;
-		IMAGE_FILE_NAME 	: string  := "test_img2.mif"       
+	    IMAGE_HEIGHT		: integer := 256+2;
+		IMAGE_WIDTH			: integer := 256+2;
+		IMAGE_FILE_NAME 	: string  := "lena.mif"       
   	);
 END tb_image_filter;
 
@@ -21,7 +21,7 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	    DATA_WIDTH     		: integer := DATA_WIDTH;
 	    IMAGE_HEIGHT		: integer := IMAGE_HEIGHT;
 		IMAGE_WIDTH			: integer := IMAGE_WIDTH;
-		IMAGE_FILE_NAME 	: string  := "test_img2.mif"       
+		IMAGE_FILE_NAME 	: string  := "lena.mif"       
   	);	
 	PORT (
 		clock 		: IN  std_logic;
@@ -55,7 +55,7 @@ ARCHITECTURE behavior OF tb_image_filter IS
 		pixel_in	: IN std_logic_vector(DATA_WIDTH-1 downto 0);
 		filter_sel	: IN std_logic_vector(1 downto 0);
 		pixel_out	: OUT std_logic_vector(DATA_WIDTH-1 downto 0);
-		counter_out	: OUT std_logic_vector(16 downto 0) := (others => '0');
+		counter_out	: OUT std_logic_vector(17 downto 0) := (others => '0');
 		out_valid	: OUT std_logic
 		);
   	end COMPONENT;
@@ -69,13 +69,13 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	signal q 			: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 
    	-- Clock period definitions
-   	constant clock_period 	: time := 10 ns;
+   	constant clock_period 	: time := 1 ns;
    	
 	-- Filter signals
 	signal enable			: std_logic := '1';
 	signal data_out			: std_logic_vector(DATA_WIDTH-1 downto 0);
-	signal filter_sel 		: std_logic_vector(1 downto 0) := "00";
-	signal counter_out		: std_logic_vector(16 downto 0);
+	signal filter_sel 		: std_logic_vector(1 downto 0) := "01";
+	signal counter_out		: std_logic_vector(17 downto 0);
 	signal out_valid		: std_logic;
 	
 	-- AUX signals
@@ -152,7 +152,7 @@ BEGIN
 
 	-- Output process
 	out_proc: process (clock)
-	file test_vector 	: text open write_mode is "filter_delta_test2.txt";
+	file test_vector 	: text open write_mode is "lena_edge_test.txt";
 	variable row      	: line;
    	begin
 		if (rising_edge(clock)) then

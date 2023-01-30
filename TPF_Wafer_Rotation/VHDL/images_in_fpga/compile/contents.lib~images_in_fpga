@@ -1,4 +1,4 @@
-355
+379
 ~E 1 "../src/binarization.vhd" 6 binarization
 ~A 1 "../src/binarization.vhd" 19 behavioral
 ~A 1 "../src/binarization.vhd" 19 rtl
@@ -9,7 +9,7 @@
 ~A 1 "../src/image_filter.vhd" 27 behavioral
 ~A 1 "../src/image_filter.vhd" 27 rtl
 ~E 1 "../src/kernel_multiply_adder.vhd" 6 kernel_mac
-~A 1 "../src/kernel_multiply_adder.vhd" 26 behavioral
+~A 1 "../src/kernel_multiply_adder.vhd" 27 behavioral
 ~A 1 "../src/kernel_multiply_adder.vhd" 26 rtl
 ~E 1 "../src/RAM_block.vhd" 6 RAM_block
 ~A 1 "../src/RAM_block.vhd" 25 behavioral
