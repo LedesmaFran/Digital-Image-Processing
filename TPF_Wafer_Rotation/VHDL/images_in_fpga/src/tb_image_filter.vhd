@@ -69,7 +69,7 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	signal q 			: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 
    	-- Clock period definitions
-   	constant clock_period 	: time := 50 ns;
+   	constant clock_period 	: time := 10 ns;
    	
 	-- Filter signals
 	signal enable			: std_logic := '1';
@@ -124,7 +124,7 @@ BEGIN
 		counter_out => counter_out,
 		out_valid => out_valid
 	);
-
+										 							  
 	-- Clock process definitions
 	clock_process: 	process
    	begin
@@ -137,25 +137,31 @@ BEGIN
 	
 	-- Stimulus process
    	stim_proc: process
-	file test_vector 	: text open write_mode is "filter_delta_test.txt";
-	variable row      	: line;
    	begin
 		wait for clock_period;
 		re <= '1';
-		
 		for i in 0 to (IMAGE_HEIGHT*IMAGE_WIDTH)-1 loop
-		  	rdaddress <= std_logic_vector(to_unsigned(i, ADDR_WIDTH));	
+			rdaddress <= std_logic_vector(to_unsigned(i, ADDR_WIDTH));	
 			wait for clock_period/2;
 			q <= q_reg;
 			enable <= '0';
 			wait for clock_period/2;
-			if (out_valid = '1') then
-			  	write(row,data_out);
-				writeline(test_vector,row);
-			else null;
-			end if;
 		end loop;
 		wait;
   	end process;
- 
+
+	-- Output process
+	out_proc: process (clock)
+	file test_vector 	: text open write_mode is "filter_delta_test2.txt";
+	variable row      	: line;
+   	begin
+		if (rising_edge(clock)) then
+			if (out_valid = '1') then
+				write(row,data_out);
+				writeline(test_vector,row);
+			else null;
+			end if;
+		else null;
+		end if;	
+	end process;
 END;
