@@ -1,4 +1,4 @@
-387
+405
 ~E 1 "../src/binarization.vhd" 6 binarization
 ~A 1 "../src/binarization.vhd" 18 behavioral
 ~A 1 "../src/binarization.vhd" 19 rtl
@@ -10,12 +10,12 @@
 ~A 1 "../src/fifo.vhd" 24 behavioral
 ~A 1 "../src/fifo.vhd" 24 rtl
 ~E 1 "../src/image_filter.vhd" 8 image_filter
-~A 1 "../src/image_filter.vhd" 27 behavioral
+~A 1 "../src/image_filter.vhd" 28 behavioral
 ~A 1 "../src/image_filter.vhd" 27 rtl
 ~E 1 "../src/dilation.vhd" 6 kernel_dilation
-~A 1 "../src/dilation.vhd" 27 behavioral
+~A 1 "../src/dilation.vhd" 26 behavioral
 ~E 1 "../src/erosion.vhd" 6 kernel_erosion
-~A 1 "../src/erosion.vhd" 27 behavioral
+~A 1 "../src/erosion.vhd" 26 behavioral
 ~E 1 "../src/kernel_multiply_adder.vhd" 6 kernel_mac
 ~A 1 "../src/kernel_multiply_adder.vhd" 27 behavioral
 ~A 1 "../src/kernel_multiply_adder.vhd" 26 rtl

@@ -10,7 +10,7 @@ ENTITY tb_image_filter IS
 	    DATA_WIDTH     		: integer := 8;
 	    IMAGE_HEIGHT		: integer := 64+2;
 		IMAGE_WIDTH			: integer := 64+2;
-		IMAGE_FILE_NAME 	: string  := ".mif"       
+		IMAGE_FILE_NAME 	: string  := "testwafer_1_gray.mif"       
   	);
 END tb_image_filter;
 
@@ -53,6 +53,7 @@ ARCHITECTURE behavior OF tb_image_filter IS
 		not_enable	: IN std_logic;
 		pixel_in	: IN std_logic_vector(DATA_WIDTH-1 downto 0);
 		filter_sel	: IN std_logic_vector(1 downto 0);
+		type_sel	: IN std_logic_vector(1 downto 0);
 		pixel_out	: OUT std_logic_vector(DATA_WIDTH-1 downto 0);
 		counter_out	: OUT std_logic_vector(17 downto 0) := (others => '0');
 		out_valid	: OUT std_logic
@@ -70,10 +71,11 @@ ARCHITECTURE behavior OF tb_image_filter IS
    	-- Clock period definitions
    	constant clock_period 	: time := 10 ns;
    	
-	-- Filter signals
+	-- Filter1 signals
 	signal enable			: std_logic := '1';
 	signal data_out			: std_logic_vector(DATA_WIDTH-1 downto 0);
-	signal filter_sel 		: std_logic_vector(1 downto 0) := "01";
+	signal filter_sel 		: std_logic_vector(1 downto 0) := "00";
+	signal type_sel 		: std_logic_vector(1 downto 0) := "10";	 -- 00 => kernel / 01 => erosion / 10 => dilation 
 	signal counter_out		: std_logic_vector(17 downto 0);
 	signal out_valid		: std_logic;
 	
@@ -118,6 +120,7 @@ BEGIN
 	)
 	PORT MAP (
 		filter_sel => filter_sel,
+		type_sel => type_sel,
 		not_enable => enable,
 		clock => clock,
 		pixel_in => bin_out,
@@ -153,7 +156,7 @@ BEGIN
 
 	-- Output process
 	out_proc: process (clock)
-	file test_vector 	: text open write_mode is "bin_and_filter_test.txt";
+	file test_vector 	: text open write_mode is "wafer_bin_dilation_test.txt";
 	variable row      	: line;
    	begin
 		if (rising_edge(clock)) then

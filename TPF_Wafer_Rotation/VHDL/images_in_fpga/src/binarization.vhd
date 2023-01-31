@@ -21,9 +21,9 @@ begin
 	begin
 		if (not_enable = '0') then
 			if (unsigned(data_in) >= THRESHOLD) then
-				data_out <= x"ff";
+				data_out <= (others => '1');
 			else
-				data_out <= x"00";
+				data_out <= (others => '0');
 			end if;
 		else null; 
 		end if;

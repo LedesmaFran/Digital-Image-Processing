@@ -1,277 +1,475 @@
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "rtl" of Entity "read_image_VHDL"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
-# Compile Entity "binarization"
-# Compile Architecture "behavioral" of Entity "binarization"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
-# Compile Entity "fifo"
-# Compile Architecture "behavioral" of Entity "fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
-# Compile Entity "tb_fifo"
-# Compile Architecture "behavior" of Entity "tb_fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
-# Compile Entity "image_filter"
-# Compile Architecture "behavioral" of Entity "image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
-# Compile Entity "kernel_mac"
-# Compile Architecture "behavioral" of Entity "kernel_mac"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
-# Compile Entity "tb_image_filter"
-# Compile Architecture "behavior" of Entity "tb_image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
-# Compile Entity "RAM_block"
-# Compile Architecture "behavioral" of Entity "RAM_block"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
-# Compile Entity "reg"
-# Compile Architecture "behavioral" of Entity "reg"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
-acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# Warning: ELAB1_0026: read_image_tb.vhd : (69, 0): There is no default binding for component "binarization". (Port "clock" is not on the entity).
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "rtl" of Entity "read_image_VHDL"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
-# Compile Entity "binarization"
-# Compile Architecture "behavioral" of Entity "binarization"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
-# Compile Entity "fifo"
-# Compile Architecture "behavioral" of Entity "fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
-# Compile Entity "tb_fifo"
-# Compile Architecture "behavior" of Entity "tb_fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
-# Compile Entity "image_filter"
-# Compile Architecture "behavioral" of Entity "image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
-# Compile Entity "kernel_mac"
-# Compile Architecture "behavioral" of Entity "kernel_mac"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
-# Compile Entity "tb_image_filter"
-# Compile Architecture "behavior" of Entity "tb_image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
-# Compile Entity "RAM_block"
-# Compile Architecture "behavioral" of Entity "RAM_block"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
-# Compile Entity "reg"
-# Compile Architecture "behavioral" of Entity "reg"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
-# Compile Entity "erosion"
-# Compile Architecture "behavioral" of Entity "erosion"
-# Warning: DAGGEN_0002: erosion.vhd : (20, 0): Process has no effect - no sequential statements.
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
-# Compile Entity "dilation"
-# Compile Architecture "behavioral" of Entity "dilation"
-# Warning: DAGGEN_0002: dilation.vhd : (20, 0): Process has no effect - no sequential statements.
-# Compile success 0 Errors 3 Warnings  Analysis time :  0.3 [s]
-acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_image_filter.vhd
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
-# Compile Entity "tb_image_filter"
-# Compile Architecture "behavior" of Entity "tb_image_filter"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "rtl" of Entity "read_image_VHDL"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
-# Compile Entity "binarization"
-# Compile Architecture "behavioral" of Entity "binarization"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
-# Compile Entity "fifo"
-# Compile Architecture "behavioral" of Entity "fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
-# Compile Entity "tb_fifo"
-# Compile Architecture "behavior" of Entity "tb_fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
-# Compile Entity "image_filter"
-# Compile Architecture "behavioral" of Entity "image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
-# Compile Entity "kernel_mac"
-# Compile Architecture "behavioral" of Entity "kernel_mac"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
-# Compile Entity "tb_image_filter"
-# Compile Architecture "behavior" of Entity "tb_image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
-# Compile Entity "RAM_block"
-# Compile Architecture "behavioral" of Entity "RAM_block"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
-# Compile Entity "reg"
-# Compile Architecture "behavioral" of Entity "reg"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
-# Compile Entity "erosion"
-# Compile Architecture "behavioral" of Entity "erosion"
-# Warning: DAGGEN_0002: erosion.vhd : (20, 0): Process has no effect - no sequential statements.
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
-# Compile Entity "dilation"
-# Compile Architecture "behavioral" of Entity "dilation"
-# Warning: DAGGEN_0002: dilation.vhd : (20, 0): Process has no effect - no sequential statements.
-# Compile success 0 Errors 2 Warnings  Analysis time :  0.3 [s]
-acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "rtl" of Entity "read_image_VHDL"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
-# Compile Entity "binarization"
-# Compile Architecture "behavioral" of Entity "binarization"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
-# Compile Entity "fifo"
-# Compile Architecture "behavioral" of Entity "fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
-# Compile Entity "tb_fifo"
-# Compile Architecture "behavior" of Entity "tb_fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
-# Compile Entity "image_filter"
-# Compile Architecture "behavioral" of Entity "image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
-# Compile Entity "kernel_mac"
-# Compile Architecture "behavioral" of Entity "kernel_mac"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
-# Compile Entity "tb_image_filter"
-# Compile Architecture "behavior" of Entity "tb_image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
-# Compile Entity "RAM_block"
-# Compile Architecture "behavioral" of Entity "RAM_block"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
-# Compile Entity "reg"
-# Compile Architecture "behavioral" of Entity "reg"
+# ELBREAD: Elaboration time 0.4 [s].
+# Error: You do not have a valid license to run Advanced Dataflow. Contact Aldec for ordering information - sales@aldec.com
+# Memory View: Error: You do not have a valid license to run Memory View. Contact Aldec for ordering information - sales@aldec.com
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/erosion.vhd
 # File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
 # Compile Entity "kernel_erosion"
 # Compile Architecture "behavioral" of Entity "kernel_erosion"
-# Error: COMP96_0019: erosion.vhd : (105, 3): Keyword 'end' expected.
-# Error: COMP96_0015: erosion.vhd : (106, 6): ';' expected.
-# Error: COMP96_0016: erosion.vhd : (106, 8): Design unit declaration expected.
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
-# Compile Entity "kernel_dilation"
-# Compile Architecture "behavioral" of Entity "kernel_dilation"
-# Error: COMP96_0019: dilation.vhd : (105, 3): Keyword 'end' expected.
-# Error: COMP96_0015: dilation.vhd : (106, 6): ';' expected.
-# Error: COMP96_0016: dilation.vhd : (106, 8): Design unit declaration expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  0.3 [s]
-acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
-# Compile Entity "tb_read_image_vhdl"
-# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
-# Compile Entity "read_image_VHDL"
-# Compile Architecture "rtl" of Entity "read_image_VHDL"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
-# Compile Entity "binarization"
-# Compile Architecture "behavioral" of Entity "binarization"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
-# Compile Entity "fifo"
-# Compile Architecture "behavioral" of Entity "fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
-# Compile Entity "tb_fifo"
-# Compile Architecture "behavior" of Entity "tb_fifo"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
-# Compile Entity "image_filter"
-# Compile Architecture "behavioral" of Entity "image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
-# Compile Entity "kernel_mac"
-# Compile Architecture "behavioral" of Entity "kernel_mac"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
-# Compile Entity "tb_image_filter"
-# Compile Architecture "behavior" of Entity "tb_image_filter"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
-# Compile Entity "RAM_block"
-# Compile Architecture "behavioral" of Entity "RAM_block"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
-# Compile Entity "reg"
-# Compile Architecture "behavioral" of Entity "reg"
-# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
-# Compile Entity "kernel_erosion"
-# Compile Architecture "behavioral" of Entity "kernel_erosion"
-# Error: COMP96_0078: erosion.vhd : (64, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (64, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (64, 43): Prefix of index must be an array.
-# Error: COMP96_0077: erosion.vhd : (64, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: erosion.vhd : (65, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (65, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (65, 43): Prefix of index must be an array.
-# Error: COMP96_0077: erosion.vhd : (65, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: erosion.vhd : (66, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (66, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (66, 43): Prefix of index must be an array.
-# Error: COMP96_0077: erosion.vhd : (66, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: erosion.vhd : (67, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (67, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (67, 43): Prefix of index must be an array.
-# Error: COMP96_0077: erosion.vhd : (67, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: erosion.vhd : (68, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (68, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (68, 43): Prefix of index must be an array.
+# Error: COMP96_0617: erosion.vhd : (65, 14): Assignment target incompatible with right side. Cannot convert 'STD_LOGIC_VECTOR' to 'INTEGER'.
+# Error: COMP96_0617: erosion.vhd : (66, 14): Assignment target incompatible with right side. Cannot convert 'STD_LOGIC_VECTOR' to 'INTEGER'.
+# Error: COMP96_0617: erosion.vhd : (67, 14): Assignment target incompatible with right side. Cannot convert 'STD_LOGIC_VECTOR' to 'INTEGER'.
+# Error: COMP96_0078: erosion.vhd : (68, 14): Unknown identifier "top3".
+# Error: COMP96_0133: erosion.vhd : (68, 14): Cannot find object declaration.
 # Error: COMP96_0077: erosion.vhd : (68, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: erosion.vhd : (69, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (69, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (69, 43): Prefix of index must be an array.
+# Error: COMP96_0078: erosion.vhd : (69, 14): Unknown identifier "top4".
+# Error: COMP96_0133: erosion.vhd : (69, 14): Cannot find object declaration.
 # Error: COMP96_0077: erosion.vhd : (69, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: erosion.vhd : (70, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (70, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (70, 43): Prefix of index must be an array.
+# Error: COMP96_0078: erosion.vhd : (70, 14): Unknown identifier "top5".
+# Error: COMP96_0133: erosion.vhd : (70, 14): Cannot find object declaration.
 # Error: COMP96_0077: erosion.vhd : (70, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: erosion.vhd : (71, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (71, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (71, 43): Prefix of index must be an array.
+# Error: COMP96_0078: erosion.vhd : (71, 14): Unknown identifier "top6".
+# Error: COMP96_0133: erosion.vhd : (71, 14): Cannot find object declaration.
 # Error: COMP96_0077: erosion.vhd : (71, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: erosion.vhd : (72, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: erosion.vhd : (72, 43): Cannot find object declaration.
-# Error: COMP96_0289: erosion.vhd : (72, 43): Prefix of index must be an array.
+# Error: COMP96_0078: erosion.vhd : (72, 14): Unknown identifier "top7".
+# Error: COMP96_0133: erosion.vhd : (72, 14): Cannot find object declaration.
 # Error: COMP96_0077: erosion.vhd : (72, 14): Undefined type of expression. Expected type 'INTEGER'.
+# Error: COMP96_0078: erosion.vhd : (73, 14): Unknown identifier "top8".
+# Error: COMP96_0133: erosion.vhd : (73, 14): Cannot find object declaration.
+# Error: COMP96_0077: erosion.vhd : (73, 14): Undefined type of expression. Expected type 'INTEGER'.
+# Error: COMP96_0753: erosion.vhd : (75, 42): Cannot find the "and" operator with operands denoted with the "[INTEGER, INTEGER]" signature.
+# Error: COMP96_0149: erosion.vhd : (75, 32): Explicit type conversions are allowed between closely related types only.
+# Compile failure 23 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/erosion.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# Error: COMP96_0078: erosion.vhd : (68, 14): Unknown identifier "top3".
+# Error: COMP96_0133: erosion.vhd : (68, 14): Cannot find object declaration.
+# Error: COMP96_0077: erosion.vhd : (68, 14): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: erosion.vhd : (69, 14): Unknown identifier "top4".
+# Error: COMP96_0133: erosion.vhd : (69, 14): Cannot find object declaration.
+# Error: COMP96_0077: erosion.vhd : (69, 14): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: erosion.vhd : (70, 14): Unknown identifier "top5".
+# Error: COMP96_0133: erosion.vhd : (70, 14): Cannot find object declaration.
+# Error: COMP96_0077: erosion.vhd : (70, 14): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: erosion.vhd : (71, 14): Unknown identifier "top6".
+# Error: COMP96_0133: erosion.vhd : (71, 14): Cannot find object declaration.
+# Error: COMP96_0077: erosion.vhd : (71, 14): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: erosion.vhd : (72, 14): Unknown identifier "top7".
+# Error: COMP96_0133: erosion.vhd : (72, 14): Cannot find object declaration.
+# Error: COMP96_0077: erosion.vhd : (72, 14): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: erosion.vhd : (73, 14): Unknown identifier "top8".
+# Error: COMP96_0133: erosion.vhd : (73, 14): Cannot find object declaration.
+# Error: COMP96_0077: erosion.vhd : (73, 14): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile failure 18 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/erosion.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/erosion.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# Error: COMP96_0093: erosion.vhd : (65, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Error: COMP96_0093: erosion.vhd : (66, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Error: COMP96_0093: erosion.vhd : (67, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Error: COMP96_0093: erosion.vhd : (68, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Error: COMP96_0093: erosion.vhd : (69, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Error: COMP96_0093: erosion.vhd : (70, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Error: COMP96_0093: erosion.vhd : (71, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Error: COMP96_0093: erosion.vhd : (72, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Error: COMP96_0093: erosion.vhd : (73, 52): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.TO_UNSIGNED(ARG : NATURAL; SIZE : NATURAL) return UNSIGNED" subprogram.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/erosion.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/dilation.vhd
 # File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
 # Compile Entity "kernel_dilation"
 # Compile Architecture "behavioral" of Entity "kernel_dilation"
-# Error: COMP96_0078: dilation.vhd : (64, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (64, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (64, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (64, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: dilation.vhd : (65, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (65, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (65, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (65, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: dilation.vhd : (66, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (66, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (66, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (66, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: dilation.vhd : (67, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (67, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (67, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (67, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: dilation.vhd : (68, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (68, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (68, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (68, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: dilation.vhd : (69, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (69, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (69, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (69, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: dilation.vhd : (70, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (70, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (70, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (70, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: dilation.vhd : (71, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (71, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (71, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (71, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: dilation.vhd : (72, 43): Unknown identifier "kernel".
-# Error: COMP96_0133: dilation.vhd : (72, 43): Cannot find object declaration.
-# Error: COMP96_0289: dilation.vhd : (72, 43): Prefix of index must be an array.
-# Error: COMP96_0077: dilation.vhd : (72, 14): Undefined type of expression. Expected type 'INTEGER'.
-# Compile failure 72 Errors 0 Warnings  Analysis time :  0.3 [s]
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/binarization.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.7 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9914 kB (elbread=427 elab2=9201 kernel=285 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:01 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 690 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+endsim
+# KERNEL: stopped at time: 1907690 ns
+# VSIM: Simulation has finished.
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9914 kB (elbread=427 elab2=9201 kernel=285 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:03 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+# VSIM: 1 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 690 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+endsim
+# KERNEL: stopped at time: 2194750 ns
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9914 kB (elbread=427 elab2=9201 kernel=285 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:06 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 44000 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 690 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: stopped at time: 44 us
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: ELAB1_0011: image_filter.vhd : (210, 0): Port "filter_sel" is on entity "kernel_erosion" but not on the component declaration.
+# Error: COMP96_0078: image_filter.vhd : (334, 19): Unknown identifier "kernel".
+# Error: COMP96_0133: image_filter.vhd : (334, 19): Cannot find object declaration.
+# Error: COMP96_0078: image_filter.vhd : (335, 19): Unknown identifier "kernel".
+# Error: COMP96_0133: image_filter.vhd : (335, 19): Cannot find object declaration.
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# Error: COMP96_0122: tb_image_filter.vhd : (78, 2): Symbol "filter_sel" has already been declared in this scope.
+# Error: COMP96_0207: tb_image_filter.vhd : (114, 2): No actual specified for local port "type_sel".
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# Error: COMP96_0078: image_filter.vhd : (334, 19): Unknown identifier "kernel".
+# Error: COMP96_0133: image_filter.vhd : (334, 19): Cannot find object declaration.
+# Error: COMP96_0078: image_filter.vhd : (335, 19): Unknown identifier "kernel".
+# Error: COMP96_0133: image_filter.vhd : (335, 19): Cannot find object declaration.
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# Error: COMP96_0207: tb_image_filter.vhd : (114, 2): No actual specified for local port "type_sel".
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# Error: COMP96_0207: tb_image_filter.vhd : (114, 2): No actual specified for local port "type_sel".
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.3 [s]
 acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
 # File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
 # Compile Entity "tb_read_image_vhdl"
@@ -317,4 +515,562 @@ acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src
 # File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
 # Compile Entity "read_image_VHDL"
 # Compile Architecture "rtl" of Entity "read_image_VHDL"
-# File: D:/Documents/repos/
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9970 kB (elbread=427 elab2=9250 kernel=292 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:19 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 44000 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 60 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 690 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: stopped at time: 44 us
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9970 kB (elbread=427 elab2=9250 kernel=292 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:19 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 44000 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 60 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 690 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: stopped at time: 44 us
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9970 kB (elbread=427 elab2=9250 kernel=292 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:21 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 44000 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 60 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 690 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: stopped at time: 44 us
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9970 kB (elbread=427 elab2=9250 kernel=292 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:33 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 44000 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 60 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 690 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: stopped at time: 44 us
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9970 kB (elbread=427 elab2=9250 kernel=292 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:34 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 44000 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 40 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 50 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 60 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 690 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 700 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/k_mac,  Process: line__73.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 710 ns,  Iteration: 1,  Instance: /tb_image_filter/filter/dilate,  Process: line__58.
+# KERNEL: stopped at time: 44 us
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 9970 kB (elbread=427 elab2=9250 kernel=292 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  1:34 PM, Tuesday, January 31, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/im

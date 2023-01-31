@@ -18,6 +18,7 @@ entity image_filter is
 		not_enable	: IN std_logic;
 		pixel_in	: IN std_logic_vector(DATA_WIDTH-1 downto 0);
 		filter_sel	: IN std_logic_vector(1 downto 0);
+		type_sel	: IN std_logic_vector(1 downto 0);
 		pixel_out	: OUT std_logic_vector(DATA_WIDTH-1 downto 0);		  
 		counter_out	: OUT std_logic_vector(17 downto 0) := (others => '0');
 		out_valid	: OUT std_logic := '0'
@@ -51,16 +52,58 @@ architecture behavioral of image_filter is
 	port(
 		clock		: IN std_logic;
 		not_enable	: IN std_logic;
-		top0			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		top1			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		top2			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		mid0			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		mid1			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		mid2			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		bot0			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		bot1			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		bot2			: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 		filter_sel	: IN std_logic_vector(1 downto 0);
+		sum_out		: OUT std_logic_vector(DATA_WIDTH-1 downto 0)
+		);
+	end component;
+	
+	-- erosion component
+	component kernel_erosion
+	generic(
+		DATA_WIDTH		: integer := DATA_WIDTH
+		);
+	port(
+		clock		: IN std_logic;
+		not_enable	: IN std_logic;
+		top0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		sum_out		: OUT std_logic_vector(DATA_WIDTH-1 downto 0)
+		);
+	end component;
+	
+	-- dilation component
+	component kernel_dilation
+	generic(
+		DATA_WIDTH		: integer := DATA_WIDTH
+		);
+	port(
+		clock		: IN std_logic;
+		not_enable	: IN std_logic;
+		top0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		top2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		mid2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+		bot2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 		sum_out		: OUT std_logic_vector(DATA_WIDTH-1 downto 0)
 		);
 	end component;
@@ -89,6 +132,10 @@ architecture behavioral of image_filter is
 	signal bot2_reg : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 	
 	signal kernel_out_reg : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+	
+	signal erosion_out_reg : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0'); 
+	
+	signal dilation_out_reg : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 	
 	signal stage_3_enable : std_logic := '0';
 	
@@ -157,6 +204,44 @@ begin
 		bot2 => bot2_reg,
 		filter_sel => filter_sel,
 		sum_out => kernel_out_reg
+	);
+	
+	-- erosion
+	erode: kernel_erosion generic map (
+		DATA_WIDTH => DATA_WIDTH
+	)
+	port map (
+		clock => clock,
+		not_enable => kernel_not_enable,
+		top0 => top0_reg,
+		top1 => top1_reg,
+		top2 => top2_reg,
+		mid0 => mid0_reg,
+		mid1 => mid1_reg,
+		mid2 => mid2_reg,
+		bot0 => bot0_reg,
+		bot1 => bot1_reg,
+		bot2 => bot2_reg,
+		sum_out => erosion_out_reg
+	);
+	
+	-- dilation
+	dilate: kernel_dilation generic map (
+		DATA_WIDTH => DATA_WIDTH
+	)
+	port map (
+		clock => clock,
+		not_enable => kernel_not_enable,
+		top0 => top0_reg,
+		top1 => top1_reg,
+		top2 => top2_reg,
+		mid0 => mid0_reg,
+		mid1 => mid1_reg,
+		mid2 => mid2_reg,
+		bot0 => bot0_reg,
+		bot1 => bot1_reg,
+		bot2 => bot2_reg,
+		sum_out => dilation_out_reg
 	);
 	
 	-- stage 0: async enable
@@ -244,7 +329,14 @@ begin
 			else null;
 			end if;
 			
-			pixel_out <= kernel_out_reg;
+			case type_sel is 
+					when "00" => pixel_out <= kernel_out_reg;
+					when "01" => pixel_out <= erosion_out_reg;	   -- type_sel = 01 => erosion
+					when "10" => pixel_out <= dilation_out_reg;   -- type_sel = 10 => dilation
+					when "11" => pixel_out <= kernel_out_reg;
+					when others => pixel_out <= kernel_out_reg;
+				end case;
+			
 			
 			if ((j > 0) and (j < (IMAGE_WIDTH-1)) and (i > 0) and (i < (IMAGE_HEIGHT-1))) then
 				out_valid <= '1';

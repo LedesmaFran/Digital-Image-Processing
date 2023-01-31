@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2023-01-30 20:42:42
+Active-HDL 13.0.376.8320 2023-01-31 13:34:44
 
 Elaboration top modules:
 Architecture                  behavior(tb_image_filter)
@@ -9,9 +9,12 @@ Entity          | Architecture | Library        | Info | Compiler Version       
 ---------------------------------------------------------------------------------------------------------
 tb_image_filter | behavior     | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
 RAM_block       | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
+binarization    | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
 image_filter    | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
 fifo            | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
 kernel_mac      | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
+kernel_erosion  | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
+kernel_dilation | behavioral   | images_in_fpga |      | 13.0.376.8320 (Windows64) | -dbg
 ---------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------
@@ -33,3 +36,9 @@ ieee                           | Standard IEEE packages library
 images_in_fpga                 | None
 std                            | Standard VHDL library
 ---------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+tb_image_filter tb_image_filter behavior
+
+
+The performance of simulation is reduced. Version Student Edition

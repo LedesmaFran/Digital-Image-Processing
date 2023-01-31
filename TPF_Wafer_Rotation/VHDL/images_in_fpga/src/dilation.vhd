@@ -19,7 +19,6 @@ entity kernel_dilation is
 		bot0		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 		bot1		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 		bot2		: IN std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-		filter_sel	: IN std_logic_vector(1 downto 0);
 		sum_out		: OUT std_logic_vector(DATA_WIDTH-1 downto 0)
 		);
 end kernel_dilation;
@@ -27,15 +26,15 @@ end kernel_dilation;
 architecture behavioral of kernel_dilation is
 
 	--products
-	signal prod0 : integer := 0; 
-	signal prod1 : integer := 0;
-	signal prod2 : integer := 0;
-	signal prod3 : integer := 0; 
-	signal prod4 : integer := 0;
-	signal prod5 : integer := 0;
-	signal prod6 : integer := 0; 
-	signal prod7 : integer := 0;
-	signal prod8 : integer := 0;
+	signal prod0 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0'); 
+	signal prod1 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+	signal prod2 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+	signal prod3 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+	signal prod4 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+	signal prod5 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+	signal prod6 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0'); 
+	signal prod7 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+	signal prod8 : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 	
 	--sum
 	signal sum : integer := 0;
@@ -46,25 +45,33 @@ architecture behavioral of kernel_dilation is
 	signal isNegative			: std_logic := '0';
 	
 	--kernel values
-	type kernel_type is array (0 to 8) of integer;
+	type kernel_type is array (0 to 8) of std_logic_vector(DATA_WIDTH-1 downto 0);
 	
-	constant dilation_filter : kernel_type := (0,1,0,
-										  	   1,1,1,
-										  	   0,1,0);
+	constant dilation_filter : kernel_type := ((others => '0'),(others => '1'),(others => '0'),
+										  	  (others => '1'),(others => '1'),(others => '1'),
+										  	  (others => '0'),(others => '1'),(others => '0'));
 	
 	constant ceil  	: positive := (2**DATA_WIDTH)-1;
 	constant floor 	: integer  := 0;
 	
 begin
-	process (clock, not_enable, filter_sel, top0, top1, top2, mid0, mid1, mid2, bot0, bot1, bot2)
+	process (clock, not_enable, top0, top1, top2, mid0, mid1, mid2, bot0, bot1, bot2)
 	begin
 		if (rising_edge(clock)) then			
 			if (not_enable = '0') then
 				
-				-- modify for dilation
-
+				-- dilation
+				prod0 <= top0 and dilation_filter(0);
+				prod1 <= top1 and dilation_filter(1);
+				prod2 <= top2 and dilation_filter(2);
+				prod3 <= mid0 and dilation_filter(3);
+				prod4 <= mid1 and dilation_filter(4);
+				prod5 <= mid2 and dilation_filter(5);
+				prod6 <= bot0 and dilation_filter(6);
+				prod7 <= bot1 and dilation_filter(7);
+				prod8 <= bot2 and dilation_filter(8);
 				
-				sum <= prod0 + prod1 + prod2 + prod3 + prod4 + prod5 + prod6 + prod7 + prod8;
+				sum <= to_integer(unsigned(prod1 or prod3 or prod4 or prod5 or prod7));
 				
 				sum_signed <= std_logic_vector(to_signed(sum, (DATA_WIDTH*2)));
 		
