@@ -8,8 +8,8 @@ ENTITY tb_image_filter IS
 	GENERIC (
 	    ADDR_WIDTH     		: integer := 16;        
 	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 64+2;
-		IMAGE_WIDTH			: integer := 64+2;
+	    IMAGE_HEIGHT		: integer := 64+4;
+		IMAGE_WIDTH			: integer := 64+4;
 		IMAGE_FILE_NAME 	: string  := "testwafer_1_gray.mif"       
   	);
 END tb_image_filter;
@@ -75,7 +75,7 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	signal enable			: std_logic := '1';
 	signal data_out			: std_logic_vector(DATA_WIDTH-1 downto 0);
 	signal filter_sel 		: std_logic_vector(1 downto 0) := "00";
-	signal type_sel 		: std_logic_vector(1 downto 0) := "10";	 -- 00 => kernel / 01 => erosion / 10 => dilation 
+	signal type_sel 		: std_logic_vector(1 downto 0) := "01";	 -- 00 => kernel / 01 => erosion / 10 => dilation 
 	signal counter_out		: std_logic_vector(17 downto 0);
 	signal out_valid		: std_logic;
 	
@@ -156,7 +156,7 @@ BEGIN
 
 	-- Output process
 	out_proc: process (clock)
-	file test_vector 	: text open write_mode is "wafer_bin_dilation_test.txt";
+	file test_vector 	: text open write_mode is "wafer_dilated.txt";
 	variable row      	: line;
    	begin
 		if (rising_edge(clock)) then

@@ -10,3 +10,4 @@ i<>.\src\RAM_block.vhd
 i<>.\src\register.vhd
 i<>.\src\erosion.vhd
 i<>.\src\dilation.vhd
+i<>.\src\tb_double_filter.vhd

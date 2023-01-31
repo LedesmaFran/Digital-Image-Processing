@@ -10,4 +10,5 @@
 "D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd" VHDL images_in_fpga 1 0 0 -02
 "D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd" VHDL images_in_fpga 1 0 0 -02
 "D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd" VHDL images_in_fpga 1 0 0 -02
 . . 0 0 0

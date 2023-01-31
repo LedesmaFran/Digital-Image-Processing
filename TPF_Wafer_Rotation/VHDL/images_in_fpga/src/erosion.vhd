@@ -47,9 +47,9 @@ architecture behavioral of kernel_erosion is
 	--kernel values
 	type kernel_type is array (0 to 8) of std_logic_vector(DATA_WIDTH-1 downto 0);
 	
-	constant erosion_filter : kernel_type := ((others => '0'),(others => '1'),(others => '0'),
+	constant erosion_filter : kernel_type := ((others => '1'),(others => '1'),(others => '1'),
 										  	  (others => '1'),(others => '1'),(others => '1'),
-										  	  (others => '0'),(others => '1'),(others => '0'));
+										  	  (others => '1'),(others => '1'),(others => '1'));
 	
 	constant ceil  	: positive := (2**DATA_WIDTH)-1;
 	constant floor 	: integer  := 0;
@@ -71,7 +71,7 @@ begin
 				prod7 <= bot1 and erosion_filter(7);
 				prod8 <= bot2 and erosion_filter(8);
 				
-				sum <= to_integer(unsigned(prod1 and prod3 and prod4 and prod5 and prod7));
+				sum <= to_integer(unsigned(prod0 and prod1 and prod2 and prod3 and prod4 and prod5 and prod7 and prod8));
 				
 				sum_signed <= std_logic_vector(to_signed(sum, (DATA_WIDTH*2)));
 		

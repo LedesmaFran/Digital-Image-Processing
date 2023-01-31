@@ -10,3 +10,4 @@
 .\src\register.vhd
 .\src\erosion.vhd
 .\src\dilation.vhd
+.\src\tb_double_filter.vhd

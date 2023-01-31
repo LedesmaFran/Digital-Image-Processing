@@ -25,7 +25,8 @@ begin
 			else
 				data_out <= (others => '0');
 			end if;
-		else null; 
+		else 
+			data_out <= data_in; 
 		end if;
 	end process;	
 end behavioral;

@@ -3,9 +3,9 @@ D:\Documents\Aldec\vlib\std/src/standard.vhd=S
 D:\Documents\Aldec\vlib\std/src/textio.vhd=S
 D:\Documents\Aldec\vlib\ieee/src/std_logic_1164.vhdl=S
 D:\Documents\Aldec\vlib\ieee/src/std_logic_1164-body.vhdl=S
-D:\Documents\Aldec\vlib\ieee/src/textio.vhd=S
 D:\Documents\Aldec\vlib\ieee/src/numeric_std.vhdl=S
 D:\Documents\Aldec\vlib\ieee/src/numeric_std-body.vhdl=S
+D:\Documents\Aldec\vlib\ieee/src/textio.vhd=S
 D:\Documents\Aldec\vlib\ieee/src/arith_p.vhd=S
 D:\Documents\Aldec\vlib\ieee/src/arith_b.vhd=S
 D:\Documents\Aldec\vlib\ieee/src/unsigned_p.vhd=S
@@ -17,4 +17,4 @@ D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fp
 D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga/src/image_filter.vhd=S
 D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga/src/binarization.vhd=S
 D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga/src/RAM_block.vhd=S
-D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga/src/tb_image_filter.vhd=S
+D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga/src/tb_double_filter.vhd=S

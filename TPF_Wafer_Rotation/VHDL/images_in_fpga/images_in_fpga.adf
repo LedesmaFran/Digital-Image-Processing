@@ -42,6 +42,8 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 /..\..\..\..\AldecFiles\image_in_fpga\images_in_fpga\src\filter_test_wave.awc=-1
 /erosion.vhd=-1
 /dilation.vhd=-1
+/tb_double_filter.vhd=-1
+/double_filter_test_wave.awc=-1
 [Files.Data]
 .\src\read_image_tb.vhd=VHDL Source Code
 .\src\read_image.vhd=VHDL Source Code
@@ -56,6 +58,8 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 .\..\..\..\AldecFiles\image_in_fpga\images_in_fpga\src\filter_test_wave.awc=Accelerated Waveform Configuration
 .\src\erosion.vhd=VHDL Source Code
 .\src\dilation.vhd=VHDL Source Code
+.\src\tb_double_filter.vhd=VHDL Source Code
+.\src\double_filter_test_wave.awc=Accelerated Waveform Configuration
 [HierarchyViewer]
 HierarchyInformation=tb_image_filter|behavior|0
 ShowHide=ShowTopLevel

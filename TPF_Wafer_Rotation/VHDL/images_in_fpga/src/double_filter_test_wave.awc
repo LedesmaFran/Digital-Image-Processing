@@ -1,0 +1,53 @@
+<config>
+    <version>
+        3.1
+    </version>
+    <comment>
+    </comment>
+    <databases>
+        <database id="">*virtual*</database>
+        <database id="88d7f6351f7f1b56d9639a4243090b00">wave.asdb</database>
+    </databases>
+    <gridshown/>
+    <signallists>
+        <signallist id="0">
+        <signal>/tb_image_double_filter/clock</signal>
+        <signal>/tb_image_double_filter/enable</signal>
+        <signal>/tb_image_double_filter/bin_out</signal>
+        <signal>/tb_image_double_filter/data_out</signal>
+        <signal>/tb_image_double_filter/counter_out</signal>
+        <signal>/tb_image_double_filter/out_valid</signal>
+        <signal>/tb_image_double_filter/enable2</signal>
+        <signal>/tb_image_double_filter/data_out2</signal>
+        <signal>/tb_image_double_filter/counter_out2</signal>
+        <signal>/tb_image_double_filter/out_valid2</signal>
+        </signallist>
+    </signallists>
+    <timebases>
+        <timebase id="0">
+            <time start_time="0" end_time="44916672" />
+        </timebase>
+    </timebases>
+    <prefbases>
+        <prefbase id="0" >
+        </prefbase>
+    </prefbases>
+    <bookmarkbases>
+        <bookmarks id="0">
+        </bookmarks>
+    </bookmarkbases>
+    <cursorbases>
+        <cursors id="0">
+            <cursor value="0" label="Cursor 1" locked="0" />
+        </cursors>
+    </cursorbases>
+    <measurementbases>
+    </measurementbases>
+    <commentbases>
+        <comments id="0">
+        </comments>
+    </commentbases>
+    <views>
+        <view signallist="0" propertybase="0" prefbase="0" type="1" bookmarks="0" cursors="0" measurements="-1" comments="-1" />
+    </views>
+</config>
