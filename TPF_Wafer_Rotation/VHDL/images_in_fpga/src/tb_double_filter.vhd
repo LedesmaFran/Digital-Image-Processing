@@ -8,8 +8,8 @@ ENTITY tb_image_double_filter IS
 	GENERIC (
 	    ADDR_WIDTH     		: integer := 16;        
 	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 64+4;
-		IMAGE_WIDTH			: integer := 64+4;
+	    IMAGE_HEIGHT		: integer := 256+4;
+		IMAGE_WIDTH			: integer := 256+4;
 		IMAGE_FILE_NAME 	: string  := "wafer_gray.mif"       
   	);
 END tb_image_double_filter;

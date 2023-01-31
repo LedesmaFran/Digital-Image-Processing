@@ -6,18 +6,24 @@
     </comment>
     <databases>
         <database id="">*virtual*</database>
-        <database id="88d7f6351f7f1b56d9639a4243090b00">wave.asdb</database>
+        <database id="88d7f6351f7f2f91d96339062a0a3d00">wave.asdb</database>
     </databases>
     <gridshown/>
     <signallists>
         <signallist id="0">
-        <signal>/tb_image_double_filter/clock</signal>
         <signal>/tb_image_double_filter/enable</signal>
+        <signal>/tb_image_double_filter/q_reg</signal>
+        <signal>/tb_image_double_filter/q</signal>
         <signal>/tb_image_double_filter/bin_out</signal>
         <signal>/tb_image_double_filter/data_out</signal>
         <signal>/tb_image_double_filter/counter_out</signal>
         <signal>/tb_image_double_filter/out_valid</signal>
+        <signal>/tb_image_double_filter/re2</signal>
         <signal>/tb_image_double_filter/enable2</signal>
+        <signal>/tb_image_double_filter/clock</signal>
+        <signal>/tb_image_double_filter/rdaddress2</signal>
+        <signal>/tb_image_double_filter/q_reg2</signal>
+        <signal>/tb_image_double_filter/q2</signal>
         <signal>/tb_image_double_filter/data_out2</signal>
         <signal>/tb_image_double_filter/counter_out2</signal>
         <signal>/tb_image_double_filter/out_valid2</signal>
@@ -25,7 +31,7 @@
     </signallists>
     <timebases>
         <timebase id="0">
-            <time start_time="0" end_time="44916672" />
+            <time start_time="0" end_time="1371999988" />
         </timebase>
     </timebases>
     <prefbases>
@@ -38,7 +44,7 @@
     </bookmarkbases>
     <cursorbases>
         <cursors id="0">
-            <cursor value="0" label="Cursor 1" locked="0" />
+            <cursor value="1344000000" label="Cursor 1" locked="0" />
         </cursors>
     </cursorbases>
     <measurementbases>
