@@ -8,9 +8,9 @@ ENTITY tb_image_filter IS
 	GENERIC (
 	    ADDR_WIDTH     		: integer := 16;        
 	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 256+2;
-		IMAGE_WIDTH			: integer := 256+2;
-		IMAGE_FILE_NAME 	: string  := "lena.mif"       
+	    IMAGE_HEIGHT		: integer := 64+2;
+		IMAGE_WIDTH			: integer := 64+2;
+		IMAGE_FILE_NAME 	: string  := ".mif"       
   	);
 END tb_image_filter;
 
@@ -36,7 +36,6 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	COMPONENT binarization is
 	PORT (
 		not_enable	: IN STD_LOGIC;
-		clock		: IN STD_LOGIC;
 		data_in		: IN std_logic_vector ((DATA_WIDTH-1) DOWNTO 0);
 		data_out	: OUT std_logic_vector ((DATA_WIDTH-1) DOWNTO 0)
 	);
@@ -69,7 +68,7 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	signal q 			: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 
    	-- Clock period definitions
-   	constant clock_period 	: time := 1 ns;
+   	constant clock_period 	: time := 10 ns;
    	
 	-- Filter signals
 	signal enable			: std_logic := '1';
@@ -78,9 +77,12 @@ ARCHITECTURE behavior OF tb_image_filter IS
 	signal counter_out		: std_logic_vector(17 downto 0);
 	signal out_valid		: std_logic;
 	
+	-- Binarization signals
+	signal bin_out			: std_logic_vector(DATA_WIDTH-1 downto 0);
+	
 	-- AUX signals
 	signal i 				: integer := 0;
-	signal q_reg			: std_logic_vector(DATA_WIDTH-1 downto 0);
+	signal q_reg			: std_logic_vector(DATA_WIDTH-1 downto 0); 
 	
 BEGIN
 	-- Read image in VHDL
@@ -101,12 +103,11 @@ BEGIN
 		q => q_reg
 	);
 	
-	--bin: binarization PORT MAP (
-	--	not_enable => enable,
-	--	clock => clock,
-	--	data_in => q,
-	--	data_out => data_out
-	--);
+	bin: binarization PORT MAP (
+		not_enable => enable,
+		data_in => q,
+		data_out => bin_out
+	);
 	
 	filter : image_filter GENERIC MAP (
 		IMAGE_HEIGHT => IMAGE_HEIGHT,
@@ -119,7 +120,7 @@ BEGIN
 		filter_sel => filter_sel,
 		not_enable => enable,
 		clock => clock,
-		pixel_in => q,
+		pixel_in => bin_out,
 		pixel_out => data_out,
 		counter_out => counter_out,
 		out_valid => out_valid
@@ -152,7 +153,7 @@ BEGIN
 
 	-- Output process
 	out_proc: process (clock)
-	file test_vector 	: text open write_mode is "lena_edge_test.txt";
+	file test_vector 	: text open write_mode is "bin_and_filter_test.txt";
 	variable row      	: line;
    	begin
 		if (rising_edge(clock)) then

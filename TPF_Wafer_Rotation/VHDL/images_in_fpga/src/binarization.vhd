@@ -10,26 +10,22 @@ entity binarization is
 	);
 	port(
 		not_enable	: IN STD_LOGIC;
-		clock		: IN STD_LOGIC;
 		data_in		: IN std_logic_vector ((DATA_WIDTH-1) DOWNTO 0);
 		data_out	: OUT std_logic_vector ((DATA_WIDTH-1) DOWNTO 0)
 	);
 end binarization;
 
 architecture behavioral of binarization is
-
+begin
+	process (not_enable, data_in)
 	begin
-		process (clock, not_enable, data_in)
-		begin
-			if (not_enable = '0') then
-				if (rising_edge(clock)) then
-					if (unsigned(data_in) >= THRESHOLD) then
-						data_out <= x"ff";
-					else
-						data_out <= x"00";
-					end if;
-				end if;
-			else null;	
+		if (not_enable = '0') then
+			if (unsigned(data_in) >= THRESHOLD) then
+				data_out <= x"ff";
+			else
+				data_out <= x"00";
 			end if;
-		end process;	
+		else null; 
+		end if;
+	end process;	
 end behavioral;

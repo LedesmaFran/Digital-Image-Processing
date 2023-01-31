@@ -29,7 +29,6 @@ ARCHITECTURE behavior OF tb_read_image_vhdl IS
 	COMPONENT binarization is
 	PORT (
 		not_enable	: IN STD_LOGIC;
-		clock		: IN STD_LOGIC;
 		data_in		: IN std_logic_vector ((DATA_WIDTH-1) DOWNTO 0);
 		data_out	: OUT std_logic_vector ((DATA_WIDTH-1) DOWNTO 0)
 	);
@@ -68,7 +67,6 @@ BEGIN
 	
 	bin: binarization PORT MAP (
 		not_enable => enable,
-		clock => clock,
 		data_in => q,
 		data_out => data_out
 	);

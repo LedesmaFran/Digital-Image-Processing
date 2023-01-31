@@ -40,6 +40,8 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 /RAM_block.vhd=-1
 /register.vhd=-1
 /..\..\..\..\AldecFiles\image_in_fpga\images_in_fpga\src\filter_test_wave.awc=-1
+/erosion.vhd=-1
+/dilation.vhd=-1
 [Files.Data]
 .\src\read_image_tb.vhd=VHDL Source Code
 .\src\read_image.vhd=VHDL Source Code
@@ -52,6 +54,8 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 .\src\RAM_block.vhd=VHDL Source Code
 .\src\register.vhd=VHDL Source Code
 .\..\..\..\AldecFiles\image_in_fpga\images_in_fpga\src\filter_test_wave.awc=Accelerated Waveform Configuration
+.\src\erosion.vhd=VHDL Source Code
+.\src\dilation.vhd=VHDL Source Code
 [HierarchyViewer]
 HierarchyInformation=tb_image_filter|behavior|0
 ShowHide=ShowTopLevel

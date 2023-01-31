@@ -8,3 +8,5 @@
 .\src\tb_image_filter.vhd
 .\src\RAM_block.vhd
 .\src\register.vhd
+.\src\erosion.vhd
+.\src\dilation.vhd

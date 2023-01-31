@@ -8,3 +8,5 @@ i<>.\src\kernel_multiply_adder.vhd
 i<>.\src\tb_image_filter.vhd
 i<>.\src\RAM_block.vhd
 i<>.\src\register.vhd
+i<>.\src\erosion.vhd
+i<>.\src\dilation.vhd
