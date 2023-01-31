@@ -47,9 +47,9 @@ architecture behavioral of kernel_dilation is
 	--kernel values
 	type kernel_type is array (0 to 8) of std_logic_vector(DATA_WIDTH-1 downto 0);
 	
-	constant dilation_filter : kernel_type := ((others => '0'),(others => '1'),(others => '0'),
-										  	  (others => '1'),(others => '1'),(others => '1'),
-										  	  (others => '0'),(others => '1'),(others => '0'));
+	constant dilation_filter : kernel_type := ((others => '1'),(others => '1'),(others => '1'),
+										  	   (others => '1'),(others => '1'),(others => '1'),
+										  	   (others => '1'),(others => '1'),(others => '1'));
 	
 	constant ceil  	: positive := (2**DATA_WIDTH)-1;
 	constant floor 	: integer  := 0;
@@ -71,7 +71,7 @@ begin
 				prod7 <= bot1 and dilation_filter(7);
 				prod8 <= bot2 and dilation_filter(8);
 				
-				sum <= to_integer(unsigned(prod0 or prod1 or prod2 or prod3 or prod5 or prod7 or prod8));
+				sum <= to_integer(unsigned(prod0 or prod1 or prod2 or prod3 or prod4 or prod5 or prod6 or prod7 or prod8));
 				
 				sum_signed <= std_logic_vector(to_signed(sum, (DATA_WIDTH*2)));
 		
