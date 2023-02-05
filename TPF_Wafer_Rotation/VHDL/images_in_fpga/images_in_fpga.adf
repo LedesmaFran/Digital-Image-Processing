@@ -61,7 +61,7 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 .\src\tb_double_filter.vhd=VHDL Source Code
 .\src\double_filter_test_wave.awc=Accelerated Waveform Configuration
 [HierarchyViewer]
-HierarchyInformation=tb_image_filter|behavior|0
+HierarchyInformation=tb_image_double_filter|behavior|0
 ShowHide=ShowTopLevel
 Selected=
 [ORDER]

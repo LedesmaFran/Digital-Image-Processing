@@ -6,7 +6,7 @@
     </comment>
     <databases>
         <database id="">*virtual*</database>
-        <database id="88d7f6351f7f349fd9634ac8600a4200">wave.asdb</database>
+        <database id="88d7f6351f7f80a9d9637e00890a0100">wave.asdb</database>
     </databases>
     <gridshown/>
     <signallists>
@@ -54,6 +54,6 @@
         </comments>
     </commentbases>
     <views>
-        <view signallist="0" propertybase="0" prefbase="0" type="1" bookmarks="0" cursors="0" measurements="-1" comments="-1" />
+        <view signallist="0" propertybase="0" prefbase="-1" type="1" bookmarks="0" cursors="0" measurements="-1" comments="-1" />
     </views>
 </config>
