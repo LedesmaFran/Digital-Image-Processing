@@ -6,7 +6,7 @@ entity uart_RX is
 port( CLK: in std_logic;
 		RX_LINE: in std_logic;
 		DATA: out std_logic_vector(7 downto 0);
-		BUSY: out std_logic);
+		BUSY: out std_logic := '1');
 
 END uart_RX;
 
@@ -21,11 +21,13 @@ begin
 	process(CLK)
 	begin
 		if rising_edge(CLK) then
-			if(RX_FLG = '0' and RX_LINE = '0') then
-				INDEX<=0;
-				PRSCL<=0;
+			if(RX_FLG = '0') then
 				BUSY<='1';
-				RX_FLG<='1';
+				if(RX_LINE = '0') then
+					INDEX<=0;
+					PRSCL<=0;
+					RX_FLG<='1';
+				end if;
 			end if;
 	
 			if(RX_FLG='1')then
