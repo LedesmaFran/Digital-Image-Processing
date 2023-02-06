@@ -13,7 +13,7 @@ END uart_TX;
 
 architecture arch_TX of uart_TX is
 
-signal PRSCL: integer range 0 to 5802:=0;
+signal PRSCL: integer range 0 to 362:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
 signal TX_FLG: STD_LOGIC:='0';
@@ -30,13 +30,13 @@ BEGIN
 				end if;
 			
 				if(TX_FLG = '1')then
-					if(PRSCL<432)then	
+					if(PRSCL<27)then	
 						PRSCL <= PRSCL+1;
 					else
 						PRSCL <= 0;
 					end if;
 			
-					if(PRSCL = 216)then
+					if(PRSCL = 13)then
 						TX_LINE<=DATAFLL(INDEX);
 						if(INDEX<9)then
 							INDEX<=INDEX+1;

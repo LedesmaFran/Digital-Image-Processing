@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 320 544 488 560)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "UART_RXD" (rect 5 0 63 12)(font "Arial" ))
+	(text "UART_RXD" (rect 5 0 62 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -52,6 +52,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 256 560 320 584))
 )
 (pin
 	(output)
@@ -68,6 +69,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1712 552 1776 576))
 )
 (symbol
 	(rect 552 184 672 368)
@@ -541,10 +543,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1248 648)
 )
 (connector
-	(pt 832 264)
-	(pt 832 504)
-)
-(connector
 	(pt 832 504)
 	(pt 880 504)
 )
@@ -637,22 +635,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 536 536)
 )
 (connector
-	(pt 488 344)
-	(pt 504 344)
-)
-(connector
-	(pt 504 344)
-	(pt 552 344)
-)
-(connector
-	(pt 504 344)
-	(pt 504 536)
-)
-(connector
-	(pt 504 536)
-	(pt 504 648)
-)
-(connector
 	(pt 432 224)
 	(pt 432 240)
 )
@@ -680,11 +662,35 @@ https://fpgasoftware.intel.com/eula.
 	(pt 504 288)
 	(pt 504 304)
 )
+(connector
+	(pt 488 344)
+	(pt 552 344)
+)
+(connector
+	(pt 504 424)
+	(pt 832 424)
+)
+(connector
+	(pt 504 424)
+	(pt 504 536)
+)
+(connector
+	(pt 504 536)
+	(pt 504 648)
+)
+(connector
+	(pt 832 264)
+	(pt 832 424)
+)
+(connector
+	(pt 832 424)
+	(pt 832 504)
+)
 (junction (pt 504 304))
 (junction (pt 432 256))
 (junction (pt 432 272))
-(junction (pt 504 344))
-(junction (pt 504 536))
 (junction (pt 432 240))
 (junction (pt 504 208))
 (junction (pt 504 288))
+(junction (pt 504 536))
+(junction (pt 832 424))

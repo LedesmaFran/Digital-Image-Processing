@@ -1,14 +1,14 @@
-Fitter Status : Successful - Mon Feb  6 13:06:33 2023
+Fitter Status : Successful - Mon Feb  6 14:52:42 2023
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : Image_Filter_Tool
 Top-level Entity Name : top
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 8,092 / 22,320 ( 36 % )
-    Total combinational functions : 3,831 / 22,320 ( 17 % )
-    Dedicated logic registers : 4,609 / 22,320 ( 21 % )
-Total registers : 4609
+Total logic elements : 8,079 / 22,320 ( 36 % )
+    Total combinational functions : 3,820 / 22,320 ( 17 % )
+    Dedicated logic registers : 4,602 / 22,320 ( 21 % )
+Total registers : 4602
 Total pins : 3 / 154 ( 2 % )
 Total virtual pins : 0
 Total memory bits : 458,752 / 608,256 ( 75 % )
