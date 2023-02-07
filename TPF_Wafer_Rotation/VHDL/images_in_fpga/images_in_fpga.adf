@@ -44,6 +44,10 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 /dilation.vhd=-1
 /tb_double_filter.vhd=-1
 /double_filter_test_wave.awc=-1
+/Image_Filter_Tool.vhd=-1
+/uart_TX.vhd=-1
+/uart_RX.vhd=-1
+/tb_image_filter_tool.vhd=-1
 [Files.Data]
 .\src\read_image_tb.vhd=VHDL Source Code
 .\src\read_image.vhd=VHDL Source Code
@@ -60,6 +64,10 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 .\src\dilation.vhd=VHDL Source Code
 .\src\tb_double_filter.vhd=VHDL Source Code
 .\src\double_filter_test_wave.awc=Accelerated Waveform Configuration
+.\src\Image_Filter_Tool.vhd=VHDL Source Code
+.\src\uart_TX.vhd=VHDL Source Code
+.\src\uart_RX.vhd=VHDL Source Code
+.\src\tb_image_filter_tool.vhd=VHDL Source Code
 [HierarchyViewer]
 HierarchyInformation=tb_image_double_filter|behavior|0
 ShowHide=ShowTopLevel

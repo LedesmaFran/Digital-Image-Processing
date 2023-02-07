@@ -11,3 +11,7 @@ i<>.\src\register.vhd
 i<>.\src\erosion.vhd
 i<>.\src\dilation.vhd
 i<>.\src\tb_double_filter.vhd
+i<>.\src\Image_Filter_Tool.vhd
+i<>.\src\uart_TX.vhd
+i<>.\src\uart_RX.vhd
+i<>.\src\tb_image_filter_tool.vhd

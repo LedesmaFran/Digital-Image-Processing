@@ -251,7 +251,10 @@ begin
 			not_enable1 <= '0';
 			not_enable2 <= '0';
 			kernel_not_enable <= '0';
-		else null;
+		else 
+			not_enable1 <= '1';
+			not_enable2 <= '1';
+			kernel_not_enable <= '1';
 		end if;
 	end process;
 		
