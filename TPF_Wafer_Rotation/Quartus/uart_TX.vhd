@@ -8,7 +8,7 @@ PORT( CLK :IN STD_LOGIC;
 		START:IN STD_LOGIC;
 		BUSY:OUT STD_LOGIC;
 		DATA: IN STD_LOGIC_VECTOR(7 downto 0);
-		TX_LINE:OUT STD_LOGIC);
+		TX_LINE:OUT STD_LOGIC := '1');
 END uart_TX;
 
 architecture arch_TX of uart_TX is
