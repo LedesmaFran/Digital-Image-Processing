@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Image_Filter_Tool
-Mon Feb  6 21:14:44 2023
+Tue Feb  7 13:52:50 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -17,31 +17,33 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   9. General Register Statistics
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: 74161:inst10
- 13. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst
- 14. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|RAM_block:ram2
- 15. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|binarization:bin
- 16. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter
- 17. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|fifo:fifo1
- 18. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|fifo:fifo2
- 19. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|kernel_mac:k_mac
- 20. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|kernel_erosion:erode
- 21. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|kernel_dilation:dilate
- 22. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2
- 23. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo1
- 24. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo2
- 25. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|kernel_mac:k_mac
- 26. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|kernel_erosion:erode
- 27. Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|kernel_dilation:dilate
- 28. Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo2"
- 29. Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo1"
- 30. Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter2"
- 31. Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter|fifo:fifo2"
- 32. Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter|fifo:fifo1"
- 33. Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter"
- 34. Post-Synthesis Netlist Statistics for Top Partition
- 35. Elapsed Time Per Partition
- 36. Analysis & Synthesis Messages
+ 12. Parameter Settings for User Entity Instance: 74161:clk_prsclr
+ 13. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter
+ 14. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|RAM_block:ram2
+ 15. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|binarization:bin
+ 16. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter
+ 17. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|fifo:fifo1
+ 18. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|fifo:fifo2
+ 19. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|kernel_mac:k_mac
+ 20. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|kernel_erosion:erode
+ 21. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|kernel_dilation:dilate
+ 22. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2
+ 23. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo1
+ 24. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo2
+ 25. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|kernel_mac:k_mac
+ 26. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|kernel_erosion:erode
+ 27. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|kernel_dilation:dilate
+ 28. Parameter Settings for User Entity Instance: reg:pixel_in_reg
+ 29. Parameter Settings for User Entity Instance: reg:pixel_out_reg
+ 30. Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo2"
+ 31. Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo1"
+ 32. Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter2"
+ 33. Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter|fifo:fifo2"
+ 34. Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter|fifo:fifo1"
+ 35. Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -68,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb  6 21:14:44 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb  7 13:52:50 2023       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; Image_Filter_Tool                           ;
 ; Top-level Entity Name              ; top                                         ;
@@ -188,71 +190,72 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-; uart_TX.vhd                      ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd               ;         ;
-; uart_RX.vhd                      ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd               ;         ;
-; RAM_block.vhd                    ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/RAM_block.vhd             ;         ;
-; kernel_multiply_adder.vhd        ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/kernel_multiply_adder.vhd ;         ;
-; image_filter.vhd                 ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd          ;         ;
-; fifo.vhd                         ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/fifo.vhd                  ;         ;
-; erosion.vhd                      ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/erosion.vhd               ;         ;
-; dilation.vhd                     ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/dilation.vhd              ;         ;
-; binarization.vhd                 ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/binarization.vhd          ;         ;
-; Image_Filter_Tool.vhd            ; yes             ; User VHDL File                     ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd     ;         ;
-; top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/top.bdf                   ;         ;
-; 74161.tdf                        ; yes             ; Megafunction                       ; d:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/74161.tdf                           ;         ;
-; aglobal.inc                      ; yes             ; Megafunction                       ; d:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal.inc                           ;         ;
-; f74161.bdf                       ; yes             ; Megafunction                       ; d:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/f74161.bdf                          ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; uart_TX.vhd                      ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd               ;         ;
+; uart_RX.vhd                      ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd               ;         ;
+; register.vhd                     ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/register.vhd              ;         ;
+; RAM_block.vhd                    ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/RAM_block.vhd             ;         ;
+; kernel_multiply_adder.vhd        ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/kernel_multiply_adder.vhd ;         ;
+; image_filter.vhd                 ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd          ;         ;
+; fifo.vhd                         ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/fifo.vhd                  ;         ;
+; erosion.vhd                      ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/erosion.vhd               ;         ;
+; dilation.vhd                     ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/dilation.vhd              ;         ;
+; binarization.vhd                 ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/binarization.vhd          ;         ;
+; Image_Filter_Tool.vhd            ; yes             ; User VHDL File                     ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd     ;         ;
+; top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/top.bdf                   ;         ;
+; 74161.tdf                        ; yes             ; Megafunction                       ; d:/documents/quartus_lite/quartus/libraries/others/maxplus2/74161.tdf                            ;         ;
+; aglobal.inc                      ; yes             ; Megafunction                       ; d:/documents/quartus_lite/quartus/libraries/megafunctions/aglobal.inc                            ;         ;
+; f74161.bdf                       ; yes             ; Megafunction                       ; d:/documents/quartus_lite/quartus/libraries/others/maxplus2/f74161.bdf                           ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                               ;
-+---------------------------------------------+-----------------------------+
-; Resource                                    ; Usage                       ;
-+---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 93                          ;
-;                                             ;                             ;
-; Total combinational functions               ; 85                          ;
-; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 44                          ;
-;     -- 3 input functions                    ; 16                          ;
-;     -- <=2 input functions                  ; 25                          ;
-;                                             ;                             ;
-; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 69                          ;
-;     -- arithmetic mode                      ; 16                          ;
-;                                             ;                             ;
-; Total registers                             ; 60                          ;
-;     -- Dedicated logic registers            ; 60                          ;
-;     -- I/O registers                        ; 0                           ;
-;                                             ;                             ;
-; I/O pins                                    ; 5                           ;
-;                                             ;                             ;
-; Embedded Multiplier 9-bit elements          ; 0                           ;
-;                                             ;                             ;
-; Maximum fan-out node                        ; 74161:inst10|f74161:sub|104 ;
-; Maximum fan-out                             ; 56                          ;
-; Total fan-out                               ; 455                         ;
-; Average fan-out                             ; 2.94                        ;
-+---------------------------------------------+-----------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                   ;
++---------------------------------------------+---------------------------------+
+; Resource                                    ; Usage                           ;
++---------------------------------------------+---------------------------------+
+; Estimated Total logic elements              ; 93                              ;
+;                                             ;                                 ;
+; Total combinational functions               ; 85                              ;
+; Logic element usage by number of LUT inputs ;                                 ;
+;     -- 4 input functions                    ; 44                              ;
+;     -- 3 input functions                    ; 16                              ;
+;     -- <=2 input functions                  ; 25                              ;
+;                                             ;                                 ;
+; Logic elements by mode                      ;                                 ;
+;     -- normal mode                          ; 69                              ;
+;     -- arithmetic mode                      ; 16                              ;
+;                                             ;                                 ;
+; Total registers                             ; 60                              ;
+;     -- Dedicated logic registers            ; 60                              ;
+;     -- I/O registers                        ; 0                               ;
+;                                             ;                                 ;
+; I/O pins                                    ; 5                               ;
+;                                             ;                                 ;
+; Embedded Multiplier 9-bit elements          ; 0                               ;
+;                                             ;                                 ;
+; Maximum fan-out node                        ; 74161:clk_prsclr|f74161:sub|104 ;
+; Maximum fan-out                             ; 56                              ;
+; Total fan-out                               ; 455                             ;
+; Average fan-out                             ; 2.94                            ;
++---------------------------------------------+---------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-------------+--------------+
-; |top                       ; 85 (0)              ; 60 (0)                    ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |top                         ; top         ; work         ;
-;    |74161:inst10|          ; 5 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|74161:inst10            ; 74161       ; work         ;
-;       |f74161:sub|         ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|74161:inst10|f74161:sub ; f74161      ; work         ;
-;    |uart_RX:inst5|         ; 52 (52)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_RX:inst5           ; uart_RX     ; work         ;
-;    |uart_TX:inst6|         ; 28 (28)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_TX:inst6           ; uart_TX     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
+; |top                       ; 85 (0)              ; 60 (0)                    ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |top                             ; top         ; work         ;
+;    |74161:clk_prsclr|      ; 5 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|74161:clk_prsclr            ; 74161       ; work         ;
+;       |f74161:sub|         ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|74161:clk_prsclr|f74161:sub ; f74161      ; work         ;
+;    |uart_RX:RX|            ; 52 (52)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_RX:RX                  ; uart_RX     ; work         ;
+;    |uart_TX:TX|            ; 28 (28)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_TX:TX                  ; uart_TX     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -261,9 +264,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; uart_TX:inst6|DATAFLL[0]              ; Stuck at GND due to stuck port data_in ;
-; uart_TX:inst6|DATAFLL[9]              ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
+; uart_TX:TX|DATAFLL[0]                 ; Stuck at GND due to stuck port data_in ;
+; uart_TX:TX|DATAFLL[9]                 ; Stuck at VCC due to stuck port data_in ;
+; uart_TX:TX|BUSY                       ; Lost fanout                            ;
+; Total Number of Removed Registers = 3 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -287,135 +291,125 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; uart_TX:inst6|TX_LINE                  ; 1       ;
-; uart_RX:inst5|BUSY                     ; 4       ;
+; uart_TX:TX|TX_LINE                     ; 1       ;
+; uart_RX:RX|BUSY                        ; 4       ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart_RX:inst5|INDEX[1] ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|uart_RX:inst5|PRSCL[7] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart_RX:RX|INDEX[1]   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|uart_RX:RX|PRSCL[7]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: 74161:inst10 ;
-+------------------------+--------------+-------------------+
-; Parameter Name         ; Value        ; Type              ;
-+------------------------+--------------+-------------------+
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped           ;
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY        ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY      ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE      ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE    ;
-+------------------------+--------------+-------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: 74161:clk_prsclr ;
++------------------------+--------------+-----------------------+
+; Parameter Name         ; Value        ; Type                  ;
++------------------------+--------------+-----------------------+
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped               ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE        ;
++------------------------+--------------+-----------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst ;
-+-----------------+----------------+----------------------------------+
-; Parameter Name  ; Value          ; Type                             ;
-+-----------------+----------------+----------------------------------+
-; addr_width      ; 16             ; Signed Integer                   ;
-; data_width      ; 8              ; Signed Integer                   ;
-; image_height    ; 260            ; Signed Integer                   ;
-; image_width     ; 260            ; Signed Integer                   ;
-; image_file_name ; wafer_gray.mif ; String                           ;
-+-----------------+----------------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|RAM_block:ram2 ;
-+-----------------+----------------+-------------------------------------------------+
-; Parameter Name  ; Value          ; Type                                            ;
-+-----------------+----------------+-------------------------------------------------+
-; addr_width      ; 16             ; Signed Integer                                  ;
-; data_width      ; 8              ; Signed Integer                                  ;
-; image_height    ; 260            ; Signed Integer                                  ;
-; image_width     ; 260            ; Signed Integer                                  ;
-; image_file_name ; wafer_gray.mif ; String                                          ;
-+-----------------+----------------+-------------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter ;
++-----------------+----------------+------------------------------------+
+; Parameter Name  ; Value          ; Type                               ;
++-----------------+----------------+------------------------------------+
+; addr_width      ; 16             ; Signed Integer                     ;
+; data_width      ; 8              ; Signed Integer                     ;
+; image_height    ; 260            ; Signed Integer                     ;
+; image_width     ; 260            ; Signed Integer                     ;
+; image_file_name ; wafer_gray.mif ; String                             ;
++-----------------+----------------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|binarization:bin ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; THRESHOLD      ; 185   ; Signed Integer                                              ;
-; DATA_WIDTH     ; 8     ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|RAM_block:ram2 ;
++-----------------+----------------+---------------------------------------------------+
+; Parameter Name  ; Value          ; Type                                              ;
++-----------------+----------------+---------------------------------------------------+
+; addr_width      ; 16             ; Signed Integer                                    ;
+; data_width      ; 8              ; Signed Integer                                    ;
+; image_height    ; 260            ; Signed Integer                                    ;
+; image_width     ; 260            ; Signed Integer                                    ;
+; image_file_name ; wafer_gray.mif ; String                                            ;
++-----------------+----------------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; image_width    ; 260   ; Signed Integer                                                 ;
-; image_height   ; 260   ; Signed Integer                                                 ;
-; length_bits    ; 16    ; Signed Integer                                                 ;
-; kernel_width   ; 3     ; Signed Integer                                                 ;
-; data_width     ; 8     ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|binarization:bin ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; THRESHOLD      ; 185   ; Signed Integer                                                ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|fifo:fifo1 ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; length         ; 257   ; Signed Integer                                                            ;
-; length_bits    ; 16    ; Signed Integer                                                            ;
-; data_width     ; 8     ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; image_width    ; 260   ; Signed Integer                                                   ;
+; image_height   ; 260   ; Signed Integer                                                   ;
+; length_bits    ; 16    ; Signed Integer                                                   ;
+; kernel_width   ; 3     ; Signed Integer                                                   ;
+; data_width     ; 8     ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|fifo:fifo2 ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; length         ; 257   ; Signed Integer                                                            ;
-; length_bits    ; 16    ; Signed Integer                                                            ;
-; data_width     ; 8     ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|fifo:fifo1 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; length         ; 257   ; Signed Integer                                                              ;
+; length_bits    ; 16    ; Signed Integer                                                              ;
+; data_width     ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|kernel_mac:k_mac ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|fifo:fifo2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; length         ; 257   ; Signed Integer                                                              ;
+; length_bits    ; 16    ; Signed Integer                                                              ;
+; data_width     ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|kernel_erosion:erode ;
-+----------------+-------+-------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                                      ;
-+----------------+-------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|kernel_mac:k_mac ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter|kernel_dilation:dilate ;
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|kernel_erosion:erode ;
 +----------------+-------+---------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                  ;
 +----------------+-------+---------------------------------------------------------------------------------------+
@@ -424,66 +418,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2 ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; image_width    ; 258   ; Signed Integer                                                  ;
-; image_height   ; 258   ; Signed Integer                                                  ;
-; length_bits    ; 16    ; Signed Integer                                                  ;
-; kernel_width   ; 3     ; Signed Integer                                                  ;
-; data_width     ; 8     ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter|kernel_dilation:dilate ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo1 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; length         ; 255   ; Signed Integer                                                             ;
-; length_bits    ; 16    ; Signed Integer                                                             ;
-; data_width     ; 8     ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2 ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; image_width    ; 258   ; Signed Integer                                                    ;
+; image_height   ; 258   ; Signed Integer                                                    ;
+; length_bits    ; 16    ; Signed Integer                                                    ;
+; kernel_width   ; 3     ; Signed Integer                                                    ;
+; data_width     ; 8     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo2 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; length         ; 255   ; Signed Integer                                                             ;
-; length_bits    ; 16    ; Signed Integer                                                             ;
-; data_width     ; 8     ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; length         ; 255   ; Signed Integer                                                               ;
+; length_bits    ; 16    ; Signed Integer                                                               ;
+; data_width     ; 8     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|kernel_mac:k_mac ;
-+----------------+-------+----------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                             ;
-+----------------+-------+----------------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                                   ;
-+----------------+-------+----------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo2 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; length         ; 255   ; Signed Integer                                                               ;
+; length_bits    ; 16    ; Signed Integer                                                               ;
+; data_width     ; 8     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|kernel_erosion:erode ;
-+----------------+-------+--------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                 ;
-+----------------+-------+--------------------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                                       ;
-+----------------+-------+--------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|kernel_mac:k_mac ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Image_Filter_Tool:inst|image_filter:filter2|kernel_dilation:dilate ;
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|kernel_erosion:erode ;
 +----------------+-------+----------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                   ;
 +----------------+-------+----------------------------------------------------------------------------------------+
@@ -492,8 +486,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|image_filter:filter2|kernel_dilation:dilate ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:pixel_in_reg ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; data_width     ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:pixel_out_reg ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo2"                                    ;
+; Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo2"                                  ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -503,7 +527,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo1"                                    ;
+; Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo1"                                  ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -512,18 +536,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter2" ;
-+------------+-------+----------+-----------------------------------------+
-; Port       ; Type  ; Severity ; Details                                 ;
-+------------+-------+----------+-----------------------------------------+
-; filter_sel ; Input ; Info     ; Stuck at GND                            ;
-; type_sel   ; Input ; Info     ; Stuck at GND                            ;
-+------------+-------+----------+-----------------------------------------+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter2" ;
++------------+-------+----------+-------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                   ;
++------------+-------+----------+-------------------------------------------+
+; filter_sel ; Input ; Info     ; Stuck at GND                              ;
+; type_sel   ; Input ; Info     ; Stuck at GND                              ;
++------------+-------+----------+-------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter|fifo:fifo2"                                     ;
+; Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter|fifo:fifo2"                                   ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -533,7 +557,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter|fifo:fifo1"                                     ;
+; Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter|fifo:fifo1"                                   ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -542,14 +566,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "Image_Filter_Tool:inst|image_filter:filter" ;
-+------------+-------+----------+----------------------------------------+
-; Port       ; Type  ; Severity ; Details                                ;
-+------------+-------+----------+----------------------------------------+
-; filter_sel ; Input ; Info     ; Stuck at GND                           ;
-; type_sel   ; Input ; Info     ; Stuck at GND                           ;
-+------------+-------+----------+----------------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "Image_Filter_Tool:filter|image_filter:filter" ;
++------------+-------+----------+------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                  ;
++------------+-------+----------+------------------------------------------+
+; filter_sel ; Input ; Info     ; Stuck at GND                             ;
+; type_sel   ; Input ; Info     ; Stuck at GND                             ;
++------------+-------+----------+------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -582,7 +606,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -592,108 +616,109 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Feb  6 21:14:36 2023
+    Info: Processing started: Tue Feb  7 13:52:34 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Image_Filter_tool -c Image_Filter_Tool
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file uart_tx.vhd
-    Info (12022): Found design unit 1: uart_TX-arch_TX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd Line: 14
-    Info (12023): Found entity 1: uart_TX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd Line: 6
+    Info (12022): Found design unit 1: uart_TX-arch_TX File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd Line: 14
+    Info (12023): Found entity 1: uart_TX File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file uart_rx.vhd
-    Info (12022): Found design unit 1: uart_RX-atch_RX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 13
-    Info (12023): Found entity 1: uart_RX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 5
+    Info (12022): Found design unit 1: uart_RX-atch_RX File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 13
+    Info (12023): Found entity 1: uart_RX File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file tb_image_filter.vhd
-    Info (12022): Found design unit 1: tb_image_filter-behavior File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_image_filter.vhd Line: 17
-    Info (12023): Found entity 1: tb_image_filter File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_image_filter.vhd Line: 7
+    Info (12022): Found design unit 1: tb_image_filter-behavior File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_image_filter.vhd Line: 17
+    Info (12023): Found entity 1: tb_image_filter File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_image_filter.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file tb_fifo.vhd
-    Info (12022): Found design unit 1: tb_fifo-behavior File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_fifo.vhd Line: 16
-    Info (12023): Found entity 1: tb_fifo File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_fifo.vhd Line: 8
+    Info (12022): Found design unit 1: tb_fifo-behavior File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_fifo.vhd Line: 16
+    Info (12023): Found entity 1: tb_fifo File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_fifo.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file tb_double_filter.vhd
-    Info (12022): Found design unit 1: tb_image_double_filter-behavior File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_double_filter.vhd Line: 17
-    Info (12023): Found entity 1: tb_image_double_filter File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_double_filter.vhd Line: 7
+    Info (12022): Found design unit 1: tb_image_double_filter-behavior File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_double_filter.vhd Line: 17
+    Info (12023): Found entity 1: tb_image_double_filter File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_double_filter.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file register.vhd
-    Info (12022): Found design unit 1: reg-behavioral File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/register.vhd Line: 17
-    Info (12023): Found entity 1: reg File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/register.vhd Line: 5
+    Info (12022): Found design unit 1: reg-behavioral File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/register.vhd Line: 17
+    Info (12023): Found entity 1: reg File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/register.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file read_image_tb.vhd
-    Info (12022): Found design unit 1: tb_read_image_vhdl-behavior File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/read_image_tb.vhd Line: 17
-    Info (12023): Found entity 1: tb_read_image_vhdl File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/read_image_tb.vhd Line: 7
+    Info (12022): Found design unit 1: tb_read_image_vhdl-behavior File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/read_image_tb.vhd Line: 17
+    Info (12023): Found entity 1: tb_read_image_vhdl File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/read_image_tb.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file read_image.vhd
-    Info (12022): Found design unit 1: read_image_VHDL-rtl File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/read_image.vhd Line: 25
-    Info (12023): Found entity 1: read_image_VHDL File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/read_image.vhd Line: 6
+    Info (12022): Found design unit 1: read_image_VHDL-rtl File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/read_image.vhd Line: 25
+    Info (12023): Found entity 1: read_image_VHDL File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/read_image.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ram_block.vhd
-    Info (12022): Found design unit 1: RAM_block-behavioral File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/RAM_block.vhd Line: 25
-    Info (12023): Found entity 1: RAM_block File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/RAM_block.vhd Line: 6
+    Info (12022): Found design unit 1: RAM_block-behavioral File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/RAM_block.vhd Line: 25
+    Info (12023): Found entity 1: RAM_block File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/RAM_block.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file kernel_multiply_adder.vhd
-    Info (12022): Found design unit 1: kernel_mac-behavioral File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/kernel_multiply_adder.vhd Line: 27
-    Info (12023): Found entity 1: kernel_mac File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/kernel_multiply_adder.vhd Line: 6
+    Info (12022): Found design unit 1: kernel_mac-behavioral File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/kernel_multiply_adder.vhd Line: 27
+    Info (12023): Found entity 1: kernel_mac File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/kernel_multiply_adder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file image_filter.vhd
-    Info (12022): Found design unit 1: image_filter-behavioral File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 28
-    Info (12023): Found entity 1: image_filter File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 8
+    Info (12022): Found design unit 1: image_filter-behavioral File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 28
+    Info (12023): Found entity 1: image_filter File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file fifo.vhd
-    Info (12022): Found design unit 1: fifo-behavioral File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/fifo.vhd Line: 24
-    Info (12023): Found entity 1: fifo File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/fifo.vhd Line: 8
+    Info (12022): Found design unit 1: fifo-behavioral File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/fifo.vhd Line: 24
+    Info (12023): Found entity 1: fifo File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/fifo.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file erosion.vhd
-    Info (12022): Found design unit 1: kernel_erosion-behavioral File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/erosion.vhd Line: 26
-    Info (12023): Found entity 1: kernel_erosion File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/erosion.vhd Line: 6
+    Info (12022): Found design unit 1: kernel_erosion-behavioral File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/erosion.vhd Line: 26
+    Info (12023): Found entity 1: kernel_erosion File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/erosion.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file dilation.vhd
-    Info (12022): Found design unit 1: kernel_dilation-behavioral File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/dilation.vhd Line: 26
-    Info (12023): Found entity 1: kernel_dilation File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/dilation.vhd Line: 6
+    Info (12022): Found design unit 1: kernel_dilation-behavioral File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/dilation.vhd Line: 26
+    Info (12023): Found entity 1: kernel_dilation File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/dilation.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file binarization.vhd
-    Info (12022): Found design unit 1: binarization-behavioral File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/binarization.vhd Line: 18
-    Info (12023): Found entity 1: binarization File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/binarization.vhd Line: 6
+    Info (12022): Found design unit 1: binarization-behavioral File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/binarization.vhd Line: 18
+    Info (12023): Found entity 1: binarization File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/binarization.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file image_filter_tool.vhd
-    Info (12022): Found design unit 1: Image_Filter_Tool-behavior File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 26
-    Info (12023): Found entity 1: Image_Filter_Tool File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 7
+    Info (12022): Found design unit 1: Image_Filter_Tool-behavior File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 26
+    Info (12023): Found entity 1: Image_Filter_Tool File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file top.bdf
     Info (12023): Found entity 1: top
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (275043): Pin "out_clk" is missing source
-Warning (275008): Primitive "AND2" of instance "inst7" not used
-Warning (275008): Primitive "NOT" of instance "inst8" not used
-Info (12128): Elaborating entity "uart_TX" for hierarchy "uart_TX:inst6"
-Info (12128): Elaborating entity "74161" for hierarchy "74161:inst10"
-Info (12130): Elaborated megafunction instantiation "74161:inst10"
-Info (12128): Elaborating entity "f74161" for hierarchy "74161:inst10|f74161:sub" File: d:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/74161.tdf Line: 33
-Info (12131): Elaborated megafunction instantiation "74161:inst10|f74161:sub", which is child of megafunction instantiation "74161:inst10" File: d:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/74161.tdf Line: 33
-Info (12128): Elaborating entity "uart_RX" for hierarchy "uart_RX:inst5"
-Info (12128): Elaborating entity "Image_Filter_Tool" for hierarchy "Image_Filter_Tool:inst"
-Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(82): used explicit default value for signal "filter_sel" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 82
-Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(83): used explicit default value for signal "type_sel" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 83
-Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(90): used explicit default value for signal "filter_sel2" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 90
-Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(91): used explicit default value for signal "type_sel2" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 91
-Info (12128): Elaborating entity "RAM_block" for hierarchy "Image_Filter_Tool:inst|RAM_block:ram2" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 109
-Info (12128): Elaborating entity "binarization" for hierarchy "Image_Filter_Tool:inst|binarization:bin" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 126
-Info (12128): Elaborating entity "image_filter" for hierarchy "Image_Filter_Tool:inst|image_filter:filter" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 132
-Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(146): object "stack_full1" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 146
-Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(147): object "counter_out1" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 147
-Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(153): object "stack_full2" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 153
-Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(154): object "counter_out2" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 154
-Info (12128): Elaborating entity "fifo" for hierarchy "Image_Filter_Tool:inst|image_filter:filter|fifo:fifo1" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 162
-Info (12128): Elaborating entity "kernel_mac" for hierarchy "Image_Filter_Tool:inst|image_filter:filter|kernel_mac:k_mac" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 190
-Info (12128): Elaborating entity "kernel_erosion" for hierarchy "Image_Filter_Tool:inst|image_filter:filter|kernel_erosion:erode" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 210
-Warning (10036): Verilog HDL or VHDL warning at erosion.vhd(35): object "prod6" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/erosion.vhd Line: 35
-Info (12128): Elaborating entity "kernel_dilation" for hierarchy "Image_Filter_Tool:inst|image_filter:filter|kernel_dilation:dilate" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 229
-Info (12128): Elaborating entity "image_filter" for hierarchy "Image_Filter_Tool:inst|image_filter:filter2" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 150
-Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(146): object "stack_full1" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 146
-Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(147): object "counter_out1" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 147
-Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(153): object "stack_full2" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 153
-Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(154): object "counter_out2" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 154
-Info (12128): Elaborating entity "fifo" for hierarchy "Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo1" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 162
+Warning (275008): Primitive "VCC" of instance "inst15" not used
+Warning (275008): Primitive "DFF" of instance "out_valid_ff" not used
+Info (12128): Elaborating entity "uart_TX" for hierarchy "uart_TX:TX"
+Info (12128): Elaborating entity "74161" for hierarchy "74161:clk_prsclr"
+Info (12130): Elaborated megafunction instantiation "74161:clk_prsclr"
+Info (12128): Elaborating entity "f74161" for hierarchy "74161:clk_prsclr|f74161:sub" File: d:/documents/quartus_lite/quartus/libraries/others/maxplus2/74161.tdf Line: 33
+Info (12131): Elaborated megafunction instantiation "74161:clk_prsclr|f74161:sub", which is child of megafunction instantiation "74161:clk_prsclr" File: d:/documents/quartus_lite/quartus/libraries/others/maxplus2/74161.tdf Line: 33
+Info (12128): Elaborating entity "uart_RX" for hierarchy "uart_RX:RX"
+Info (12128): Elaborating entity "Image_Filter_Tool" for hierarchy "Image_Filter_Tool:filter"
+Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(82): used explicit default value for signal "filter_sel" because signal was never assigned a value File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 82
+Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(83): used explicit default value for signal "type_sel" because signal was never assigned a value File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 83
+Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(90): used explicit default value for signal "filter_sel2" because signal was never assigned a value File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 90
+Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(91): used explicit default value for signal "type_sel2" because signal was never assigned a value File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 91
+Info (12128): Elaborating entity "RAM_block" for hierarchy "Image_Filter_Tool:filter|RAM_block:ram2" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 109
+Info (12128): Elaborating entity "binarization" for hierarchy "Image_Filter_Tool:filter|binarization:bin" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 126
+Info (12128): Elaborating entity "image_filter" for hierarchy "Image_Filter_Tool:filter|image_filter:filter" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 132
+Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(146): object "stack_full1" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 146
+Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(147): object "counter_out1" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 147
+Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(153): object "stack_full2" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 153
+Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(154): object "counter_out2" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 154
+Info (12128): Elaborating entity "fifo" for hierarchy "Image_Filter_Tool:filter|image_filter:filter|fifo:fifo1" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 162
+Info (12128): Elaborating entity "kernel_mac" for hierarchy "Image_Filter_Tool:filter|image_filter:filter|kernel_mac:k_mac" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 190
+Info (12128): Elaborating entity "kernel_erosion" for hierarchy "Image_Filter_Tool:filter|image_filter:filter|kernel_erosion:erode" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 210
+Warning (10036): Verilog HDL or VHDL warning at erosion.vhd(35): object "prod6" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/erosion.vhd Line: 35
+Info (12128): Elaborating entity "kernel_dilation" for hierarchy "Image_Filter_Tool:filter|image_filter:filter|kernel_dilation:dilate" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 229
+Info (12128): Elaborating entity "image_filter" for hierarchy "Image_Filter_Tool:filter|image_filter:filter2" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 150
+Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(146): object "stack_full1" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 146
+Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(147): object "counter_out1" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 147
+Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(153): object "stack_full2" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 153
+Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(154): object "counter_out2" assigned a value but never read File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 154
+Info (12128): Elaborating entity "fifo" for hierarchy "Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo1" File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 162
+Info (12128): Elaborating entity "reg" for hierarchy "reg:pixel_in_reg"
 Info (13014): Ignored 4 buffer(s)
     Info (13015): Ignored 4 CARRY buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out_clk" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 93 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Mon Feb  6 21:14:44 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Tue Feb  7 13:52:50 2023
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:25
 
 

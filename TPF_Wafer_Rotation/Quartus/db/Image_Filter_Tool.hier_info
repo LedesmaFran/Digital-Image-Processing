@@ -1,12 +1,12 @@
 |top
-UART_TXD <= uart_TX:inst6.TX_LINE
-CLOCK_50 => 74161:inst10.CLK
-UART_RXD => uart_RX:inst5.RX_LINE
-start_led <= uart_RX:inst5.BUSY
-out_clk <= <GND>
+UART_TXD <= uart_TX:TX.TX_LINE
+CLOCK_50 => 74161:clk_prsclr.CLK
+UART_RXD => uart_RX:RX.RX_LINE
+start_led <= uart_RX:RX.BUSY
+out_clk <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|uart_TX:inst6
+|top|uart_TX:TX
 CLK => INDEX[0].CLK
 CLK => INDEX[1].CLK
 CLK => INDEX[2].CLK
@@ -46,7 +46,7 @@ DATA[7] => DATAFLL[8].DATAIN
 TX_LINE <= TX_LINE~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|74161:inst10
+|top|74161:clk_prsclr
 clk => f74161:sub.clk
 ldn => f74161:sub.ldn
 clrn => f74161:sub.clrn
@@ -63,7 +63,7 @@ qa <= f74161:sub.qa
 rco <= f74161:sub.rco
 
 
-|top|74161:inst10|f74161:sub
+|top|74161:clk_prsclr|f74161:sub
 RCO <= 105.DB_MAX_OUTPUT_PORT_TYPE
 CLRN => 110.ACLR
 CLRN => 99.ACLR
@@ -93,7 +93,7 @@ QB <= 87.DB_MAX_OUTPUT_PORT_TYPE
 QA <= 9.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|uart_RX:inst5
+|top|uart_RX:RX
 CLK => DATA[0]~reg0.CLK
 CLK => DATA[1]~reg0.CLK
 CLK => DATA[2]~reg0.CLK
@@ -162,7 +162,7 @@ DATA[7] <= DATA[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 BUSY <= BUSY~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst
+|top|Image_Filter_Tool:filter
 clock => RAM_block:ram2.clock
 clock => counter_out[0]~reg0.CLK
 clock => counter_out[1]~reg0.CLK
@@ -355,7 +355,7 @@ counter_out[17] <= counter_out[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out_valid <= out_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|RAM_block:ram2
+|top|Image_Filter_Tool:filter|RAM_block:ram2
 clock => ram_block~25.CLK
 clock => ram_block~0.CLK
 clock => ram_block~1.CLK
@@ -475,7 +475,7 @@ q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|binarization:bin
+|top|Image_Filter_Tool:filter|binarization:bin
 not_enable => data_out.OUTPUTSELECT
 not_enable => data_out.OUTPUTSELECT
 not_enable => data_out.OUTPUTSELECT
@@ -510,7 +510,7 @@ data_out[6] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter
+|top|Image_Filter_Tool:filter|image_filter:filter
 clock => fifo:fifo1.clock
 clock => out_valid~reg0.CLK
 clock => pixel_out[0]~reg0.CLK
@@ -956,7 +956,7 @@ counter_out[17] <= \Stage3:counter[17].DB_MAX_OUTPUT_PORT_TYPE
 out_valid <= out_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter|fifo:fifo1
+|top|Image_Filter_Tool:filter|image_filter:filter|fifo:fifo1
 not_enable => counter.OUTPUTSELECT
 not_enable => counter.OUTPUTSELECT
 not_enable => counter.OUTPUTSELECT
@@ -5153,7 +5153,7 @@ counter_out[14] <= counter[14].DB_MAX_OUTPUT_PORT_TYPE
 counter_out[15] <= counter[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter|fifo:fifo2
+|top|Image_Filter_Tool:filter|image_filter:filter|fifo:fifo2
 not_enable => counter.OUTPUTSELECT
 not_enable => counter.OUTPUTSELECT
 not_enable => counter.OUTPUTSELECT
@@ -9350,7 +9350,7 @@ counter_out[14] <= counter[14].DB_MAX_OUTPUT_PORT_TYPE
 counter_out[15] <= counter[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter|kernel_mac:k_mac
+|top|Image_Filter_Tool:filter|image_filter:filter|kernel_mac:k_mac
 clock => sum_out[0]~reg0.CLK
 clock => sum_out[1]~reg0.CLK
 clock => sum_out[2]~reg0.CLK
@@ -10543,7 +10543,7 @@ sum_out[6] <= sum_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sum_out[7] <= sum_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter|kernel_erosion:erode
+|top|Image_Filter_Tool:filter|image_filter:filter|kernel_erosion:erode
 clock => sum_out[0]~reg0.CLK
 clock => sum_out[1]~reg0.CLK
 clock => sum_out[2]~reg0.CLK
@@ -10848,7 +10848,7 @@ sum_out[6] <= sum_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sum_out[7] <= sum_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter|kernel_dilation:dilate
+|top|Image_Filter_Tool:filter|image_filter:filter|kernel_dilation:dilate
 clock => sum_out[0]~reg0.CLK
 clock => sum_out[1]~reg0.CLK
 clock => sum_out[2]~reg0.CLK
@@ -11167,7 +11167,7 @@ sum_out[6] <= sum_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sum_out[7] <= sum_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter2
+|top|Image_Filter_Tool:filter|image_filter:filter2
 clock => fifo:fifo1.clock
 clock => out_valid~reg0.CLK
 clock => pixel_out[0]~reg0.CLK
@@ -11613,7 +11613,7 @@ counter_out[17] <= \Stage3:counter[17].DB_MAX_OUTPUT_PORT_TYPE
 out_valid <= out_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo1
+|top|Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo1
 not_enable => counter.OUTPUTSELECT
 not_enable => counter.OUTPUTSELECT
 not_enable => counter.OUTPUTSELECT
@@ -15778,7 +15778,7 @@ counter_out[14] <= counter[14].DB_MAX_OUTPUT_PORT_TYPE
 counter_out[15] <= counter[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter2|fifo:fifo2
+|top|Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo2
 not_enable => counter.OUTPUTSELECT
 not_enable => counter.OUTPUTSELECT
 not_enable => counter.OUTPUTSELECT
@@ -19943,7 +19943,7 @@ counter_out[14] <= counter[14].DB_MAX_OUTPUT_PORT_TYPE
 counter_out[15] <= counter[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter2|kernel_mac:k_mac
+|top|Image_Filter_Tool:filter|image_filter:filter2|kernel_mac:k_mac
 clock => sum_out[0]~reg0.CLK
 clock => sum_out[1]~reg0.CLK
 clock => sum_out[2]~reg0.CLK
@@ -21136,7 +21136,7 @@ sum_out[6] <= sum_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sum_out[7] <= sum_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter2|kernel_erosion:erode
+|top|Image_Filter_Tool:filter|image_filter:filter2|kernel_erosion:erode
 clock => sum_out[0]~reg0.CLK
 clock => sum_out[1]~reg0.CLK
 clock => sum_out[2]~reg0.CLK
@@ -21441,7 +21441,7 @@ sum_out[6] <= sum_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sum_out[7] <= sum_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Image_Filter_Tool:inst|image_filter:filter2|kernel_dilation:dilate
+|top|Image_Filter_Tool:filter|image_filter:filter2|kernel_dilation:dilate
 clock => sum_out[0]~reg0.CLK
 clock => sum_out[1]~reg0.CLK
 clock => sum_out[2]~reg0.CLK
@@ -21758,5 +21758,75 @@ sum_out[4] <= sum_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sum_out[5] <= sum_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sum_out[6] <= sum_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sum_out[7] <= sum_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|reg:pixel_in_reg
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+clock => reg_output[0]~reg0.CLK
+clock => reg_output[1]~reg0.CLK
+clock => reg_output[2]~reg0.CLK
+clock => reg_output[3]~reg0.CLK
+clock => reg_output[4]~reg0.CLK
+clock => reg_output[5]~reg0.CLK
+clock => reg_output[6]~reg0.CLK
+clock => reg_output[7]~reg0.CLK
+reg_input[0] => reg_output.DATAA
+reg_input[1] => reg_output.DATAA
+reg_input[2] => reg_output.DATAA
+reg_input[3] => reg_output.DATAA
+reg_input[4] => reg_output.DATAA
+reg_input[5] => reg_output.DATAA
+reg_input[6] => reg_output.DATAA
+reg_input[7] => reg_output.DATAA
+reg_output[0] <= reg_output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[1] <= reg_output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[2] <= reg_output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[3] <= reg_output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[4] <= reg_output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[5] <= reg_output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[6] <= reg_output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[7] <= reg_output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|reg:pixel_out_reg
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+reset => reg_output.OUTPUTSELECT
+clock => reg_output[0]~reg0.CLK
+clock => reg_output[1]~reg0.CLK
+clock => reg_output[2]~reg0.CLK
+clock => reg_output[3]~reg0.CLK
+clock => reg_output[4]~reg0.CLK
+clock => reg_output[5]~reg0.CLK
+clock => reg_output[6]~reg0.CLK
+clock => reg_output[7]~reg0.CLK
+reg_input[0] => reg_output.DATAA
+reg_input[1] => reg_output.DATAA
+reg_input[2] => reg_output.DATAA
+reg_input[3] => reg_output.DATAA
+reg_input[4] => reg_output.DATAA
+reg_input[5] => reg_output.DATAA
+reg_input[6] => reg_output.DATAA
+reg_input[7] => reg_output.DATAA
+reg_output[0] <= reg_output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[1] <= reg_output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[2] <= reg_output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[3] <= reg_output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[4] <= reg_output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[5] <= reg_output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[6] <= reg_output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_output[7] <= reg_output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

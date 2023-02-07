@@ -7,9 +7,9 @@ entity reg is
 		DATA_WIDTH : integer := 8
 	);
 	port(
+		signal reg_input :in  std_logic_vector(DATA_WIDTH-1 downto 0) ;
 		signal reset: in std_logic;
 		signal clock: in std_logic;
-		signal reg_input :in  std_logic_vector(DATA_WIDTH-1 downto 0) ;
 		signal reg_output: out std_logic_vector(DATA_WIDTH-1 downto 0)
 	 );
 end reg;
