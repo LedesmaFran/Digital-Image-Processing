@@ -28,7 +28,7 @@
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
  --                  Bank 1:       2.5V
- --                  Bank 2:       2.5V
+ --                  Bank 2:       3.3V
  --                  Bank 3:       3.3V
  --                  Bank 4:       3.3V
  --                  Bank 5:       2.5V
@@ -83,7 +83,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
-start_led                    : A15       : output : 3.3-V LVTTL       :         : 7         : Y              
+tx_full                      : A15       : output : 3.3-V LVTTL       :         : 7         : Y              
 VCCIO7                       : A16       : power  :                   : 3.3V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
@@ -215,7 +215,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 2         :                
-VCCIO2                       : K3        : power  :                   : 2.5V    : 2         :                
+VCCIO2                       : K3        : power  :                   : 3.3V    : 2         :                
 GND                          : K4        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 2         :                
 GND                          : K6        : gnd    :                   :         :           :                
@@ -231,7 +231,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : K15       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : K16       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 2         :                
+rx_full                      : L3        : output : 3.3-V LVTTL       :         : 2         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 2         :                
 VCCA1                        : L5        : power  :                   : 2.5V    :           :                
 VCCINT                       : L6        : power  :                   : 1.2V    :           :                
@@ -247,7 +247,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : L15       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : L16       :        :                   :         : 5         :                
 GND+                         : M1        :        :                   :         : 2         :                
 GND+                         : M2        :        :                   :         : 2         :                
-VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
+VCCIO2                       : M3        : power  :                   : 3.3V    : 2         :                
 GND                          : M4        : gnd    :                   :         :           :                
 GNDA1                        : M5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3         :                
@@ -321,7 +321,7 @@ GND+                         : T9        :        :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 4         :                
 UART_TXD                     : T11       : output : 3.3-V LVTTL       :         : 4         : Y              
 UART_RXD                     : T12       : input  : 3.3-V LVTTL       :         : 4         : Y              
-out_clk                      : T13       : output : 3.3-V LVTTL       :         : 4         : Y              
+rx_clk                       : T13       : output : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 4         :                
 VCCIO4                       : T16       : power  :                   : 3.3V    : 4         :                

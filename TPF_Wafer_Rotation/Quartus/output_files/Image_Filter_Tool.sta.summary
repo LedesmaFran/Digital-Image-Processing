@@ -3,19 +3,19 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup '74161:clk_prsclr|f74161:sub|110'
-Slack : -1.404
-TNS   : -52.799
+Slack : -4.364
+TNS   : -1618.827
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -0.677
-TNS   : -0.684
+Slack : -0.675
+TNS   : -0.675
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.286
+Slack : 0.285
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold '74161:clk_prsclr|f74161:sub|110'
-Slack : 0.343
+Slack : 0.342
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
@@ -24,22 +24,22 @@ TNS   : -7.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width '74161:clk_prsclr|f74161:sub|110'
 Slack : -1.000
-TNS   : -60.000
+TNS   : -640.000
 
 Type  : Slow 1200mV 0C Model Setup '74161:clk_prsclr|f74161:sub|110'
-Slack : -1.173
-TNS   : -41.675
+Slack : -3.721
+TNS   : -1391.138
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
 Slack : -0.505
 TNS   : -0.505
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.257
+Slack : 0.256
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold '74161:clk_prsclr|f74161:sub|110'
-Slack : 0.299
+Slack : 0.298
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -48,22 +48,22 @@ TNS   : -7.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width '74161:clk_prsclr|f74161:sub|110'
 Slack : -1.000
-TNS   : -60.000
+TNS   : -640.000
 
 Type  : Fast 1200mV 0C Model Setup '74161:clk_prsclr|f74161:sub|110'
-Slack : -0.318
-TNS   : -6.829
+Slack : -2.114
+TNS   : -676.213
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.164
-TNS   : -0.164
+Slack : -0.161
+TNS   : -0.161
 
 Type  : Fast 1200mV 0C Model Hold '74161:clk_prsclr|f74161:sub|110'
-Slack : 0.179
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.186
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -72,6 +72,6 @@ TNS   : -8.015
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width '74161:clk_prsclr|f74161:sub|110'
 Slack : -1.000
-TNS   : -60.000
+TNS   : -640.000
 
 ------------------------------------------------------------
