@@ -13,20 +13,27 @@ END uart_TX;
 
 architecture arch_TX of uart_TX is
 
-signal PRSCL: integer range 0 to 362:=0;
+signal PRSCL: integer range 0 to 63:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
 signal TX_FLG: STD_LOGIC:='0';
+signal LAST_START: STD_LOGIC:='0';
 BEGIN
 	process(CLK)
 		begin
+		
 			if rising_edge(CLK) then
-				if(TX_FLG = '0' and START = '1') then
+				if(TX_FLG = '0' and LAST_START = '0' and START = '1') then
+					LAST_START <= '1';
 					TX_FLG <= '1';
 					BUSY <= '1';
 					DATAFLL(0)<='0';
 					DATAFLL(9)<='1';
 					DATAFLL(8 downto 1)<=DATA;
+				end if;
+				
+				if(LAST_START = '1' and START = '0') then
+					LAST_START <= '0';
 				end if;
 			
 				if(TX_FLG = '1')then
@@ -42,7 +49,7 @@ BEGIN
 							INDEX<=INDEX+1;
 						else
 							TX_FLG <='0';
-								BUSY <='0';
+							BUSY <='0';
 							INDEX <= 0;
 						end if;
 					end if;	

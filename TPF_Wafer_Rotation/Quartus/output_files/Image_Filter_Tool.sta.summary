@@ -3,15 +3,15 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup '74161:clk_prsclr|f74161:sub|110'
-Slack : -1.732
-TNS   : -65.899
+Slack : -1.404
+TNS   : -52.799
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -0.693
-TNS   : -0.815
+Slack : -0.677
+TNS   : -0.684
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.234
+Slack : 0.286
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold '74161:clk_prsclr|f74161:sub|110'
@@ -24,22 +24,22 @@ TNS   : -7.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width '74161:clk_prsclr|f74161:sub|110'
 Slack : -1.000
-TNS   : -56.000
+TNS   : -60.000
 
 Type  : Slow 1200mV 0C Model Setup '74161:clk_prsclr|f74161:sub|110'
-Slack : -1.471
-TNS   : -53.934
+Slack : -1.173
+TNS   : -41.675
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.511
-TNS   : -0.511
+Slack : -0.505
+TNS   : -0.505
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.217
+Slack : 0.257
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold '74161:clk_prsclr|f74161:sub|110'
-Slack : 0.297
+Slack : 0.299
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -48,22 +48,22 @@ TNS   : -7.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width '74161:clk_prsclr|f74161:sub|110'
 Slack : -1.000
-TNS   : -56.000
+TNS   : -60.000
 
 Type  : Fast 1200mV 0C Model Setup '74161:clk_prsclr|f74161:sub|110'
-Slack : -0.503
-TNS   : -11.764
+Slack : -0.318
+TNS   : -6.829
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.111
-TNS   : -0.111
-
-Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.148
-TNS   : 0.000
+Slack : -0.164
+TNS   : -0.164
 
 Type  : Fast 1200mV 0C Model Hold '74161:clk_prsclr|f74161:sub|110'
-Slack : 0.178
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -72,6 +72,6 @@ TNS   : -8.015
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width '74161:clk_prsclr|f74161:sub|110'
 Slack : -1.000
-TNS   : -56.000
+TNS   : -60.000
 
 ------------------------------------------------------------

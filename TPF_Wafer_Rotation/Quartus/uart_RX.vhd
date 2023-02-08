@@ -14,7 +14,7 @@ architecture atch_RX of uart_RX is
 
 signal DATAFLL: std_logic_vector(9 downto 0);
 signal RX_FLG : std_logic:='0';
-signal PRSCL: integer range 0 to 362:=0;
+signal PRSCL: integer range 0 to 63:=0;
 signal INDEX: integer range 0 to 9:=0;
 
 begin
@@ -22,21 +22,21 @@ begin
 	begin
 		if rising_edge(CLK) then
 			if(RX_FLG = '0') then
-				BUSY<='1';
 				if(RX_LINE = '0') then
 					INDEX<=0;
 					PRSCL<=0;
 					RX_FLG<='1';
+					BUSY<='1';
 				end if;
 			end if;
 	
 			if(RX_FLG='1')then
 				DATAFLL(INDEX)<=RX_LINE;
-					if(PRSCL<27)then
-						PRSCL<=PRSCL+1;
-					else
-						PRSCL <= 0; 
-					end if;
+				if(PRSCL<27)then
+					PRSCL<=PRSCL+1;
+				else
+					PRSCL <= 0; 
+				end if;
 			
 		
 				if(PRSCL=13)then
@@ -49,8 +49,8 @@ begin
 --							DATA<=(OTHERS=>'0');
 							DATA <= "11100111";
 						end if;
-					RX_FLG<='0';
-					BUSY<='0';
+						RX_FLG<='0';
+						BUSY<='0';
 					end if;
 				end if;
 			end if;
