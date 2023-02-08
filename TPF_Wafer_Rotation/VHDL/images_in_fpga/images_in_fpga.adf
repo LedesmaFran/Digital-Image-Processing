@@ -69,7 +69,7 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 .\src\uart_RX.vhd=VHDL Source Code
 .\src\tb_image_filter_tool.vhd=VHDL Source Code
 [HierarchyViewer]
-HierarchyInformation=tb_image_double_filter|behavior|0 tb_image_filter_tool|behavior|0
+HierarchyInformation=tb_image_filter_tool|behavior|0
 ShowHide=ShowTopLevel
 Selected=
 [ORDER]

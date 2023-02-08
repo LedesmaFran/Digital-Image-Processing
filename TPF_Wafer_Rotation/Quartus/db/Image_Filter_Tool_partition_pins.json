@@ -8,15 +8,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "start_led",
+					"name" : "rx_full",
 					"strict" : false
 				},
 				{
-					"name" : "UART_RXD",
+					"name" : "tx_full",
 					"strict" : false
 				},
 				{
 					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "UART_RXD",
 					"strict" : false
 				}
 			]

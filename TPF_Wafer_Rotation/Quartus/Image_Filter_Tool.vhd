@@ -194,7 +194,7 @@ BEGIN
 	end process;
 	
 	-- Stimulus process 2
-   stim_proc2: process (clock, counter_out1, counter_out2, out_valid1)
+   stim_proc2: process (clock, counter_out1, counter_out2, out_valid1) -- add ready?
 	begin
 		if (rising_edge(clock)) then				
 			if (to_integer(unsigned(counter_out1)) > (IMAGE_HEIGHT*IMAGE_WIDTH-2*IMAGE_HEIGHT-3) and (to_integer(unsigned(counter_out2)) <= ((IMAGE_HEIGHT-2)*(IMAGE_WIDTH-2)-2*(IMAGE_HEIGHT-2)))) then
@@ -215,7 +215,7 @@ BEGIN
   	end process;
 	
 	-- Output process
-	out_proc: process (clock)
+	out_proc: process (clock) -- add ready?
    begin
 		if (rising_edge(clock)) then
 			out_valid <= out_valid2;
