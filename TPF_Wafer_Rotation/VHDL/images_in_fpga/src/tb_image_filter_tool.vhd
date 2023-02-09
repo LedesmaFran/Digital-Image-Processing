@@ -51,25 +51,6 @@ ARCHITECTURE behavior OF tb_Image_Filter_Tool IS
 		);
 	END COMPONENT;
 	
-	COMPONENT uart_RX 
-	port( 
-		CLK		: in std_logic;
-		RX_LINE	: in std_logic;
-		DATA	: out std_logic_vector(7 downto 0);
-		BUSY	: out std_logic := '1'
-		);
-	END COMPONENT;
-	
-	COMPONENT uart_TX
-	PORT( 
-		CLK 	:IN STD_LOGIC;
-		START	:IN STD_LOGIC;
-		BUSY	:OUT STD_LOGIC;
-		DATA	: IN STD_LOGIC_VECTOR(7 downto 0);
-		TX_LINE	:OUT STD_LOGIC
-		);
-	END COMPONENT;
-	
 	-- clock
 	signal clock 		: std_logic := '1';
 	
@@ -90,17 +71,6 @@ ARCHITECTURE behavior OF tb_Image_Filter_Tool IS
 	signal pixel_out	: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 	signal counter_out	: std_logic_vector(17 downto 0) := (others => '0');
 	signal out_valid	: std_logic := '0';	 
-	
-	-- UART RX signals
-	signal RX_LINE	: std_logic;
-	signal DATA		: std_logic_vector(7 downto 0);
-	signal BUSY		: std_logic := '1';
-	
-	-- UART TX signals
-	signal START	: STD_LOGIC;
-	signal BUSY		:  	STD_LOGIC;
-	signal DATA		: IN STD_LOGIC_VECTOR(7 downto 0);
-	signal TX_LINE	: OUT STD_LOGIC
 	
 	-- AUX signals
 	signal k 	: integer := 0;

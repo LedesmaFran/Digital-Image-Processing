@@ -1,7 +1,5 @@
 [Version]
 Version=13.0
-[Designs]
-images_in_fpga=.\images_in_fpga\images_in_fpga.adf
 [Browser]
 sort=order
 mode=none
@@ -10,3 +8,5 @@ order=1
 macro=
 [Expand]
 images_in_fpga=1
+[designs]
+images_in_fpga=.\images_in_fpga\images_in_fpga.adf

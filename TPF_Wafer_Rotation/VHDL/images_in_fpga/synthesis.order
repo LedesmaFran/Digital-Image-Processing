@@ -15,3 +15,5 @@ i<>.\src\Image_Filter_Tool.vhd
 i<>.\src\uart_TX.vhd
 i<>.\src\uart_RX.vhd
 i<>.\src\tb_image_filter_tool.vhd
+i<>.\src\axi_fifo.vhd
+i<>.\src\tb_uart_axi.vhd

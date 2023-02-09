@@ -1,2 +1,2872 @@
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.3 [s].
+# ELBREAD: Elaboration time 0.4 [s].
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# Warning: ELAB1_0026: uart_TX.vhd : (64, 0): There is no default binding for component "AXI_FIFO". (No entity named "AXI_FIFO" was found).
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# Warning: ELAB1_0026: uart_RX.vhd : (68, 0): There is no default binding for component "AXI_FIFO". (No entity named "AXI_FIFO" was found).
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# Error: COMP96_0018: tb_image_filter_tool.vhd : (102, 17): Identifier expected.
+# Error: COMP96_0018: tb_image_filter_tool.vhd : (103, 19): Identifier expected.
+# Compile failure 2 Errors 2 Warnings  Analysis time :  1.0 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# Warning: ELAB1_0026: uart_TX.vhd : (64, 0): There is no default binding for component "AXI_FIFO". (No entity named "AXI_FIFO" was found).
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# Warning: ELAB1_0026: uart_RX.vhd : (68, 0): There is no default binding for component "AXI_FIFO". (No entity named "AXI_FIFO" was found).
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# Compile success 0 Errors 2 Warnings  Analysis time :  0.5 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# Warning: ELAB1_0026: uart_TX.vhd : (64, 0): There is no default binding for component "AXI_FIFO". (No entity named "AXI_FIFO" was found).
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# Warning: ELAB1_0026: uart_RX.vhd : (68, 0): There is no default binding for component "AXI_FIFO". (No entity named "AXI_FIFO" was found).
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# Compile success 0 Errors 2 Warnings  Analysis time :  1.0 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/uart_RX.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/uart_TX.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0018: tb_uart_axi.vhd : (102, 11): Identifier expected.
+# Error: COMP96_0015: tb_uart_axi.vhd : (153, 2): ':' expected.
+# Error: COMP96_0018: tb_uart_axi.vhd : (154, 3): Identifier expected.
+# Error: COMP96_0019: tb_uart_axi.vhd : (159, 4): Keyword 'begin' expected.
+# Error: COMP96_0019: tb_uart_axi.vhd : (159, 4): Keyword 'end' expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0015: tb_uart_axi.vhd : (153, 2): ':' expected.
+# Error: COMP96_0018: tb_uart_axi.vhd : (154, 3): Identifier expected.
+# Error: COMP96_0019: tb_uart_axi.vhd : (159, 4): Keyword 'begin' expected.
+# Error: COMP96_0019: tb_uart_axi.vhd : (159, 4): Keyword 'end' expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0019: tb_uart_axi.vhd : (159, 4): Keyword 'process' expected.
+# Error: COMP96_0019: tb_uart_axi.vhd : (159, 4): Keyword 'end' expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0078: tb_uart_axi.vhd : (139, 4): Unknown identifier "UART_RX_FIFO_FULL".
+# Error: COMP96_0133: tb_uart_axi.vhd : (139, 4): Cannot find object declaration.
+# Error: COMP96_0112: tb_uart_axi.vhd : (139, 4): "UART_RX_FIFO_FULL" does not match the formal name.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0015: tb_uart_axi.vhd : (158, 9): ';' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim -O5 +access +r +m+tb_Image_Filter_Tool tb_Image_Filter_Tool behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.8 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 162390 kB (elbread=427 elab2=161151 kernel=811 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:31 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+endsim
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6525 kB (elbread=427 elab2=5952 kernel=145 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:31 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# VSIM: 1 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6525 kB (elbread=427 elab2=5952 kernel=145 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:34 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 320 ns
+# KERNEL: stopped at time: 320 ns
+run 320 ns
+# KERNEL: stopped at time: 640 ns
+run 320 ns
+# KERNEL: stopped at time: 960 ns
+run 320 ns
+# KERNEL: stopped at time: 1280 ns
+run 320 ns
+# KERNEL: stopped at time: 1600 ns
+run 320 ns
+# KERNEL: stopped at time: 1920 ns
+run 320 ns
+# KERNEL: stopped at time: 2240 ns
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6526 kB (elbread=427 elab2=5952 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:37 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 320 ns
+# KERNEL: stopped at time: 320 ns
+run 320 ns
+# KERNEL: stopped at time: 640 ns
+run 320 ns
+# KERNEL: stopped at time: 960 ns
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6526 kB (elbread=427 elab2=5952 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:39 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 320 ns
+# KERNEL: stopped at time: 320 ns
+run 320 ns
+# KERNEL: stopped at time: 640 ns
+run 320 ns
+# KERNEL: stopped at time: 960 ns
+run 320 ns
+# KERNEL: stopped at time: 1280 ns
+run 320 ns
+# KERNEL: stopped at time: 1600 ns
+run 320 ns
+# KERNEL: stopped at time: 1920 ns
+run 320 ns
+# KERNEL: stopped at time: 2240 ns
+run 320 ns
+# KERNEL: stopped at time: 2560 ns
+run 320 ns
+# KERNEL: stopped at time: 2880 ns
+run 320 ns
+# KERNEL: stopped at time: 3200 ns
+run 320 ns
+# KERNEL: stopped at time: 3520 ns
+run 320 ns
+# KERNEL: stopped at time: 3840 ns
+run 320 ns
+# KERNEL: stopped at time: 4160 ns
+run 320 ns
+# KERNEL: stopped at time: 4480 ns
+run 320 ns
+# KERNEL: stopped at time: 4800 ns
+run 320 ns
+# KERNEL: stopped at time: 5120 ns
+run 320 ns
+# KERNEL: stopped at time: 5440 ns
+run 320 ns
+# KERNEL: stopped at time: 5760 ns
+run 320 ns
+# KERNEL: stopped at time: 6080 ns
+run 320 ns
+# KERNEL: stopped at time: 6400 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6526 kB (elbread=427 elab2=5952 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:39 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6526 kB (elbread=427 elab2=5952 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:40 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Warning: DAGGEN_0001: tb_uart_axi.vhd : (155, 0): Process without explicit or implicit wait statement - possible infinite loop.
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.6 [s]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:45 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+# VSIM: 1 object(s) traced.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:46 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:46 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:48 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:55 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:56 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:59 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0123: tb_uart_axi.vhd : (164, 5): Variable or constant cannot be the target of a signal assignment.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  8:59 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:00 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:04 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:06 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+run 8640 ns
+# KERNEL: stopped at time: 51840 ns
+run 8640 ns
+# KERNEL: stopped at time: 60480 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:07 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:10 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+run 8640 ns
+# KERNEL: stopped at time: 51840 ns
+run 8640 ns
+# KERNEL: stopped at time: 60480 ns
+run 8640 ns
+# KERNEL: stopped at time: 69120 ns
+run 8640 ns
+# KERNEL: stopped at time: 77760 ns
+run 8640 ns
+# KERNEL: stopped at time: 86400 ns
+run 8640 ns
+# KERNEL: stopped at time: 95040 ns
+run 8640 ns
+# KERNEL: stopped at time: 103680 ns
+run 8640 ns
+# KERNEL: stopped at time: 112320 ns
+run 8640 ns
+# KERNEL: stopped at time: 120960 ns
+run 8640 ns
+# KERNEL: stopped at time: 129600 ns
+run 8640 ns
+# KERNEL: stopped at time: 138240 ns
+run 8640 ns
+# KERNEL: stopped at time: 146880 ns
+run 8640 ns
+# KERNEL: stopped at time: 155520 ns
+run 8640 ns
+# KERNEL: stopped at time: 164160 ns
+run 8640 ns
+# KERNEL: stopped at time: 172800 ns
+run 8640 ns
+# KERNEL: stopped at time: 181440 ns
+run 8640 ns
+# KERNEL: stopped at time: 190080 ns
+run 8640 ns
+# KERNEL: stopped at time: 198720 ns
+run 8640 ns
+# KERNEL: stopped at time: 207360 ns
+run 8640 ns
+# KERNEL: stopped at time: 216 us
+run 8640 ns
+# KERNEL: stopped at time: 224640 ns
+run 8640 ns
+# KERNEL: stopped at time: 233280 ns
+run 8640 ns
+# KERNEL: stopped at time: 241920 ns
+run 8640 ns
+# KERNEL: stopped at time: 250560 ns
+run 8640 ns
+# KERNEL: stopped at time: 259200 ns
+run 8640 ns
+# KERNEL: stopped at time: 267840 ns
+run 8640 ns
+# KERNEL: stopped at time: 276480 ns
+run 8640 ns
+# KERNEL: stopped at time: 285120 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/uart_RX.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# Error: COMP96_0284: uart_RX.vhd : (75, 23): Direction of the discrete range must be the same as that of the prefix of the slice name.
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  78.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:24 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/uart_RX.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:25 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+run 8640 ns
+# KERNEL: stopped at time: 51840 ns
+run 8640 ns
+# KERNEL: stopped at time: 60480 ns
+run 8640 ns
+# KERNEL: stopped at time: 69120 ns
+run 8640 ns
+# KERNEL: stopped at time: 77760 ns
+run 8640 ns
+# KERNEL: stopped at time: 86400 ns
+run 8640 ns
+# KERNEL: stopped at time: 95040 ns
+run 8640 ns
+# KERNEL: stopped at time: 103680 ns
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:26 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+run 8640 ns
+# KERNEL: stopped at time: 51840 ns
+run 8640 ns
+# KERNEL: stopped at time: 60480 ns
+run 8640 ns
+# KERNEL: stopped at time: 69120 ns
+run 8640 ns
+# KERNEL: stopped at time: 77760 ns
+run 8640 ns
+# KERNEL: stopped at time: 86400 ns
+run 8640 ns
+# KERNEL: stopped at time: 95040 ns
+run 8640 ns
+# KERNEL: stopped at time: 103680 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6528 kB (elbread=427 elab2=5954 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  9:28 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+run 8640 ns
+# KERNEL: stopped at time: 51840 ns
+run 8640 ns
+# KERNEL: stopped at time: 60480 ns
+run 8640 ns
+# KERNEL: stopped at time: 69120 ns
+run 8640 ns
+# KERNEL: stopped at time: 77760 ns
+run 8640 ns
+# KERNEL: stopped at time: 86400 ns
+run 8640 ns
+# KERNEL: stopped at time: 95040 ns
+run 8640 ns
+# KERNEL: stopped at time: 103680 ns
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/axi_fifo.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# Error: COMP96_0019: axi_fifo.vhd : (34, 2): Keyword 'begin' expected.
+# Error: COMP96_0019: axi_fifo.vhd : (35, 2): Keyword 'end' expected.
+# Error: COMP96_0016: axi_fifo.vhd : (35, 11): Design unit declaration expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/axi_fifo.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+endsim
+# VSIM: Simulation has finished.
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/read_image_tb.vhd $dsn/src/read_image.vhd $dsn/src/binarization.vhd $dsn/src/fifo.vhd $dsn/src/tb_fifo.vhd $dsn/src/image_filter.vhd $dsn/src/kernel_multiply_adder.vhd $dsn/src/tb_image_filter.vhd $dsn/src/RAM_block.vhd $dsn/src/register.vhd $dsn/src/erosion.vhd $dsn/src/dilation.vhd $dsn/src/tb_double_filter.vhd $dsn/src/Image_Filter_Tool.vhd $dsn/src/uart_TX.vhd $dsn/src/uart_RX.vhd $dsn/src/tb_image_filter_tool.vhd $dsn/src/axi_fifo.vhd $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd
+# Compile Entity "tb_read_image_vhdl"
+# Compile Architecture "behavior" of Entity "tb_read_image_vhdl"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd
+# Compile Entity "read_image_VHDL"
+# Compile Architecture "rtl" of Entity "read_image_VHDL"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd
+# Compile Entity "binarization"
+# Compile Architecture "behavioral" of Entity "binarization"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "behavioral" of Entity "fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd
+# Compile Entity "tb_fifo"
+# Compile Architecture "behavior" of Entity "tb_fifo"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd
+# Compile Entity "image_filter"
+# Compile Architecture "behavioral" of Entity "image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd
+# Compile Entity "kernel_mac"
+# Compile Architecture "behavioral" of Entity "kernel_mac"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter.vhd
+# Compile Entity "tb_image_filter"
+# Compile Architecture "behavior" of Entity "tb_image_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd
+# Compile Entity "RAM_block"
+# Compile Architecture "behavioral" of Entity "RAM_block"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd
+# Compile Entity "reg"
+# Compile Architecture "behavioral" of Entity "reg"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd
+# Compile Entity "kernel_erosion"
+# Compile Architecture "behavioral" of Entity "kernel_erosion"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd
+# Compile Entity "kernel_dilation"
+# Compile Architecture "behavioral" of Entity "kernel_dilation"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd
+# Compile Entity "tb_image_double_filter"
+# Compile Architecture "behavior" of Entity "tb_image_double_filter"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd
+# Compile Entity "Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd
+# Compile Entity "uart_TX"
+# Compile Architecture "arch_TX" of Entity "uart_TX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd
+# Compile Entity "uart_RX"
+# Compile Architecture "atch_RX" of Entity "uart_RX"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_image_filter_tool.vhd
+# Compile Entity "tb_Image_Filter_Tool"
+# Compile Architecture "behavior" of Entity "tb_Image_Filter_Tool"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd
+# Compile Entity "AXI_FIFO"
+# Compile Architecture "behavioral" of Entity "AXI_FIFO"
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  10:19 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+run 8640 ns
+# KERNEL: stopped at time: 51840 ns
+run 8640 ns
+# KERNEL: stopped at time: 60480 ns
+run 8640 ns
+# KERNEL: stopped at time: 69120 ns
+run 8640 ns
+# KERNEL: stopped at time: 77760 ns
+run 8640 ns
+# KERNEL: stopped at time: 86400 ns
+run 8640 ns
+# KERNEL: stopped at time: 95040 ns
+run 8640 ns
+# KERNEL: stopped at time: 103680 ns
+run 8640 ns
+# KERNEL: stopped at time: 112320 ns
+run 8640 ns
+# KERNEL: stopped at time: 120960 ns
+run 8640 ns
+# KERNEL: stopped at time: 129600 ns
+run 8640 ns
+# KERNEL: stopped at time: 138240 ns
+run 8640 ns
+# KERNEL: stopped at time: 146880 ns
+run 8640 ns
+# KERNEL: stopped at time: 155520 ns
+run 8640 ns
+# KERNEL: stopped at time: 164160 ns
+run 8640 ns
+# KERNEL: stopped at time: 172800 ns
+run 8640 ns
+# KERNEL: stopped at time: 181440 ns
+run 8640 ns
+# KERNEL: stopped at time: 190080 ns
+run 8640 ns
+# KERNEL: stopped at time: 198720 ns
+run 8640 ns
+# KERNEL: stopped at time: 207360 ns
+run 8640 ns
+# KERNEL: stopped at time: 216 us
+run 8640 ns
+# KERNEL: stopped at time: 224640 ns
+run 8640 ns
+# KERNEL: stopped at time: 233280 ns
+run 8640 ns
+# KERNEL: stopped at time: 241920 ns
+run 8640 ns
+# KERNEL: stopped at time: 250560 ns
+run 8640 ns
+# KERNEL: stopped at time: 259200 ns
+run 8640 ns
+# KERNEL: stopped at time: 267840 ns
+run 8640 ns
+# KERNEL: stopped at time: 276480 ns
+run 8640 ns
+# KERNEL: stopped at time: 285120 ns
+run 8640 ns
+# KERNEL: stopped at time: 293760 ns
+run 8640 ns
+# KERNEL: stopped at time: 302400 ns
+run 8640 ns
+# KERNEL: stopped at time: 311040 ns
+run 8640 ns
+# KERNEL: stopped at time: 319680 ns
+run 8640 ns
+# KERNEL: stopped at time: 328320 ns
+run 8640 ns
+# KERNEL: stopped at time: 336960 ns
+run 8640 ns
+# KERNEL: stopped at time: 345600 ns
+run 8640 ns
+# KERNEL: stopped at time: 354240 ns
+run 8640 ns
+# KERNEL: stopped at time: 362880 ns
+run 8640 ns
+# KERNEL: stopped at time: 371520 ns
+run 8640 ns
+# KERNEL: stopped at time: 380160 ns
+run 8640 ns
+# KERNEL: stopped at time: 388800 ns
+run 8640 ns
+# KERNEL: stopped at time: 397440 ns
+run 8640 ns
+# KERNEL: stopped at time: 406080 ns
+run 8640 ns
+# KERNEL: stopped at time: 414720 ns
+run 8640 ns
+# KERNEL: stopped at time: 423360 ns
+run 8640 ns
+# KERNEL: stopped at time: 432 us
+run 8640 ns
+# KERNEL: stopped at time: 440640 ns
+run 8640 ns
+# KERNEL: stopped at time: 449280 ns
+run 8640 ns
+# KERNEL: stopped at time: 457920 ns
+run 8640 ns
+# KERNEL: stopped at time: 466560 ns
+run 8640 ns
+# KERNEL: stopped at time: 475200 ns
+run 8640 ns
+# KERNEL: stopped at time: 483840 ns
+run 8640 ns
+# KERNEL: stopped at time: 492480 ns
+run 8640 ns
+# KERNEL: stopped at time: 501120 ns
+run 8640 ns
+# KERNEL: stopped at time: 509760 ns
+run 8640 ns
+# KERNEL: stopped at time: 518400 ns
+run 8640 ns
+# KERNEL: stopped at time: 527040 ns
+run 8640 ns
+# KERNEL: stopped at time: 535680 ns
+run 8640 ns
+# KERNEL: stopped at time: 544320 ns
+run 8640 ns
+# KERNEL: stopped at time: 552960 ns
+run 8640 ns
+# KERNEL: stopped at time: 561600 ns
+run 8640 ns
+# KERNEL: stopped at time: 570240 ns
+run 8640 ns
+# KERNEL: stopped at time: 578880 ns
+run 8640 ns
+# KERNEL: stopped at time: 587520 ns
+run 8640 ns
+# KERNEL: stopped at time: 596160 ns
+run 8640 ns
+# KERNEL: stopped at time: 604800 ns
+run 8640 ns
+# KERNEL: stopped at time: 613440 ns
+run 8640 ns
+# KERNEL: stopped at time: 622080 ns
+run 8640 ns
+# KERNEL: stopped at time: 630720 ns
+run 8640 ns
+# KERNEL: stopped at time: 639360 ns
+run 8640 ns
+# KERNEL: stopped at time: 648 us
+run 8640 ns
+# KERNEL: stopped at time: 656640 ns
+run 8640 ns
+# KERNEL: stopped at time: 665280 ns
+run 8640 ns
+# KERNEL: stopped at time: 673920 ns
+run 8640 ns
+# KERNEL: stopped at time: 682560 ns
+run 8640 ns
+# KERNEL: stopped at time: 691200 ns
+run 8640 ns
+# KERNEL: stopped at time: 699840 ns
+run 8640 ns
+# KERNEL: stopped at time: 708480 ns
+run 8640 ns
+# KERNEL: stopped at time: 717120 ns
+run 8640 ns
+# KERNEL: stopped at time: 725760 ns
+run 8640 ns
+# KERNEL: stopped at time: 734400 ns
+run 8640 ns
+# KERNEL: stopped at time: 743040 ns
+run 8640 ns
+# KERNEL: stopped at time: 751680 ns
+run 8640 ns
+# KERNEL: stopped at time: 760320 ns
+run 8640 ns
+# KERNEL: stopped at time: 768960 ns
+run 8640 ns
+# KERNEL: stopped at time: 777600 ns
+run 8640 ns
+# KERNEL: stopped at time: 786240 ns
+run 8640 ns
+# KERNEL: stopped at time: 794880 ns
+run 8640 ns
+# KERNEL: stopped at time: 803520 ns
+run 8640 ns
+# KERNEL: stopped at time: 812160 ns
+run 8640 ns
+# KERNEL: stopped at time: 820800 ns
+run 8640 ns
+# KERNEL: stopped at time: 829440 ns
+run 8640 ns
+# KERNEL: stopped at time: 838080 ns
+run 8640 ns
+# KERNEL: stopped at time: 846720 ns
+run 8640 ns
+# KERNEL: stopped at time: 855360 ns
+run 8640 ns
+# KERNEL: stopped at time: 864 us
+run 8640 ns
+# KERNEL: stopped at time: 872640 ns
+run 8640 ns
+# KERNEL: stopped at time: 881280 ns
+run 8640 ns
+# KERNEL: stopped at time: 889920 ns
+run 8640 ns
+# KERNEL: stopped at time: 898560 ns
+run 8640 ns
+# KERNEL: stopped at time: 907200 ns
+run 8640 ns
+# KERNEL: stopped at time: 915840 ns
+run 8640 ns
+# KERNEL: stopped at time: 924480 ns
+run 8640 ns
+# KERNEL: stopped at time: 933120 ns
+run 8640 ns
+# KERNEL: stopped at time: 941760 ns
+run 8640 ns
+# KERNEL: stopped at time: 950400 ns
+run 8640 ns
+# KERNEL: stopped at time: 959040 ns
+run 8640 ns
+# KERNEL: stopped at time: 967680 ns
+run 8640 ns
+# KERNEL: stopped at time: 976320 ns
+run 8640 ns
+# KERNEL: stopped at time: 984960 ns
+run 8640 ns
+# KERNEL: stopped at time: 993600 ns
+run 8640 ns
+# KERNEL: stopped at time: 1002240 ns
+run 8640 ns
+# KERNEL: stopped at time: 1010880 ns
+run 8640 ns
+# KERNEL: stopped at time: 1019520 ns
+run 8640 ns
+# KERNEL: stopped at time: 1028160 ns
+run 8640 ns
+# KERNEL: stopped at time: 1036800 ns
+run 8640 ns
+# KERNEL: stopped at time: 1045440 ns
+run 8640 ns
+# KERNEL: stopped at time: 1054080 ns
+run 8640 ns
+# KERNEL: stopped at time: 1062720 ns
+run 8640 ns
+# KERNEL: stopped at time: 1071360 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  10:39 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+run 8640 ns
+# KERNEL: stopped at time: 51840 ns
+run 8640 ns
+# KERNEL: stopped at time: 60480 ns
+run 8640 ns
+# KERNEL: stopped at time: 69120 ns
+run 8640 ns
+# KERNEL: stopped at time: 77760 ns
+run 8640 ns
+# KERNEL: stopped at time: 86400 ns
+run 8640 ns
+# KERNEL: stopped at time: 95040 ns
+run 8640 ns
+# KERNEL: stopped at time: 103680 ns
+run 8640 ns
+# KERNEL: stopped at time: 112320 ns
+run 8640 ns
+# KERNEL: stopped at time: 120960 ns
+run 8640 ns
+# KERNEL: stopped at time: 129600 ns
+run 8640 ns
+# KERNEL: stopped at time: 138240 ns
+run 8640 ns
+# KERNEL: stopped at time: 146880 ns
+run 8640 ns
+# KERNEL: stopped at time: 155520 ns
+run 8640 ns
+# KERNEL: stopped at time: 164160 ns
+run 8640 ns
+# KERNEL: stopped at time: 172800 ns
+run 8640 ns
+# KERNEL: stopped at time: 181440 ns
+run 8640 ns
+# KERNEL: stopped at time: 190080 ns
+run 8640 ns
+# KERNEL: stopped at time: 198720 ns
+run 8640 ns
+# KERNEL: stopped at time: 207360 ns
+run 8640 ns
+# KERNEL: stopped at time: 216 us
+run 8640 ns
+# KERNEL: stopped at time: 224640 ns
+run 8640 ns
+# KERNEL: stopped at time: 233280 ns
+run 8640 ns
+# KERNEL: stopped at time: 241920 ns
+run 8640 ns
+# KERNEL: stopped at time: 250560 ns
+run 8640 ns
+# KERNEL: stopped at time: 259200 ns
+run 8640 ns
+# KERNEL: stopped at time: 267840 ns
+run 8640 ns
+# KERNEL: stopped at time: 276480 ns
+run 8640 ns
+# KERNEL: stopped at time: 285120 ns
+run 8640 ns
+# KERNEL: stopped at time: 293760 ns
+run 8640 ns
+# KERNEL: stopped at time: 302400 ns
+run 8640 ns
+# KERNEL: stopped at time: 311040 ns
+run 8640 ns
+# KERNEL: stopped at time: 319680 ns
+run 8640 ns
+# KERNEL: stopped at time: 328320 ns
+run 8640 ns
+# KERNEL: stopped at time: 336960 ns
+run 8640 ns
+# KERNEL: stopped at time: 345600 ns
+run 8640 ns
+# KERNEL: stopped at time: 354240 ns
+run 8640 ns
+# KERNEL: stopped at time: 362880 ns
+run 8640 ns
+# KERNEL: stopped at time: 371520 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0123: tb_uart_axi.vhd : (178, 5): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0143: tb_uart_axi.vhd : (178, 5): Object "test_msg" cannot be written.
+# Error: COMP96_0071: tb_uart_axi.vhd : (178, 28): Operator "+" is not defined for such operands.
+# Error: COMP96_0077: tb_uart_axi.vhd : (178, 17): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6529 kB (elbread=427 elab2=5955 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  10:50 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0131: tb_uart_axi.vhd : (178, 42): Illegal operand for type conversion.
+# Error: COMP96_0123: tb_uart_axi.vhd : (178, 5): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0143: tb_uart_axi.vhd : (178, 5): Object "test_msg" cannot be written.
+# Error: COMP96_0149: tb_uart_axi.vhd : (178, 79): Explicit type conversions are allowed between closely related types only.
+# Error: COMP96_0367: tb_uart_axi.vhd : (178, 17): Improper array length (1). Expected length is 10.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0123: tb_uart_axi.vhd : (178, 5): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0143: tb_uart_axi.vhd : (178, 5): Object "test_msg" cannot be written.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0123: tb_uart_axi.vhd : (178, 5): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0143: tb_uart_axi.vhd : (178, 5): Object "test_msg" cannot be written.
+# Error: COMP96_0149: tb_uart_axi.vhd : (178, 54): Explicit type conversions are allowed between closely related types only.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0149: tb_uart_axi.vhd : (178, 54): Explicit type conversions are allowed between closely related types only.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0131: tb_uart_axi.vhd : (178, 42): Illegal operand for type conversion.
+# Error: COMP96_0149: tb_uart_axi.vhd : (178, 79): Explicit type conversions are allowed between closely related types only.
+# Error: COMP96_0367: tb_uart_axi.vhd : (178, 17): Improper array length (1). Expected length is 10.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Error: COMP96_0131: tb_uart_axi.vhd : (178, 42): Illegal operand for type conversion.
+# Error: COMP96_0149: tb_uart_axi.vhd : (178, 82): Explicit type conversions are allowed between closely related types only.
+# Error: COMP96_0367: tb_uart_axi.vhd : (178, 17): Improper array length (1). Expected length is 10.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -dbg -e 100 -work images_in_fpga -2002  $dsn/src/tb_uart_axi.vhd
+# File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd
+# Compile Entity "tb_uart_axi"
+# Compile Architecture "behavior" of Entity "tb_uart_axi"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_uart_axi tb_uart_axi behavior
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6657 kB (elbread=427 elab2=6083 kernel=146 sdf=0)
+# KERNEL: ASDB file was created in location D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src\wave.asdb
+#  10:53 PM, Wednesday, February 8, 2023
+#  Simulation has been initialized
+# VSIM: 1 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/wave.asdb'.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+run 8640 ns
+# KERNEL: stopped at time: 8640 ns
+run 8640 ns
+# KERNEL: stopped at time: 17280 ns
+run 8640 ns
+# KERNEL: stopped at time: 25920 ns
+run 8640 ns
+# KERNEL: stopped at time: 34560 ns
+run 8640 ns
+# KERNEL: stopped at time: 43200 ns
+run 8640 ns
+# KERNEL: stopped at time: 51840 ns
+run 8640 ns
+# KERNEL: stopped at time: 60480 ns
+run 8640 ns
+# KERNEL: stopped at time: 69120 ns
+run 8640 ns
+# KERNEL: stopped at time: 77760 ns
+run 8640 ns
+# KERNEL: stopped at time: 86400 ns
+run 8640 ns
+# KERNEL: stopped at time: 95040 ns
+run 8640 ns
+# KERNEL: stopped at time: 103680 ns
+run 8640 ns
+# KERNEL: stopped at time: 112320 ns
+run 8640 ns
+# KERNEL: stopped at time: 120960 ns
+run 8640 ns
+# KERNEL: stopped at time: 129600 ns
+run 8640 ns
+# KERNEL: stopped at time: 138240 ns
+run 8640 ns
+# KERNEL: stopped at time: 146880 ns
+run 8640 ns
+# KERNEL: stopped at time: 155520 ns
+run 8640 ns
+# KERNEL: stopped at time: 164160 ns
+run 8640 ns
+# KERNEL: stopped at time: 172800 ns
+run 8640 ns
+# KERNEL: stopped at time: 181440 ns
+run 8640 ns
+# KERNEL: stopped at time: 190080 ns
+run 8640 ns
+# KERNEL: stopped at time: 198720 ns
+run 8640 ns
+# KERNEL: stopped at time: 207360 ns
+run 8640 ns
+# KERNEL: stopped at time: 216 us
+run 8640 ns
+# KERNEL: stopped at time: 224640 ns
+run 8640 ns
+# KERNEL: stopped at time: 233280 ns
+run 8640 ns
+# KERNEL: stopped at time: 241920 ns
+run 8640 ns
+# KERNEL: stopped at time: 250560 ns
+run 8640 ns
+# KERNEL: stopped at time: 259200 ns
+run 8640 ns
+# KERNEL: stopped at time: 267840 ns
+run 8640 ns
+# KERNEL: stopped at time: 276480 ns
+run 8640 ns
+# KERNEL: stopped at time: 285120 ns
+run 8640 ns
+# KERNEL: stopped at time: 293760 ns
+run 8640 ns
+# KERNEL: stopped at time: 302400 ns
+run 8640 ns
+# KERNEL: stopped at time: 311040 ns
+run 8640 ns
+# KERNEL: stopped at time: 319680 ns
+run 8640 ns
+# KERNEL: stopped at time: 328320 ns
+run 8640 ns
+# KERNEL: stopped at time: 336960 ns
+run 8640 ns
+# KERNEL: stopped at time: 345600 ns
+run 8640 ns
+# KERNEL: stopped at time: 354240 ns
+run 8640 ns
+# KERNEL: stopped at time: 362880 ns
+run 8640 ns
+# KERNEL: stopped at time: 371520 ns
+run 8640 ns
+# KERNEL: stopped at time: 380160 ns
+run 8640 ns
+# KERNEL: stopped at time: 388800 ns
+run 8640 ns
+# KERNEL: stopped at time: 397440 ns
+run 8640 ns
+# KERNEL: stopped at time: 406080 ns
+run 8640 ns
+# KERNEL: stopped at time: 414720 ns
+run 8640 ns
+# KERNEL: stopped at time: 423360 ns
+run 8640 ns
+# KERNEL: stopped at time: 432 us
+run 8640 ns
+# KERNEL: stopped at time: 440640 ns
+run 8640 ns
+# KERNEL: stopped at time: 449280 ns
+run 8640 ns
+# KERNEL: stopped at time: 457920 ns
+run 8640 ns
+# KERNEL: stopped at time: 466560 ns
+run 8640 ns
+# KERNEL: stopped at time: 475200 ns
+run 8640 ns
+# KERNEL: stopped at time: 483840 ns
+run 8640 ns
+# KERNEL: stopped at time: 492480 ns
+run 8640 ns
+# KERNEL: stopped at time: 501120 ns
+run 8640 ns
+# KERNEL: stopped at time: 509760 ns
+run 8640 ns
+# KERNEL: stopped at time: 518400 ns
+run 8640 ns
+# KERNEL: stopped at time: 527040 ns
+run 8640 ns
+# KERNEL: stopped at time: 535680 ns
+run 8640 ns
+# KERNEL: stopped at time: 544320 ns
+run 8640 ns
+# KERNEL: stopped at time: 552960 ns
+run 8640 ns
+# KERNEL: stopped at time: 561600 ns
+run 8640 ns
+# KERNEL: stopped at time: 570240 ns
+run 8640 ns
+# KERNEL: stopped at time: 578880 ns
+run 8640 ns
+# KERNEL: stopped at time: 587520 ns
+run 8640 ns
+# KERNEL: stopped at time: 596160 ns
+run 8640 ns
+# KERNEL: stopped at time: 604800 ns
+run 8640 ns
+# KERNEL: stopped at time: 613440 ns
+run 8640 ns
+# KERNEL: stopped at time: 622080 ns
+run 8640 ns
+# KERNEL: stopped at time: 630720 ns
+run 8640 ns
+# KERNEL: stopped at time: 639360 ns
+run 8640 ns
+# KERNEL: stopped at time: 648 us
+run 8640 ns
+# KERNEL: stopped at time: 656640 ns
+run 8640 ns
+# KERNEL: stopped at time: 665280 ns
+run 8640 ns
+# KERNEL: stopped at time: 673920 ns
+run 8640 ns
+# KERNEL: stopped at time: 682560 ns
+run 8640 ns
+# KERNEL: stopped at time: 691200 ns
+run 8640 ns
+# KERNEL: stopped at time: 699840 ns
+run 8640 ns
+# KERNEL: stopped at time: 708480 ns
+run 8640 ns
+# KERNEL: stopped at time: 717120 ns
+run 8640 ns
+# KERNEL: stopped at time: 725760 ns
+run 8640 ns
+# KERNEL: stopped at time: 734400 ns
+run 8640 ns
+# KERNEL: stopped at time: 743040 ns
+run 8640 ns
+# KERNEL: stopped at time: 751680 ns
+run 8640 ns
+# KERNEL: stopped at time: 760320 ns
+run 8640 ns
+# KERNEL: stopped at time: 768960 ns
+run 8640 ns
+# KERNEL: stopped at time: 777600 ns
+run 8640 ns
+# KERNEL: stopped at time: 786240 ns
+run 8640 ns
+# KERNEL: stopped at time: 794880 ns
+run 8640 ns
+# KERNEL: stopped at time: 803520 ns
+run 8640 ns
+# KERNEL: stopped at time: 812160 ns
+run 8640 ns
+# KERNEL: stopped at time: 820800 ns
+run 8640 ns
+# KERNEL: stopped at time: 829440 ns
+run 8640 ns
+# KERNEL: stopped at time: 838080 ns
+run 8640 ns
+# KERNEL: stopped at time: 846720 ns
+run 8640 ns
+# KERNEL: stopped at time: 855360 ns
+run 8640 ns
+# KERNEL: stopped at time: 864 us
+run 8640 ns
+# KERNEL: stopped at time: 872640 ns
+run 8640 ns
+# KERNEL: stopped at time: 881280 ns
+run 8640 ns
+# KERNEL: stopped at time: 889920 ns
+run 8640 ns
+# KERNEL: stopped at time: 898560 ns
+run 8640 ns
+# KERNEL: stopped at time: 907200 ns
+run 8640 ns
+# KERNEL: stopped at time: 915840 ns
+run 8640 ns
+# KERNEL: stopped at time: 924480 ns
+run 8640 ns
+# KERNEL: stopped at time: 933120 ns
+run 8640 ns
+# KERNEL: stopped at time: 941760 ns
+run 8640 ns
+# KERNEL: stopped at time: 950400 ns
+run 8640 ns
+# KERNEL: stopped at time: 959040 ns
+run 8640 ns
+# KERNEL: stopped at time: 967680 ns
+run 8640 ns
+# KERNEL: stopped at time: 976320 ns
+run 8640 ns
+# KERNEL: stopped at time: 984960 ns
+run 8640 ns
+# KERNEL: stopped at time: 993600 ns
+run 8640 ns
+# KERNEL: stopped at time: 1002240 ns
+run 8640 ns
+# KERNEL: stopped at time: 1010880 ns
+run 8640 ns
+# KERNEL: stopped at time: 1019520 ns
+run 8640 ns
+# KERNEL: stopped at time: 1028160 ns
+run 8640 ns
+# KERNEL: stopped at time: 1036800 ns
+run 8640 ns
+# KERNEL: stopped at time: 1045440 ns
+run 8640 ns
+# KERNEL: stopped at time: 1054080 ns
+run 8640 ns
+# KERNEL: stopped at time: 1062720 ns
+run 8640 ns
+# KERNEL: stopped at time: 1071360 ns
+run 8640 ns
+# KERNEL: stopped at time: 1080 us
+run 8640 ns
+# KERNEL: stopped at time: 1088640 ns
+run 8640 ns
+# KERNEL: stopped at time: 1097280 ns
+run 8640 ns
+# KERNEL: stopped at time: 1105920 ns
+run 8640 ns
+# KERNEL: stopped at time: 1114560 ns
+run 8640 ns
+# KERNEL: stopped at time: 1123200 ns
+run 8640 ns
+# KERNEL: stopped at time: 1131840 ns
+run 8640 ns
+# KERNEL: stopped at time: 1140480 ns
+run 8640 ns
+# KERNEL: stopped at time: 1149120 ns
+run 8640 ns
+# KERNEL: stopped at time: 1157760 ns
+run 8640 ns
+# KERNEL: stopped at time: 1166400 ns
+run 8640 ns
+# KERNEL: stopped at time: 1175040 ns
+run 8640 ns
+# KERNEL: stopped at time: 1183680 ns
+run 8640 ns
+# KERNEL: stopped at time: 1192320 ns
+run 8640 ns
+# KERNEL: stopped at time: 1200960 ns
+run 8640 ns
+# KERNEL: stopped at time: 1209600 ns
+run 8640 ns
+# KERNEL: stopped at time: 1218240 ns
+run 8640 ns
+# KERNEL: stopped at time: 1226880 ns
+run 8640 ns
+# KERNEL: stopped at time: 1235520 ns
+run 8640 ns
+# KERNEL: stopped at time: 1244160 ns
+run 8640 ns
+# KERNEL: stopped at time: 1252800 ns
+run 8640 ns
+# KERNEL: stopped at time: 1261440 ns
+run 8640 ns
+# KERNEL: stopped at time: 1270080 ns
+run 8640 ns
+# KERNEL: stopped at time: 1278720 ns
+run 8640 ns
+# KERNEL: stopped at time: 1287360 ns
+run 8640 ns
+# KERNEL: stopped at time: 1296 us
+run 8640 ns
+# KERNEL: stopped at time: 1304640 ns
+run 8640 ns
+# KERNEL: stopped at time: 1313280 ns
+run 8640 ns
+# KERNEL: stopped at time: 1321920 ns
+run 8640 ns
+# KERNEL: stopped at time: 1330560 ns
+run 8640 ns
+# KERNEL: stopped at time: 1339200 ns
+run 8640 ns
+# KERNEL: stopped at time: 1347840 ns
+run 8640 ns
+# KERNEL: stopped at time: 1356480 ns
+run 8640 ns
+# KERNEL: stopped at time: 1365120 ns
+endsim
+# VSIM: Simulation has finished.

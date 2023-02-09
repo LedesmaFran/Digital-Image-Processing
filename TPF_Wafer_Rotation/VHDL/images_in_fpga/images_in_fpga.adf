@@ -16,7 +16,7 @@ LANGUAGE=VHDL
 REFRESH_FLOW=1
 FLOWTOOLS=NONE
 FAMILY=
-fileopenfolder=D:\Documents\Aldec Files\image_in_fpga\images_in_fpga\src
+fileopenfolder=D:\Documents\repos\Digital-Image-Processing\TPF_Wafer_Rotation\VHDL\images_in_fpga\src
 CDebugSimulationTime=-all
 CDebugAdd=0
 CDebugAutoStep=1
@@ -48,6 +48,8 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 /uart_TX.vhd=-1
 /uart_RX.vhd=-1
 /tb_image_filter_tool.vhd=-1
+/axi_fifo.vhd=-1
+/tb_uart_axi.vhd=-1
 [Files.Data]
 .\src\read_image_tb.vhd=VHDL Source Code
 .\src\read_image.vhd=VHDL Source Code
@@ -68,8 +70,10 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 .\src\uart_TX.vhd=VHDL Source Code
 .\src\uart_RX.vhd=VHDL Source Code
 .\src\tb_image_filter_tool.vhd=VHDL Source Code
+.\src\axi_fifo.vhd=VHDL Source Code
+.\src\tb_uart_axi.vhd=VHDL Source Code
 [HierarchyViewer]
-HierarchyInformation=tb_image_filter_tool|behavior|0
+HierarchyInformation=tb_image_filter_tool|behavior|0 tb_uart_axi|behavior|0
 ShowHide=ShowTopLevel
 Selected=
 [ORDER]

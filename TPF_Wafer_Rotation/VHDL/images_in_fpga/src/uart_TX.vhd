@@ -4,46 +4,105 @@ use ieee.numeric_std.all;
 
 
 ENTITY uart_TX IS
-PORT( CLK :IN STD_LOGIC;
-		START:IN STD_LOGIC;
-		BUSY:OUT STD_LOGIC;
-		DATA: IN STD_LOGIC_VECTOR(7 downto 0);
-		TX_LINE:OUT STD_LOGIC);
+PORT( 
+		CLK		: in std_logic;
+		
+		VALID_IN : in std_logic := '0';
+		READY_OUT: out std_logic := '0';
+		
+		DATA_IN	: in std_logic_vector(7 downto 0);
+		
+		TX_LINE	: out std_logic; -- data out
+		
+		READY_IN	: in std_logic := '1';
+		VALID_OUT: out std_logic := '1';
+		
+		UART_TX_FIFO_FULL : out std_logic := '0'
+		
+);
 END uart_TX;
 
 architecture arch_TX of uart_TX is
 
-signal PRSCL: integer range 0 to 362:=0;
+
+component AXI_FIFO is
+generic
+(
+	DATA_WIDTH	: integer := 8;
+	STACK_SIZE	: integer := 32
+);
+port
+(
+	clock		: in std_logic;
+	
+	valid_in : in std_logic := '0';
+	ready_out: out std_logic := '1';
+	
+	data_in	: in std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+	data_out	: out std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+
+	ready_in	: in std_logic := '0';
+	valid_out: out std_logic := '0';
+	
+	full		: out std_logic := '0'
+);
+end component;
+
+
+signal PRSCL: integer range 0 to 450:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
-signal TX_FLG: STD_LOGIC:='0';
-BEGIN
+
+
+-- fifo signals
+signal fifo_valid 	: std_logic := '0';
+signal tx_ready		: std_logic := '1';
+signal fifo_data		: std_logic_vector(7 downto 0);
+
+begin
+
+	fifo : AXI_FIFO
+	port map(
+		clock => CLK,
+		
+		valid_in => VALID_IN,
+		ready_out => READY_OUT,
+		
+		data_in 	=> DATA_IN,
+		data_out	=> fifo_data,
+		
+		ready_in => tx_ready,
+		valid_out => fifo_valid,
+		
+		full => UART_TX_FIFO_FULL		
+	);
+	
 	process(CLK)
 		begin
+		
 			if rising_edge(CLK) then
-				if(TX_FLG = '0' and START = '1') then
-					TX_FLG <= '1';
-					BUSY <= '1';
+				if (tx_ready = '1' and fifo_valid = '1') then
+					tx_ready <= '0';
 					DATAFLL(0)<='0';
 					DATAFLL(9)<='1';
-					DATAFLL(8 downto 1)<=DATA;
+					DATAFLL(8 downto 1) <= fifo_data;
+				else null;
 				end if;
 			
-				if(TX_FLG = '1')then
-					if(PRSCL<27)then	
+				if(tx_ready = '0')then
+					if(PRSCL<432)then	
 						PRSCL <= PRSCL+1;
 					else
 						PRSCL <= 0;
 					end if;
 			
-					if(PRSCL = 13)then
+					if(PRSCL = 216)then
 						TX_LINE<=DATAFLL(INDEX);
 						if(INDEX<9)then
 							INDEX<=INDEX+1;
 						else
-							TX_FLG <='0';
-								BUSY <='0';
 							INDEX <= 0;
+							tx_ready <= '1';
 						end if;
 					end if;	
 				end if;

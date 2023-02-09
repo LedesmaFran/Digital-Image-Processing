@@ -1,4 +1,6 @@
-486
+523
+~E 1 "../src/axi_fifo.vhd" 5 AXI_FIFO
+~A 1 "../src/axi_fifo.vhd" 24 behavioral
 ~E 1 "../src/binarization.vhd" 6 binarization
 ~A 1 "../src/binarization.vhd" 18 behavioral
 ~A 1 "../src/binarization.vhd" 19 rtl
@@ -39,7 +41,9 @@
 ~A 1 "../src/tb_image_filter_tool.vhd" 17 behavior
 ~E 1 "../src/read_image_tb.vhd" 7 tb_read_image_vhdl
 ~A 1 "../src/read_image_tb.vhd" 17 behavior
+~E 1 "../src/tb_uart_axi.vhd" 7 tb_uart_axi
+~A 1 "../src/tb_uart_axi.vhd" 11 behavior
 ~E 1 "../src/uart_RX.vhd" 5 uart_RX
-~A 1 "../src/uart_RX.vhd" 13 atch_RX
+~A 1 "../src/uart_RX.vhd" 29 atch_RX
 ~E 1 "../src/uart_TX.vhd" 6 uart_TX
-~A 1 "../src/uart_TX.vhd" 14 arch_TX
+~A 1 "../src/uart_TX.vhd" 25 arch_TX
