@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Image_Filter_Tool
-Wed Feb  8 16:35:25 2023
+Fri Feb 10 15:44:56 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -18,8 +18,8 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: uart_TX:inst|AXI_FIFO:fifo
- 13. Parameter Settings for User Entity Instance: 74161:clk_prsclr
- 14. Parameter Settings for User Entity Instance: uart_RX:inst1|AXI_FIFO:fifo
+ 13. Parameter Settings for User Entity Instance: uart_RX:inst1|AXI_FIFO:fifo
+ 14. Parameter Settings for User Entity Instance: 74161:clk_prsclr
  15. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter
  16. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|RAM_block:ram2
  17. Parameter Settings for User Entity Instance: Image_Filter_Tool:filter|binarization:bin
@@ -70,16 +70,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb  8 16:35:25 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Feb 10 15:44:56 2023       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; Image_Filter_Tool                           ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 913                                         ;
-;     Total combinational functions  ; 872                                         ;
-;     Dedicated logic registers      ; 644                                         ;
-; Total registers                    ; 644                                         ;
-; Total pins                         ; 6                                           ;
+; Total logic elements               ; 872                                         ;
+;     Total combinational functions  ; 831                                         ;
+;     Dedicated logic registers      ; 687                                         ;
+; Total registers                    ; 687                                         ;
+; Total pins                         ; 7                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -215,36 +215,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                   ;
-+---------------------------------------------+---------------------------------+
-; Resource                                    ; Usage                           ;
-+---------------------------------------------+---------------------------------+
-; Estimated Total logic elements              ; 913                             ;
-;                                             ;                                 ;
-; Total combinational functions               ; 872                             ;
-; Logic element usage by number of LUT inputs ;                                 ;
-;     -- 4 input functions                    ; 393                             ;
-;     -- 3 input functions                    ; 322                             ;
-;     -- <=2 input functions                  ; 157                             ;
-;                                             ;                                 ;
-; Logic elements by mode                      ;                                 ;
-;     -- normal mode                          ; 738                             ;
-;     -- arithmetic mode                      ; 134                             ;
-;                                             ;                                 ;
-; Total registers                             ; 644                             ;
-;     -- Dedicated logic registers            ; 644                             ;
-;     -- I/O registers                        ; 0                               ;
-;                                             ;                                 ;
-; I/O pins                                    ; 6                               ;
-;                                             ;                                 ;
-; Embedded Multiplier 9-bit elements          ; 0                               ;
-;                                             ;                                 ;
-; Maximum fan-out node                        ; 74161:clk_prsclr|f74161:sub|104 ;
-; Maximum fan-out                             ; 640                             ;
-; Total fan-out                               ; 4686                            ;
-; Average fan-out                             ; 3.07                            ;
-+---------------------------------------------+---------------------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 872            ;
+;                                             ;                ;
+; Total combinational functions               ; 831            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 177            ;
+;     -- 3 input functions                    ; 571            ;
+;     -- <=2 input functions                  ; 83             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 714            ;
+;     -- arithmetic mode                      ; 117            ;
+;                                             ;                ;
+; Total registers                             ; 687            ;
+;     -- Dedicated logic registers            ; 687            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 7              ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 687            ;
+; Total fan-out                               ; 4623           ;
+; Average fan-out                             ; 3.02           ;
++---------------------------------------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -252,13 +252,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
-; |top                       ; 872 (0)             ; 644 (0)                   ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |top                             ; top         ; work         ;
-;    |74161:clk_prsclr|      ; 5 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|74161:clk_prsclr            ; 74161       ; work         ;
-;       |f74161:sub|         ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|74161:clk_prsclr|f74161:sub ; f74161      ; work         ;
-;    |uart_RX:inst1|         ; 443 (42)            ; 322 (24)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_RX:inst1               ; uart_RX     ; work         ;
-;       |AXI_FIFO:fifo|      ; 401 (401)           ; 298 (298)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_RX:inst1|AXI_FIFO:fifo ; AXI_FIFO    ; work         ;
-;    |uart_TX:inst|          ; 424 (23)            ; 318 (20)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_TX:inst                ; uart_TX     ; work         ;
-;       |AXI_FIFO:fifo|      ; 401 (401)           ; 298 (298)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_TX:inst|AXI_FIFO:fifo  ; AXI_FIFO    ; work         ;
+; |top                       ; 831 (0)             ; 687 (0)                   ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |top                             ; top         ; work         ;
+;    |uart_RX:inst1|         ; 448 (98)            ; 362 (64)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_RX:inst1               ; uart_RX     ; work         ;
+;       |AXI_FIFO:fifo|      ; 350 (350)           ; 298 (298)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_RX:inst1|AXI_FIFO:fifo ; AXI_FIFO    ; work         ;
+;    |uart_TX:inst|          ; 383 (33)            ; 325 (27)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_TX:inst                ; uart_TX     ; work         ;
+;       |AXI_FIFO:fifo|      ; 350 (350)           ; 298 (298)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_TX:inst|AXI_FIFO:fifo  ; AXI_FIFO    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -270,8 +268,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+---------------------------------------------------+
 ; uart_TX:inst|DATAFLL[0]                    ; Stuck at GND due to stuck port data_in            ;
 ; uart_TX:inst|DATAFLL[9]                    ; Stuck at VCC due to stuck port data_in            ;
-; uart_TX:inst|AXI_FIFO:fifo|valid_out_flag  ; Merged with uart_TX:inst|AXI_FIFO:fifo|valid_out  ;
 ; uart_RX:inst1|AXI_FIFO:fifo|valid_out_flag ; Merged with uart_RX:inst1|AXI_FIFO:fifo|valid_out ;
+; uart_TX:inst|AXI_FIFO:fifo|valid_out_flag  ; Merged with uart_TX:inst|AXI_FIFO:fifo|valid_out  ;
 ; Total Number of Removed Registers = 4      ;                                                   ;
 +--------------------------------------------+---------------------------------------------------+
 
@@ -281,12 +279,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 644   ;
-; Number of registers using Synchronous Clear  ; 15    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 687   ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 539   ;
+; Number of registers using Clock Enable       ; 634   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -296,18 +294,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+---------+
 ; Inverted Register                            ; Fan out ;
 +----------------------------------------------+---------+
-; uart_TX:inst|tx_ready                        ; 257     ;
-; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[4] ; 34      ;
-; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[3] ; 34      ;
-; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[2] ; 10      ;
-; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[1] ; 10      ;
-; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[0] ; 10      ;
-; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[4]  ; 34      ;
-; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[3]  ; 34      ;
-; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[2]  ; 10      ;
-; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[1]  ; 10      ;
-; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[0]  ; 10      ;
-; Total number of inverted registers = 11      ;         ;
+; uart_TX:inst|TX_LINE                         ; 1       ;
+; uart_TX:inst|tx_ready                        ; 19      ;
+; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[4] ; 35      ;
+; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[1] ; 19      ;
+; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[0] ; 19      ;
+; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[2] ; 19      ;
+; uart_RX:inst1|AXI_FIFO:fifo|stack_pointer[3] ; 19      ;
+; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[4]  ; 35      ;
+; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[1]  ; 19      ;
+; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[0]  ; 19      ;
+; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[2]  ; 19      ;
+; uart_TX:inst|AXI_FIFO:fifo|stack_pointer[3]  ; 19      ;
+; Total number of inverted registers = 12      ;         ;
 +----------------------------------------------+---------+
 
 
@@ -316,70 +315,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|uart_RX:inst1|INDEX[0]                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[31][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[30][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[31][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[29][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[30][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[28][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[29][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[27][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[28][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[26][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[27][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[25][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[26][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[24][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[25][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[23][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[24][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[22][0]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[23][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[21][0]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[22][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[20][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[21][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[19][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[20][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[18][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[19][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[17][0]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[18][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[16][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[17][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[15][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[16][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[14][0]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[15][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[13][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[14][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[12][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[31][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[30][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[29][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[28][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[27][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[26][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[25][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[24][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[23][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[22][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[21][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[20][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[19][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[18][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[17][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[16][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[15][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[14][0] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[13][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[12][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[11][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[10][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[9][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[8][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[7][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[6][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[5][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[4][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[3][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[2][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[1][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[31][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[30][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[29][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[28][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[27][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[26][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[25][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[24][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[23][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[22][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[21][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[20][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[19][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[18][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[17][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[16][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[15][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[14][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[13][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[12][2]  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[11][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[12][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[10][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[11][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[9][4]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[10][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[8][6]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[9][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[7][5]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[8][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[10][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[9][1]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[8][7]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[7][2]   ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[6][3]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[7][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[5][7]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[6][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[4][7]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[5][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[3][7]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[4][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[2][7]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[3][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[1][6]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[2][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_RX:inst1|AXI_FIFO:fifo|stack[1][7]  ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|uart_RX:inst1|PRSCL[5]                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[5][2]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[4][4]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[3][3]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[2][5]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|uart_TX:inst|AXI_FIFO:fifo|stack[1][7]   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|uart_RX:inst1|INDEX[3]                   ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |top|uart_RX:inst1|PRSCL[5]                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
@@ -394,6 +393,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_RX:inst1|AXI_FIFO:fifo ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                  ;
+; stack_size     ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: 74161:clk_prsclr ;
 +------------------------+--------------+-----------------------+
@@ -405,17 +415,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE          ;
 ; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE        ;
 +------------------------+--------------+-----------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_RX:inst1|AXI_FIFO:fifo ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                  ;
-; stack_size     ; 32    ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -659,24 +658,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 6                           ;
-; cycloneiii_ff         ; 644                         ;
-;     ENA               ; 527                         ;
-;     ENA SCLR          ; 12                          ;
-;     SCLR              ; 3                           ;
-;     plain             ; 102                         ;
-; cycloneiii_lcell_comb ; 872                         ;
-;     arith             ; 134                         ;
-;         2 data inputs ; 132                         ;
-;         3 data inputs ; 2                           ;
-;     normal            ; 738                         ;
-;         1 data inputs ; 18                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 320                         ;
-;         4 data inputs ; 393                         ;
+; boundary_port         ; 7                           ;
+; cycloneiii_ff         ; 687                         ;
+;     ENA               ; 607                         ;
+;     ENA SCLR          ; 27                          ;
+;     SCLR              ; 1                           ;
+;     SLD               ; 1                           ;
+;     plain             ; 51                          ;
+; cycloneiii_lcell_comb ; 832                         ;
+;     arith             ; 117                         ;
+;         2 data inputs ; 56                          ;
+;         3 data inputs ; 61                          ;
+;     normal            ; 715                         ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 510                         ;
+;         4 data inputs ; 177                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.80                        ;
-; Average LUT depth     ; 2.48                        ;
+; Max LUT depth         ; 9.70                        ;
+; Average LUT depth     ; 2.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -695,7 +695,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Wed Feb  8 16:35:16 2023
+    Info: Processing started: Fri Feb 10 15:44:47 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Image_Filter_tool -c Image_Filter_Tool
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -703,7 +703,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file uart_tx
     Info (12022): Found design unit 1: uart_TX-arch_TX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd Line: 25
     Info (12023): Found entity 1: uart_TX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file uart_rx.vhd
-    Info (12022): Found design unit 1: uart_RX-atch_RX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 29
+    Info (12022): Found design unit 1: uart_RX-atch_RX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 30
     Info (12023): Found entity 1: uart_RX File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file tb_image_filter.vhd
     Info (12022): Found design unit 1: tb_image_filter-behavior File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/tb_image_filter.vhd Line: 17
@@ -757,12 +757,12 @@ Info (12128): Elaborating entity "uart_TX" for hierarchy "uart_TX:inst"
 Warning (10540): VHDL Signal Declaration warning at uart_TX.vhd(18): used explicit default value for signal "VALID_OUT" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd Line: 18
 Info (12128): Elaborating entity "AXI_FIFO" for hierarchy "uart_TX:inst|AXI_FIFO:fifo" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_TX.vhd Line: 64
 Warning (10540): VHDL Signal Declaration warning at axi_fifo.vhd(19): used explicit default value for signal "ready_out" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/axi_fifo.vhd Line: 19
+Info (12128): Elaborating entity "uart_RX" for hierarchy "uart_RX:inst1"
+Warning (10540): VHDL Signal Declaration warning at uart_RX.vhd(14): used explicit default value for signal "READY_OUT" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 14
 Info (12128): Elaborating entity "74161" for hierarchy "74161:clk_prsclr"
 Info (12130): Elaborated megafunction instantiation "74161:clk_prsclr"
 Info (12128): Elaborating entity "f74161" for hierarchy "74161:clk_prsclr|f74161:sub" File: d:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/74161.tdf Line: 33
 Info (12131): Elaborated megafunction instantiation "74161:clk_prsclr|f74161:sub", which is child of megafunction instantiation "74161:clk_prsclr" File: d:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/74161.tdf Line: 33
-Info (12128): Elaborating entity "uart_RX" for hierarchy "uart_RX:inst1"
-Warning (10540): VHDL Signal Declaration warning at uart_RX.vhd(14): used explicit default value for signal "READY_OUT" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/uart_RX.vhd Line: 14
 Info (12128): Elaborating entity "Image_Filter_Tool" for hierarchy "Image_Filter_Tool:filter"
 Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(82): used explicit default value for signal "filter_sel" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 82
 Warning (10540): VHDL Signal Declaration warning at Image_Filter_Tool.vhd(83): used explicit default value for signal "type_sel" because signal was never assigned a value File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/Image_Filter_Tool.vhd Line: 83
@@ -786,19 +786,17 @@ Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(147): object "c
 Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(153): object "stack_full2" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 153
 Warning (10036): Verilog HDL or VHDL warning at image_filter.vhd(154): object "counter_out2" assigned a value but never read File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 154
 Info (12128): Elaborating entity "fifo" for hierarchy "Image_Filter_Tool:filter|image_filter:filter2|fifo:fifo1" File: D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/image_filter.vhd Line: 162
-Info (13014): Ignored 4 buffer(s)
-    Info (13015): Ignored 4 CARRY buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 919 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 911 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 913 logic cells
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 904 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4814 megabytes
-    Info: Processing ended: Wed Feb  8 16:35:25 2023
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Fri Feb 10 15:44:56 2023
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:22
 
 

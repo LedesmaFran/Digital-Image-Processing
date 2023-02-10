@@ -20,11 +20,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "UART_RXD",
+					"name" : "rx_gotem",
 					"strict" : false
 				},
 				{
 					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "UART_RXD",
 					"strict" : false
 				}
 			]
