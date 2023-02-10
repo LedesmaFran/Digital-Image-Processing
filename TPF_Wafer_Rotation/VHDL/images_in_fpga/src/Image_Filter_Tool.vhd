@@ -6,21 +6,24 @@ use ieee.std_logic_textio.all;
 
 ENTITY Image_Filter_Tool IS
 	GENERIC (
-	   ADDR_WIDTH     	: integer := 16;        
-	   DATA_WIDTH     	: integer := 8;
-	   IMAGE_HEIGHT		: integer := 256+4;
-		IMAGE_WIDTH			: integer := 256+4;
-		IMAGE_FILE_NAME 	: string  := "wafer_gray.mif"       
+	   	ADDR_WIDTH     	: integer := 16;        
+	   	DATA_WIDTH     	: integer := 8;
+	   	IMAGE_HEIGHT	: integer := 256+4;
+		IMAGE_WIDTH		: integer := 256+4;
+		IMAGE_FILE_NAME : string  := "wafer_gray.mif"       
   	);
 	PORT(
-		clock			: IN std_logic;
-		enable		: IN std_logic;
-		pixel_in		: IN std_logic_vector(DATA_WIDTH-1 downto 0);
+		clock		: IN std_logic;
+		
+		valid_in 	: IN std_logic;
+		ready_out	: OUT std_logic := '1';
+		
+		pixel_in	: IN std_logic_vector(DATA_WIDTH-1 downto 0);
 		pixel_out	: OUT std_logic_vector(DATA_WIDTH-1 downto 0);
-		counter_out	: OUT std_logic_vector(17 downto 0) := (others => '0');
-		out_valid	: OUT std_logic
-		);
-	
+		
+		ready_in	: IN std_logic := '0';
+		valid_out	: OUT std_logic := '0'	
+	);	
 END Image_Filter_Tool;
 
 ARCHITECTURE behavior OF Image_Filter_Tool IS 
@@ -78,6 +81,7 @@ ARCHITECTURE behavior OF Image_Filter_Tool IS
 	signal q2 			: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
    	
 	-- Filter1 signals
+	signal enable1			: std_logic := '1';
 	signal data_out		: std_logic_vector(DATA_WIDTH-1 downto 0);
 	signal filter_sel 	: std_logic_vector(1 downto 0) := "00";
 	signal type_sel 		: std_logic_vector(1 downto 0) := "00";	 -- 00 => kernel / 01 => erosion / 10 => dilation 
@@ -103,6 +107,10 @@ ARCHITECTURE behavior OF Image_Filter_Tool IS
 	signal q			: std_logic_vector(DATA_WIDTH-1 downto 0); 
 	signal q_reg2	: std_logic_vector(DATA_WIDTH-1 downto 0);
 	
+	-- AXI signals
+	signal valid_out_flag : std_logic := '0';
+	signal ready_out_flag : std_logic := '1';
+	
 BEGIN
 	
 	-- RAM block
@@ -124,7 +132,7 @@ BEGIN
 	);
 	
 	bin: binarization PORT MAP (
-		not_enable => enable,
+		not_enable => enable1,
 		data_in => q,
 		data_out => bin_out
 	);
@@ -139,7 +147,7 @@ BEGIN
 	PORT MAP (
 		filter_sel => filter_sel,
 		type_sel => type_sel,
-		not_enable => enable,
+		not_enable => enable1,
 		clock => clock,
 		pixel_in => bin_out,
 		pixel_out => data_out,
@@ -165,11 +173,18 @@ BEGIN
 		out_valid => out_valid2
 	);										 							 
 	
+	
+	
+	axi_in_proc: process (clock, valid_in, ready_out_flag)
+	
 	-- Stimulus process
-   stim_proc: process (clock, enable, pixel_in)
+	
+	-- control enable1, control the input
+	
+   	stim_proc: process (clock, enable, pixel_in)
 	begin
 		if (rising_edge(clock)) then				
-			if (enable = '0') then
+			if (enable1 = '0') then
 				q <= pixel_in;
 			else null;	
 			end if;
@@ -194,6 +209,9 @@ BEGIN
 	end process;
 	
 	-- Stimulus process 2
+	
+	-- control enable2, control the output
+	
    stim_proc2: process (clock, counter_out1, counter_out2, out_valid1)
 	begin
 		if (rising_edge(clock)) then				
@@ -216,10 +234,10 @@ BEGIN
 	
 	-- Output process
 	out_proc: process (clock)
-   begin
+   	begin
 		if (rising_edge(clock)) then
 			out_valid <= out_valid2;
-			counter_out <= counter_out2;
+			--counter_out <= counter_out2;
 		else null;
 		end if;
 	end process;

@@ -17,3 +17,5 @@
 .\src\tb_image_filter_tool.vhd
 .\src\axi_fifo.vhd
 .\src\tb_uart_axi.vhd
+.\src\AXI_Filter_Tool.vhd
+.\src\tb_uart_filter.vhd

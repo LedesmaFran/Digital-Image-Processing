@@ -46,7 +46,6 @@ ARCHITECTURE behavior OF tb_Image_Filter_Tool IS
 		enable		: IN std_logic;
 		pixel_in	: IN std_logic_vector(DATA_WIDTH-1 downto 0);
 		pixel_out	: OUT std_logic_vector(DATA_WIDTH-1 downto 0);
-		counter_out	: OUT std_logic_vector(17 downto 0) := (others => '0');
 		out_valid	: OUT std_logic
 		);
 	END COMPONENT;
@@ -94,7 +93,8 @@ BEGIN
 		q => q_reg
 	);
 	
-	filter_tool: Image_Filter_Tool GENERIC MAP(
+	filter_tool: Image_Filter_Tool 
+	GENERIC MAP(
 		ADDR_WIDTH     	=> ADDR_WIDTH,        
 	    DATA_WIDTH     	=> DATA_WIDTH,
 	    IMAGE_HEIGHT	=> IMAGE_HEIGHT,
@@ -106,7 +106,6 @@ BEGIN
 		enable		=> enable,
 		pixel_in	=> pixel_in,
 		pixel_out	=> pixel_out,
-		counter_out	=> counter_out,
 		out_valid	=> out_valid
 	);
 										 							  

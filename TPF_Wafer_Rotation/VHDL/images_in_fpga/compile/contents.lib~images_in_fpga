@@ -1,6 +1,8 @@
-523
+547
 ~E 1 "../src/axi_fifo.vhd" 5 AXI_FIFO
 ~A 1 "../src/axi_fifo.vhd" 24 behavioral
+~E 1 "../src/AXI_Filter_Tool.vhd" 6 AXI_Filter_Tool
+~A 1 "../src/AXI_Filter_Tool.vhd" 31 behavioral
 ~E 1 "../src/binarization.vhd" 6 binarization
 ~A 1 "../src/binarization.vhd" 18 behavioral
 ~A 1 "../src/binarization.vhd" 19 rtl
@@ -15,7 +17,7 @@
 ~A 1 "../src/image_filter.vhd" 28 behavioral
 ~A 1 "../src/image_filter.vhd" 27 rtl
 ~E 1 "../src/Image_Filter_Tool.vhd" 7 Image_Filter_Tool
-~A 1 "../src/Image_Filter_Tool.vhd" 26 behavior
+~A 1 "../src/Image_Filter_Tool.vhd" 29 behavior
 ~E 1 "../src/dilation.vhd" 6 kernel_dilation
 ~A 1 "../src/dilation.vhd" 26 behavioral
 ~E 1 "../src/erosion.vhd" 6 kernel_erosion
@@ -43,6 +45,8 @@
 ~A 1 "../src/read_image_tb.vhd" 17 behavior
 ~E 1 "../src/tb_uart_axi.vhd" 7 tb_uart_axi
 ~A 1 "../src/tb_uart_axi.vhd" 11 behavior
+~E 1 "../src/tb_uart_filter.vhd" 7 tb_uart_filter
+~A 1 "../src/tb_uart_filter.vhd" 11 behavior
 ~E 1 "../src/uart_RX.vhd" 5 uart_RX
 ~A 1 "../src/uart_RX.vhd" 29 atch_RX
 ~E 1 "../src/uart_TX.vhd" 6 uart_TX

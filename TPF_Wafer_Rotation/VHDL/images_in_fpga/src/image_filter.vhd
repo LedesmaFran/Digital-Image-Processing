@@ -334,8 +334,8 @@ begin
 			
 			case type_sel is 
 					when "00" => pixel_out <= kernel_out_reg;
-					when "01" => pixel_out <= erosion_out_reg;	   -- type_sel = 01 => erosion
-					when "10" => pixel_out <= dilation_out_reg;   -- type_sel = 10 => dilation
+					when "01" => pixel_out <= erosion_out_reg;		-- type_sel = 01 => erosion                 
+					when "10" => pixel_out <= dilation_out_reg;   	-- type_sel = 10 => dilation
 					when "11" => pixel_out <= kernel_out_reg;
 					when others => pixel_out <= kernel_out_reg;
 				end case;

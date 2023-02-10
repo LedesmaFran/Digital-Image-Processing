@@ -50,6 +50,8 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 /tb_image_filter_tool.vhd=-1
 /axi_fifo.vhd=-1
 /tb_uart_axi.vhd=-1
+/AXI_Filter_Tool.vhd=-1
+/tb_uart_filter.vhd=-1
 [Files.Data]
 .\src\read_image_tb.vhd=VHDL Source Code
 .\src\read_image.vhd=VHDL Source Code
@@ -72,8 +74,10 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 .\src\tb_image_filter_tool.vhd=VHDL Source Code
 .\src\axi_fifo.vhd=VHDL Source Code
 .\src\tb_uart_axi.vhd=VHDL Source Code
+.\src\AXI_Filter_Tool.vhd=VHDL Source Code
+.\src\tb_uart_filter.vhd=VHDL Source Code
 [HierarchyViewer]
-HierarchyInformation=tb_image_filter_tool|behavior|0 tb_uart_axi|behavior|0
+HierarchyInformation=tb_uart_axi|behavior|0 tb_uart_filter|behavior|0
 ShowHide=ShowTopLevel
 Selected=
 [ORDER]
