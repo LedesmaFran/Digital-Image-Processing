@@ -1,13 +1,13 @@
-timestamp=1675977411042
+timestamp=1676039796849
 
 [~A]
-ModifyID=547
+ModifyID=549
 Version=74
 
 [~MFT]
-0=10|0images_in_fpga.mgf|2440709|2343802
-1=4|1images_in_fpga.mgf|13995860|13875629
-3=4|3images_in_fpga.mgf|6481557|6435748
+0=7|0images_in_fpga.mgf|2447422|2350403
+1=2|1images_in_fpga.mgf|13999574|13884693
+3=1|3images_in_fpga.mgf|6482879|6438338
 
 [axi_fifo]
 A/behavioral=21|../src/axi_fifo.vhd|24|1*13978491
@@ -98,15 +98,15 @@ Version/behavioral=13.0.376.8320 (Windows64)|00000004789cd34d494a0700030f015b|35
 Version/rtl=13.0.376.8320 (Windows64)|00000004789cd34d494a0700030f015b|9dbb47eebe7da777b751efca131652c5665527ece7e39c46662bba89ba52f03e
 
 [image_filter_tool]
-A/behavior=21|../src/Image_Filter_Tool.vhd|29|1*13956593
-BinW64/behavior=3*6467530
-I=0*2248915
-I/behavior=0*2436142
-M=11|2|vef|1675962439642|../src/Image_Filter_Tool.vhd|0*2248166*0x1c17de8ac39611417a9c38a6a53a86c7e2d9a10d|0*2248816*0x23b75c12e3e89f2ef000564498faa8c2
-M/behavior=21|2|vef|1675969839481|../src/Image_Filter_Tool.vhd|0*2249200*0xfd5415d485f7a28e046b49a39ecface5e228fa8f|0*2253918*0x9065d32a2e40e13794b29a2731812845
+A/behavior=21|../src/Image_Filter_Tool.vhd|29|1*13999574
+BinW64/behavior=3*6482879
+I=0*2442171
+I/behavior=0*2447422
+M=11|2|vef|1676039754070|../src/Image_Filter_Tool.vhd|0*2441361*0xacaa3f612641c469e306a61023172900742fdd08|0*2442072*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavior=21|2|vef|1676039796711|../src/Image_Filter_Tool.vhd|0*2442456*0x26da3f0a381e12cfd32314ea674e75874c7d0dc5|0*2447311*0x9065d32a2e40e13794b29a2731812845
 R=../src/Image_Filter_Tool.vhd|7
-Version=13.0.376.8320 (Windows64)|00000004789cd34d494a0700030f015b|cfeb5f16519bc862fbf104240b0a1cbede682fb803fb58d2bdbf0947d34464ec4dd8109b32ec1d9ea472468c93737204
-Version/behavior=13.0.376.8320 (Windows64)|00000004789cd34d494a0700030f015b|f9bccf16e2dce5a640f0ad5e8eaa0283e08d679eaf1bc9de9439630905b37e5f46a2853a797057657fad7a5470e7b636
+Version=13.0.376.8320 (Windows64)|00000004789cd34d494a0700030f015b|cfeb5f16519bc862fbf104240b0a1cbede682fb803fb58d2bdbf0947d34464ec2b49122ffff8286e9ea8a1da8b92cc57
+Version/behavior=13.0.376.8320 (Windows64)|00000004789cd34d494a0700030f015b|f9bccf16e2dce5a640f0ad5e8eaa0283e08d679eaf1bc9de9439630905b37e5f6f2679730fc09f15b0ba6aaba4d25ce7
 
 [kernel_dilation]
 A/behavioral=21|../src/dilation.vhd|26|1*13941807
@@ -290,7 +290,7 @@ dilation=11|0*1379979|
 erosion=11|0*1378468|
 fifo=11|0*255523|
 image_filter=11|0*1438936|
-image_filter_tool=Image_Filter_Tool 11|0*2247832|
+image_filter_tool=Image_Filter_Tool 11|0*2441012|
 kernel_dilation=11|0*1445404|
 kernel_erosion=11|0*1441150|
 kernel_mac=11|0*1318752|

@@ -27,38 +27,36 @@ type stack_t is array(0 to STACK_SIZE-1) of std_logic_vector(DATA_WIDTH-1 downto
 
 signal stack 			: stack_t := (others => (others => '0'));
 signal valid_out_flag: std_logic := '0';
+signal stack_pointer 	: integer := STACK_SIZE-1;
 
 begin
 
 	process (clock, data_in, valid_in, ready_in)
-	variable stack_pointer 	: integer := STACK_SIZE-1;
-	variable counter			: integer := 0;
+	variable counter		: integer := 0;
 	begin
 		if (rising_edge(clock)) then
-			data_out <= stack(STACK_SIZE-1);
+			
 			-- stack update and data input
 			if (valid_in = '1') then
 				stack(stack_pointer) <= data_in;
-				stack_pointer := stack_pointer - 1;
-				if (stack_pointer = 0) then
+				stack_pointer <= stack_pointer - 1;
+				if (stack_pointer = 1) then
 					full <= '1';
 				else null;
 				end if;
-				valid_out_flag <= '1';
-				valid_out <= '1';
-			else null;
-			end if;
-
 			-- output when ready and valid
-			if (ready_in = '1' and valid_out_flag = '1') then
+			elsif (ready_in = '1' and valid_out_flag = '1') then
 				for counter in STACK_SIZE-1 downto 1 loop
 					stack(counter) <= stack(counter-1);
 				end loop;
-				stack_pointer := stack_pointer + 1;
-				--full <= '0';
+				stack_pointer <= stack_pointer + 1;
 				valid_out_flag <= '0';
 				valid_out <= '0';
-			else null;
+			elsif (stack_pointer < STACK_SIZE-1) then
+				data_out <= stack(STACK_SIZE-1);
+				valid_out_flag <= '1';
+				valid_out <= '1';
+			else null;	
 			end if;
 			
 		else null;

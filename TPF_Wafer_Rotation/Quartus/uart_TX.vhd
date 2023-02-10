@@ -49,7 +49,7 @@ port
 end component;
 
 
-signal PRSCL: integer range 0 to 63:=0;
+signal PRSCL: integer range 0 to 450:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
 
@@ -90,13 +90,13 @@ begin
 				end if;
 			
 				if(tx_ready = '0')then
-					if(PRSCL<27)then	
+					if(PRSCL<432)then	
 						PRSCL <= PRSCL+1;
 					else
 						PRSCL <= 0;
 					end if;
 			
-					if(PRSCL = 13)then
+					if(PRSCL = 216)then
 						TX_LINE<=DATAFLL(INDEX);
 						if(INDEX<9)then
 							INDEX<=INDEX+1;

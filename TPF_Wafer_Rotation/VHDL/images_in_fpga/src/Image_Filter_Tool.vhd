@@ -176,12 +176,14 @@ BEGIN
 	
 	
 	axi_in_proc: process (clock, valid_in, ready_out_flag)
+	begin
+	end process;
 	
 	-- Stimulus process
 	
 	-- control enable1, control the input
 	
-   	stim_proc: process (clock, enable, pixel_in)
+   	stim_proc: process (clock, enable1, pixel_in)
 	begin
 		if (rising_edge(clock)) then				
 			if (enable1 = '0') then
@@ -236,7 +238,7 @@ BEGIN
 	out_proc: process (clock)
    	begin
 		if (rising_edge(clock)) then
-			out_valid <= out_valid2;
+			--out_valid <= out_valid2;
 			--counter_out <= counter_out2;
 		else null;
 		end if;

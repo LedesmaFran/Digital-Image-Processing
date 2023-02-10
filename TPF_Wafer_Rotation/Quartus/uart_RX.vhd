@@ -8,7 +8,7 @@ port(
 
 		CLK		: in std_logic;
 		
-		UART_CLK	: out std_logic;
+		UART_CLK	: out std_logic := '0';
 		
 		VALID_IN : in std_logic := '1';
 		READY_OUT: out std_logic := '1';
@@ -55,9 +55,9 @@ end component;
 
 signal DATAFLL			: std_logic_vector(9 downto 0);
 signal RX_FLG 			: std_logic:='0';
-signal PRSCL			: integer range 0 to 63:=0;
+signal PRSCL			: integer range 0 to 450:=0;
 signal INDEX			: integer range 0 to 9:=0;
-signal INT_UART_CLK	: std_logic;
+signal INT_UART_CLK	: std_logic := '0';
 
 -- fifo signals
 signal data_valid 	: std_logic := '0';
@@ -95,14 +95,14 @@ begin
 	
 			if(RX_FLG='1')then
 				DATAFLL(INDEX)<=RX_LINE;
-				if(PRSCL<27)then
+				if(PRSCL<432)then
 					PRSCL<=PRSCL+1;
 				else
 					PRSCL <= 0; 
 				end if;
 			
 		
-				if(PRSCL=13)then
+				if(PRSCL=216)then
 					INT_UART_CLK <= not INT_UART_CLK;
 					UART_CLK <= INT_UART_CLK;
 					if(INDEX<9)then

@@ -6,3 +6,6 @@ TP1_Vision/__pycache__
 TP2_Filters/__pycache__
 TP3_Filters/__pycache__
 TPF_Wafer_Rotation/Quartus/db/Image_Filter_Tool.db_info
+*.log
+TPF_Wafer_Rotation/VHDL/images_in_fpga/images_in_fpga/elaboration.log
+TPF_Wafer_Rotation/VHDL/images_in_fpga/log/console.log

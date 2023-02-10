@@ -1,7 +1,5 @@
-MESSAGE "File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd" 
-MESSAGE "Compile Entity "binarization"" 
-MESSAGE "Compile Architecture "behavioral" of Entity "binarization"" 
-MESSAGE "File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/AXI_Filter_Tool.vhd" 
-MESSAGE "Compile Entity "AXI_Filter_Tool"" 
-MESSAGE "Compile Architecture "behavioral" of Entity "AXI_Filter_Tool"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 
+MESSAGE "File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd" 
+MESSAGE "Compile Entity "Image_Filter_Tool"" 
+MESSAGE "Compile Architecture "behavior" of Entity "Image_Filter_Tool"" 
+WARNING DAGGEN_0002: "Process has no effect - no sequential statements." "D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd" 178 0
+SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time :  0.1 [s]" 
