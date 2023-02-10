@@ -24,6 +24,7 @@ ARCHITECTURE behavior OF tb_Image_Filter_Tool IS
 		IMAGE_FILE_NAME 	: string  := "wafer_gray.mif"       
   	);	
 	PORT (
+		not_enable	: IN STD_LOGIC;
 		clock 		: IN  std_logic;
 		data 		: IN  std_logic_vector(DATA_WIDTH-1 downto 0);
 		rdaddress 	: IN  std_logic_vector(ADDR_WIDTH-1 downto 0);
@@ -84,6 +85,7 @@ BEGIN
 		IMAGE_FILE_NAME => IMAGE_FILE_NAME       
   	)
 	PORT MAP (
+		not_enable => enable,
 		clock => clock,
 		data => data,
 		rdaddress => rdaddress,
