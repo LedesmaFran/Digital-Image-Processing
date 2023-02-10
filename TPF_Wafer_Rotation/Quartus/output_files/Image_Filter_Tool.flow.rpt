@@ -1,5 +1,5 @@
 Flow report for Image_Filter_Tool
-Wed Feb  8 16:35:37 2023
+Fri Feb 10 15:45:08 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Feb  8 16:35:35 2023       ;
+; Flow Status                        ; Successful - Fri Feb 10 15:45:06 2023       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; Image_Filter_Tool                           ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 907 / 22,320 ( 4 % )                        ;
-;     Total combinational functions  ; 872 / 22,320 ( 4 % )                        ;
-;     Dedicated logic registers      ; 644 / 22,320 ( 3 % )                        ;
-; Total registers                    ; 644                                         ;
-; Total pins                         ; 6 / 154 ( 4 % )                             ;
+; Total logic elements               ; 872 / 22,320 ( 4 % )                        ;
+;     Total combinational functions  ; 831 / 22,320 ( 4 % )                        ;
+;     Dedicated logic registers      ; 687 / 22,320 ( 3 % )                        ;
+; Total registers                    ; 687                                         ;
+; Total pins                         ; 7 / 154 ( 5 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/08/2023 16:35:17 ;
+; Start date & time ; 02/10/2023 15:44:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Image_Filter_Tool   ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value     ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589190.167588491711888         ; --                ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 10995770589190.167605468710184         ; --                ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_signal_integrity ;
@@ -96,11 +96,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4814 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 5543 MB             ; 00:00:10                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4822 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 5554 MB             ; 00:00:10                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4719 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4796 MB             ; 00:00:02                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:33                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.1                     ; 4803 MB             ; 00:00:02                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

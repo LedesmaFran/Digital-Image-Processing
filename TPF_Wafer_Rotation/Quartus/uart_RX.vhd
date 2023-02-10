@@ -20,7 +20,8 @@ port(
 		READY_IN	: in std_logic := '0';
 		VALID_OUT: out std_logic := '0';
 		
-		UART_RX_FIFO_FULL : out std_logic := '0'
+		UART_RX_FIFO_FULL : out std_logic := '0';
+		UART_RX_RECIEVED_ALL : out std_logic := '0'
 		
 );
 
@@ -55,7 +56,7 @@ end component;
 
 signal DATAFLL			: std_logic_vector(9 downto 0);
 signal RX_FLG 			: std_logic:='0';
-signal PRSCL			: integer range 0 to 450:=0;
+signal PRSCL			: integer range 0 to 5400:=0;
 signal INDEX			: integer range 0 to 9:=0;
 signal INT_UART_CLK	: std_logic := '0';
 
@@ -82,6 +83,7 @@ begin
 	);
 
 	process(CLK)
+	variable BYTES_RECIEVED: integer := 0;
 	begin
 		if rising_edge(CLK) then
 			if(RX_FLG = '0') then
@@ -95,14 +97,14 @@ begin
 	
 			if(RX_FLG='1')then
 				DATAFLL(INDEX)<=RX_LINE;
-				if(PRSCL<432)then
+				if(PRSCL<5184)then
 					PRSCL<=PRSCL+1;
 				else
 					PRSCL <= 0; 
 				end if;
 			
 		
-				if(PRSCL=216)then
+				if(PRSCL=2592)then
 					INT_UART_CLK <= not INT_UART_CLK;
 					UART_CLK <= INT_UART_CLK;
 					if(INDEX<9)then
@@ -115,6 +117,11 @@ begin
 							data_valid <= '0';
 --							DATA_OUT<=(OTHERS=>'0');
 							--DATA_OUT <= "11100111";
+						end if;
+						BYTES_RECIEVED := BYTES_RECIEVED + 1;
+						if (BYTES_RECIEVED = 625) then
+							UART_RX_RECIEVED_ALL <= '1';
+						else null;
 						end if;
 						RX_FLG<='0';
 						--BUSY<='0';

@@ -12,7 +12,7 @@ PORT(
 		
 		DATA_IN	: in std_logic_vector(7 downto 0);
 		
-		TX_LINE	: out std_logic; -- data out
+		TX_LINE	: out std_logic := '1'; -- data out
 		
 		READY_IN	: in std_logic := '1';
 		VALID_OUT: out std_logic := '1';
@@ -49,7 +49,7 @@ port
 end component;
 
 
-signal PRSCL: integer range 0 to 450:=0;
+signal PRSCL: integer range 0 to 5400:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
 
@@ -90,13 +90,13 @@ begin
 				end if;
 			
 				if(tx_ready = '0')then
-					if(PRSCL<432)then	
+					if(PRSCL<5184)then	
 						PRSCL <= PRSCL+1;
 					else
 						PRSCL <= 0;
 					end if;
 			
-					if(PRSCL = 216)then
+					if(PRSCL = 2592)then
 						TX_LINE<=DATAFLL(INDEX);
 						if(INDEX<9)then
 							INDEX<=INDEX+1;
