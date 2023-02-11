@@ -1,4 +1,4 @@
-594
+611
 ~E 1 "../src/axi_fifo.vhd" 5 AXI_FIFO
 ~A 1 "../src/axi_fifo.vhd" 24 behavioral
 ~E 1 "../src/AXI_Filter_Tool.vhd" 6 AXI_Filter_Tool

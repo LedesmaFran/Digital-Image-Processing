@@ -240,8 +240,8 @@ BEGIN
 	
    stim2_proc: process (clock, ready_in, prscl_clock, counter_out1, counter_out2, out_valid1)
 	begin
-		if (rising_edge(clock)) then				
-			if ((enable2 = '0') and to_integer(unsigned(counter_out1)) > (IMAGE_HEIGHT*IMAGE_WIDTH-2*IMAGE_HEIGHT-3) and (to_integer(unsigned(counter_out2)) <= ((IMAGE_HEIGHT-2)*(IMAGE_WIDTH-2)-2*(IMAGE_HEIGHT-2)))) then
+		if (rising_edge(clock)) then									  --(IMAGE_HEIGHT*IMAGE_WIDTH-2*IMAGE_HEIGHT-3)
+			if ((enable2 = '0') and (to_integer(unsigned(counter_out1)) > (IMAGE_WIDTH*2)) and (to_integer(unsigned(counter_out2)) <= ((IMAGE_HEIGHT-2)*(IMAGE_WIDTH-2)-2*(IMAGE_HEIGHT-2)))) then
 				re2 <= '1';
 				rdaddress2 <= std_logic_vector(to_unsigned(k, ADDR_WIDTH));	
 				q2 <= q_reg2;
@@ -249,7 +249,7 @@ BEGIN
 			else 
 				enable2 <= '1';
 			end if;
-			if ((valid_out_flag = '0') and (out_valid1 = '0') and (to_integer(unsigned(counter_out1)) > (IMAGE_HEIGHT*IMAGE_WIDTH-2*IMAGE_HEIGHT-1)) and (to_integer(unsigned(counter_out2)) <= ((IMAGE_HEIGHT-2)*(IMAGE_WIDTH-2)-2*(IMAGE_HEIGHT-2)))) then
+			if ((valid_out_flag = '0') and (out_valid1 = '0') and (to_integer(unsigned(counter_out1)) > (IMAGE_WIDTH*2-1)) and (to_integer(unsigned(counter_out2)) <= ((IMAGE_HEIGHT-2)*(IMAGE_WIDTH-2)-2*(IMAGE_HEIGHT-2)))) then
 				enable2 <= '0';
 			else 
 				enable2 <= '1';
