@@ -8,6 +8,7 @@ rx_full <= uart_RX:inst1.UART_RX_FIFO_FULL
 tx_full <= uart_TX:inst.UART_TX_FIFO_FULL
 rx_clk <= uart_RX:inst1.UART_CLK
 rx_gotem <= uart_RX:inst1.UART_RX_RECIEVED_ALL
+rx_gotnt <= uart_RX:inst1.UART_RX_RECIEVED_NONE
 
 
 |top|uart_TX:inst
@@ -929,6 +930,7 @@ full <= full~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |top|uart_RX:inst1
 CLK => AXI_FIFO:fifo.clock
 CLK => UART_RX_RECIEVED_ALL~reg0.CLK
+CLK => UART_RX_RECIEVED_NONE~reg0.CLK
 CLK => data_valid.CLK
 CLK => UART_CLK~reg0.CLK
 CLK => INT_UART_CLK.CLK
@@ -1035,6 +1037,7 @@ READY_IN => AXI_FIFO:fifo.ready_in
 VALID_OUT <= AXI_FIFO:fifo.valid_out
 UART_RX_FIFO_FULL <= AXI_FIFO:fifo.full
 UART_RX_RECIEVED_ALL <= UART_RX_RECIEVED_ALL~reg0.DB_MAX_OUTPUT_PORT_TYPE
+UART_RX_RECIEVED_NONE <= UART_RX_RECIEVED_NONE~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|uart_RX:inst1|AXI_FIFO:fifo
