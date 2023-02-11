@@ -26,7 +26,7 @@ architecture behavioral of AXI_FIFO is
 type stack_t is array(0 to STACK_SIZE-1) of std_logic_vector(DATA_WIDTH-1 downto 0);
 
 signal stack 			: stack_t := (others => (others => '0'));
-signal valid_out_flag: std_logic := '0';
+signal valid_out_flag	: std_logic := '0';
 signal stack_pointer 	: integer := STACK_SIZE-1;
 
 begin

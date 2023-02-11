@@ -29,7 +29,7 @@ component AXI_FIFO is
 generic
 (
 	DATA_WIDTH	: integer := 8;
-	STACK_SIZE	: integer := 32
+	STACK_SIZE	: integer := 5692
 );
 port
 (

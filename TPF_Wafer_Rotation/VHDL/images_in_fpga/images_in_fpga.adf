@@ -28,6 +28,11 @@ CDebugReplaceDSN=0
 CDebugCallStack=1
 CDebugASDBSignals=-rec *
 CDebugASDBName=$dsn/src/images_in_fpga.asdb
+DisableIEEEWarnings=0
+DisableVitalMsg=0
+VitalAccel=1
+UnboundError=0
+VitalGlitches=0
 [Files]
 /read_image_tb.vhd=-1
 /read_image.vhd=-1
@@ -50,7 +55,6 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 /tb_image_filter_tool.vhd=-1
 /axi_fifo.vhd=-1
 /tb_uart_axi.vhd=-1
-/AXI_Filter_Tool.vhd=-1
 /tb_uart_filter.vhd=-1
 [Files.Data]
 .\src\read_image_tb.vhd=VHDL Source Code
@@ -74,7 +78,6 @@ CDebugASDBName=$dsn/src/images_in_fpga.asdb
 .\src\tb_image_filter_tool.vhd=VHDL Source Code
 .\src\axi_fifo.vhd=VHDL Source Code
 .\src\tb_uart_axi.vhd=VHDL Source Code
-.\src\AXI_Filter_Tool.vhd=VHDL Source Code
 .\src\tb_uart_filter.vhd=VHDL Source Code
 [HierarchyViewer]
 HierarchyInformation=tb_uart_axi|behavior|0 tb_uart_filter|behavior|0
@@ -105,3 +108,5 @@ VhdlPreservePortComments=0
 VhdlChangeEvalAsynchronous=0
 VhdlDisableAssertionsProcessing=0
 ClockNumbersInAssertionMessages=auto
+[LoadVHPI]
+Count=0

@@ -310,7 +310,7 @@ begin
 	begin
 		if (rising_edge(clock) and not_enable = '0' and stage_3_enable = '0') then
 			counter := counter + 1;
-			if (counter >= (2*IMAGE_WIDTH + KERNEL_WIDTH) + 7) then
+			if (counter >= (2*IMAGE_WIDTH + KERNEL_WIDTH) + 8) then
 				stage_3_enable <= '1';
 			else null;
 			end if;

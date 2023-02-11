@@ -70,8 +70,8 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	);
     END COMPONENT;
 	
-	-- AXI Filter Tool component
-	COMPONENT AXI_Filter_Tool IS
+	-- Image Filter Tool component
+	COMPONENT Image_Filter_Tool IS
 	GENERIC (
 	   	ADDR_WIDTH     	: integer := 16;        
 	   	DATA_WIDTH     	: integer := 8;
