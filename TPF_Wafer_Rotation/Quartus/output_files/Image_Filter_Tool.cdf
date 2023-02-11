@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("D:/VSCodeRepos/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/output_files/") File("Image_Filter_Tool.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("C:/Users/pablo/VSCodeProjects/Digital-Image-Processing/TPF_Wafer_Rotation/Quartus/output_files/") File("Image_Filter_Tool.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

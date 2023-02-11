@@ -21,7 +21,8 @@ port(
 		VALID_OUT: out std_logic := '0';
 		
 		UART_RX_FIFO_FULL : out std_logic := '0';
-		UART_RX_RECIEVED_ALL : out std_logic := '0'
+		UART_RX_RECIEVED_ALL : out std_logic := '0';
+		UART_RX_RECIEVED_NONE : out std_logic := '1'
 		
 );
 
@@ -112,16 +113,17 @@ begin
 					else
 						if(DATAFLL(0) = '0' AND DATAFLL(9) = '1')then
 							data_valid <= '1';
+							UART_RX_RECIEVED_NONE <= '0';
+							BYTES_RECIEVED := BYTES_RECIEVED + 1;
+							if (BYTES_RECIEVED = 625) then
+								UART_RX_RECIEVED_ALL <= '1';
+							else null;
+							end if;
 							--DATA_OUT<=DATA_OUTFLL(8 downto 1);
 						else
 							data_valid <= '0';
 --							DATA_OUT<=(OTHERS=>'0');
 							--DATA_OUT <= "11100111";
-						end if;
-						BYTES_RECIEVED := BYTES_RECIEVED + 1;
-						if (BYTES_RECIEVED = 625) then
-							UART_RX_RECIEVED_ALL <= '1';
-						else null;
 						end if;
 						RX_FLG<='0';
 						--BUSY<='0';
