@@ -24,10 +24,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "rx_gotnt",
-					"strict" : false
-				},
-				{
 					"name" : "CLOCK_50",
 					"strict" : false
 				},

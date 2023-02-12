@@ -29,7 +29,7 @@ component AXI_FIFO is
 generic
 (
 	DATA_WIDTH	: integer := 8;
-	STACK_SIZE	: integer := 32
+	STACK_SIZE	: integer := 900
 );
 port
 (
@@ -49,7 +49,7 @@ port
 end component;
 
 
-signal PRSCL: integer range 0 to 5400:=0;
+signal PRSCL: integer range 0 to 900:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
 
@@ -90,13 +90,13 @@ begin
 				end if;
 			
 				if(tx_ready = '0')then
-					if(PRSCL<5184)then	
+					if(PRSCL<868)then	
 						PRSCL <= PRSCL+1;
 					else
 						PRSCL <= 0;
 					end if;
 			
-					if(PRSCL = 2592)then
+					if(PRSCL = 434)then
 						TX_LINE<=DATAFLL(INDEX);
 						if(INDEX<9)then
 							INDEX<=INDEX+1;
