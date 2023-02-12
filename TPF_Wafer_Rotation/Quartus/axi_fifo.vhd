@@ -6,7 +6,7 @@ entity AXI_FIFO is
 generic
 (
 	DATA_WIDTH	: integer := 8;
-	STACK_SIZE	: integer := 5632
+	STACK_SIZE	: integer := 256
 );
 port
 (
