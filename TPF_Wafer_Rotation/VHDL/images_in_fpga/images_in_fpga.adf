@@ -84,7 +84,7 @@ VitalGlitches=0
 .\src\tb_axi_fifo.asdb=Accelerated Waveform File
 .\src\tb_axi_fifo.awc=Accelerated Waveform Configuration
 [HierarchyViewer]
-HierarchyInformation=tb_uart_axi|behavior|0 tb_uart_filter|behavior|0
+HierarchyInformation=tb_uart_filter|behavior|0
 ShowHide=ShowTopLevel
 Selected=
 [ORDER]

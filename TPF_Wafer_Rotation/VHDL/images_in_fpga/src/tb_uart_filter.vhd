@@ -37,7 +37,7 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 			CLK			: in std_logic;
 			
 			VALID_IN 	: in std_logic := '0';
-			READY_OUT	: out std_logic := '0';
+			READY_OUT	: out std_logic := '1';
 			
 			DATA_IN		: in std_logic_vector(7 downto 0);
 			
@@ -55,8 +55,8 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	GENERIC (
 	    ADDR_WIDTH     		: integer := 8;        
 	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 8;
-		IMAGE_WIDTH			: integer := 8;
+	    IMAGE_HEIGHT		: integer := 9;
+		IMAGE_WIDTH			: integer := 9;
 		IMAGE_FILE_NAME 	: string  := "desired_output.mif"       
   	);	
 	PORT (
@@ -116,7 +116,7 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	signal pixel_out		: std_logic_vector(7 downto 0);
 	
 	signal valid_Filter_TX	: std_logic := '0';
-	signal ready_Filter_TX	: std_logic := '0';	
+	signal ready_Filter_TX	: std_logic := '1';	
 	
 	-- TX Signals	
 	signal TX_LINE				: std_logic; -- data out
@@ -259,7 +259,7 @@ BEGIN
 	variable counter : integer := 0;
 	begin
 		if (rising_edge(prscl_clock)) then
-			if  (counter < 64) then
+			if (counter < 64) then
 				RX_LINE <= test_msg(index);
 				index := index + 1;
 				if (index > 9) then

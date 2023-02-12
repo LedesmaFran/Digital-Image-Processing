@@ -8,7 +8,7 @@ PORT(
 		CLK		: in std_logic;
 		
 		VALID_IN : in std_logic := '0';
-		READY_OUT: out std_logic := '0';
+		READY_OUT: out std_logic := '1';
 		
 		DATA_IN	: in std_logic_vector(7 downto 0);
 		
@@ -62,6 +62,10 @@ signal fifo_data		: std_logic_vector(7 downto 0);
 begin
 
 	fifo : AXI_FIFO
+	generic map(
+		DATA_WIDTH	=> 8,
+		STACK_SIZE	=> 900
+	)
 	port map(
 		clock => CLK,
 		
