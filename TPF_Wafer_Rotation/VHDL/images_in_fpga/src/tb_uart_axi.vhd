@@ -210,7 +210,7 @@ BEGIN
 		if (rising_edge(prscl_clock)) then
 			RX_LINE <= test_msg(index);
 			index := index + 1;
-			if (index > 9)  and (counter < 1024) then
+			if (index > 9)  and (counter < 67600) then
 				index := 0;
 				test_msg := std_logic_vector(to_unsigned(to_integer(unsigned(test_msg)) + 2, 10));
 				counter := counter + 1;

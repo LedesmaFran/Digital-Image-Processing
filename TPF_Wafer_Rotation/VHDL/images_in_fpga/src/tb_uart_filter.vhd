@@ -43,8 +43,8 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 			
 			TX_LINE		: out std_logic; -- data out
 			
-			READY_IN	: in std_logic := '1';
-			VALID_OUT	: out std_logic := '1';
+			READY_IN	: in std_logic := '0';
+			VALID_OUT	: out std_logic := '0';
 			
 			UART_TX_FIFO_FULL : out std_logic := '0'		
 	);
@@ -55,8 +55,8 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	GENERIC (
 	    ADDR_WIDTH     		: integer := 8;        
 	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 4;
-		IMAGE_WIDTH			: integer := 4;
+	    IMAGE_HEIGHT		: integer := 8;
+		IMAGE_WIDTH			: integer := 8;
 		IMAGE_FILE_NAME 	: string  := "desired_output.mif"       
   	);	
 	PORT (
@@ -75,8 +75,8 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	GENERIC (
 	   	ADDR_WIDTH     	: integer := 16;        
 	   	DATA_WIDTH     	: integer := 8;
-	   	IMAGE_HEIGHT	: integer := 4;
-		IMAGE_WIDTH		: integer := 4;
+	   	IMAGE_HEIGHT	: integer := 8;
+		IMAGE_WIDTH		: integer := 8;
 		IMAGE_FILE_NAME : string  := "desired_output.mif"       
   	);	
 	PORT( 
@@ -124,7 +124,22 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	signal TX_READY_IN			: std_logic := '1';
 	signal TX_VALID_OUT			: std_logic := '1';
 	
-	signal UART_TX_FIFO_FULL 	: std_logic := '0';
+	signal UART_TX_FIFO_FULL 	: std_logic := '0';	
+	
+	-- RX Signals2
+	signal UART_CLK2			: std_logic;
+	
+	signal RX2_READY_IN 		: std_logic := '1';
+	signal RX2_VALID_OUT		: std_logic := '1';
+	
+	signal RX2_LINE				: std_logic; -- data in
+	
+	signal UART_RX2_FIFO_FULL	: std_logic := '0';
+	
+	-- AXI signals	
+	signal data2	: std_logic_vector(7 downto 0);
+	signal valid2	: std_logic := '0';
+	signal ready2	: std_logic := '0';
 	   
 	-- AUX signals
 	
@@ -155,17 +170,36 @@ BEGIN
 	port map( 
 			CLK			=> clock,
 			
-			READY_OUT	=> ready_Filter_TX,
-			VALID_IN	=> valid_Filter_TX,
+			READY_OUT	=> ready_RX_Filter,
+			VALID_IN	=> valid_RX_Filter,
 			
-			DATA_IN		=> pixel_out,
+			DATA_IN	=> pixel_out,
 			
 			TX_LINE		=> TX_LINE,
 			
-			VALID_OUT 	=> TX_VALID_OUT,
-			READY_IN	=> TX_READY_IN,
+			VALID_OUT 	=> valid2,
+			READY_IN	=> ready2,
 			
 			UART_TX_FIFO_FULL => UART_TX_FIFO_FULL
+	);
+	
+	uart_out_end : uart_RX
+	port map( 
+			CLK			=> clock,
+			
+			UART_CLK	=> UART_CLK2,
+			
+			VALID_IN 	=> valid2,
+			READY_OUT	=> ready2,
+			
+			RX_LINE		=> TX_LINE,
+			
+			DATA_OUT	=> data2,
+			
+			READY_IN	=> RX2_READY_IN,
+			VALID_OUT	=> RX2_VALID_OUT,
+			
+			UART_RX_FIFO_FULL => UART_RX2_FIFO_FULL
 	);
 	
 	filter: Image_Filter_Tool
@@ -219,22 +253,26 @@ BEGIN
 	variable test_msg : std_logic_vector(9 downto 0) := (0 => '0', 9 => '1', 
 													   1 => '0', 2 => '0', 3 => '0', 4 => '0', 
 													   5 => '0', 6 => '0', 7 => '0', 8 => '0');
-	constant comp : std_logic_vector(9 downto 0) := (0 => '1', 9 => '1', 
-													 1 => '0', 2 => '0', 3 => '0', 4 => '0', 
-													 5 => '0', 6 => '0', 7 => '0', 8 => '0');
+	constant comp : std_logic_vector(9 downto 0) := (0 => '0', 9 => '1', 
+													 1 => '1', 2 => '1', 3 => '1', 4 => '1', 
+													 5 => '1', 6 => '1', 7 => '1', 8 => '1');
+	variable counter : integer := 0;
 	begin
 		if (rising_edge(prscl_clock)) then
-			RX_LINE <= test_msg(index);
-			index := index + 1;
-			if index > 9 then
-				index := 0;
-				test_msg := std_logic_vector(to_unsigned(to_integer(unsigned(test_msg)) + 2, 10));
-				if (test_msg = comp) then
-					test_msg := (0 => '0', 9 => '1', 
-								 1 => '0', 2 => '0', 3 => '0', 4 => '0', 
-	 						  	 5 => '0', 6 => '0', 7 => '0', 8 => '0');
+			if  (counter < 64) then
+				RX_LINE <= test_msg(index);
+				index := index + 1;
+				if (index > 9) then
+					index := 0;
+					test_msg := std_logic_vector(to_unsigned(to_integer(unsigned(test_msg)) + 2, 10));
+					counter := counter + 1;
+					if (test_msg = comp) then
+						test_msg := (0 => '0', 9 => '1', 
+									 1 => '0', 2 => '0', 3 => '0', 4 => '0', 
+		 						  	 5 => '0', 6 => '0', 7 => '0', 8 => '0');
+					end if;
 				end if;
 			end if;
 		end if;
-	end process;   
+	end process;
 END;

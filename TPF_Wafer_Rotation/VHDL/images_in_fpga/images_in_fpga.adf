@@ -56,6 +56,8 @@ VitalGlitches=0
 /axi_fifo.vhd=-1
 /tb_uart_axi.vhd=-1
 /tb_uart_filter.vhd=-1
+/tb_axi_fifo.asdb=-1
+/tb_axi_fifo.awc=-1
 [Files.Data]
 .\src\read_image_tb.vhd=VHDL Source Code
 .\src\read_image.vhd=VHDL Source Code
@@ -79,6 +81,8 @@ VitalGlitches=0
 .\src\axi_fifo.vhd=VHDL Source Code
 .\src\tb_uart_axi.vhd=VHDL Source Code
 .\src\tb_uart_filter.vhd=VHDL Source Code
+.\src\tb_axi_fifo.asdb=Accelerated Waveform File
+.\src\tb_axi_fifo.awc=Accelerated Waveform Configuration
 [HierarchyViewer]
 HierarchyInformation=tb_uart_axi|behavior|0 tb_uart_filter|behavior|0
 ShowHide=ShowTopLevel
