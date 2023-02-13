@@ -34,7 +34,7 @@ component AXI_FIFO is
 generic
 (
 	DATA_WIDTH	: integer := 8;
-	STACK_SIZE	: integer := 900
+	STACK_SIZE	: integer := 256
 );
 port
 (
@@ -57,7 +57,7 @@ end component;
 
 signal DATAFLL			: std_logic_vector(9 downto 0);
 signal RX_FLG 			: std_logic:='0';
-signal PRSCL			: integer range 0 to 900:=0;
+signal PRSCL			: integer range 0 to 90:=0;
 signal INDEX			: integer range 0 to 9:=0;
 signal INT_UART_CLK	: std_logic := '1';
 
@@ -73,6 +73,10 @@ signal current_state : state_type := IDLE;
 begin
 
 	fifo : AXI_FIFO
+	generic map (
+		DATA_WIDTH	=> 8,
+		STACK_SIZE	=> 512
+	)
 	port map(
 		clock => CLK,
 		
@@ -114,14 +118,14 @@ begin
 		  
 		  
       when SAMPLE =>
-        PRSCL <= 434;
+        PRSCL <= 40;
         INDEX <= 0;
         INT_UART_CLK <= '1';
         current_state <= COLLECT;
 		  
 		  
       when COLLECT =>
-        if PRSCL < 868 then
+        if PRSCL < 81 then
           PRSCL <= PRSCL + 1;
         else
 			 PRSCL <= 0;

@@ -29,7 +29,7 @@ component AXI_FIFO is
 generic
 (
 	DATA_WIDTH	: integer := 8;
-	STACK_SIZE	: integer := 900
+	STACK_SIZE	: integer := 850
 );
 port
 (
@@ -49,19 +49,24 @@ port
 end component;
 
 
-signal PRSCL: integer range 0 to 900:=0;
+signal PRSCL: integer range 0 to 90:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
-
+signal flag : std_logic := '0';
 
 -- fifo signals
 signal fifo_valid 	: std_logic := '0';
 signal tx_ready		: std_logic := '1';
-signal fifo_data		: std_logic_vector(7 downto 0);
+signal fifo_data		: std_logic_vector(7 downto 0);	
+
 
 begin
 
 	fifo : AXI_FIFO
+	generic map (
+		DATA_WIDTH	=> 8,
+		STACK_SIZE	=> 512
+	)
 	port map(
 		clock => CLK,
 		
@@ -81,30 +86,36 @@ begin
 		begin
 		
 			if rising_edge(CLK) then
-				if (tx_ready = '1' and fifo_valid = '1') then
-					tx_ready <= '0';
-					DATAFLL(0)<='0';
-					DATAFLL(9)<='1';
-					DATAFLL(8 downto 1) <= fifo_data;
+				if (VALID_IN = '1') then
+					flag <= '1';
 				else null;
-				end if;
-			
-				if(tx_ready = '0')then
-					if(PRSCL<868)then	
-						PRSCL <= PRSCL+1;
-					else
-						PRSCL <= 0;
+			end if;
+				if (flag = '1') then
+					if (tx_ready = '1' and fifo_valid = '1') then
+						tx_ready <= '0';
+						DATAFLL(0)<='0';
+						DATAFLL(9)<='1';
+						DATAFLL(8 downto 1) <= fifo_data;
+					else null;
 					end if;
-			
-					if(PRSCL = 434)then
-						TX_LINE<=DATAFLL(INDEX);
-						if(INDEX<9)then
-							INDEX<=INDEX+1;
+				
+					if(tx_ready = '0')then
+						if(PRSCL<81)then	
+							PRSCL <= PRSCL+1;
 						else
-							INDEX <= 0;
-							tx_ready <= '1';
+							PRSCL <= 0;
 						end if;
-					end if;	
+				
+						if(PRSCL = 40)then
+							TX_LINE<=DATAFLL(INDEX);
+							if(INDEX<9)then
+								INDEX<=INDEX+1;
+							else
+								INDEX <= 0;
+								tx_ready <= '1';
+							end if;
+						end if;	
+					end if;
 				end if;
 			end if;
 	end process;

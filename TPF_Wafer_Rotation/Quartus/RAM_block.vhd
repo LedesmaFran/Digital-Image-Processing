@@ -40,7 +40,7 @@ architecture behavioral of RAM_block is
 	    return temp_mem;
 	end function;
 	
-	signal ram_block			: mem_type := init_mem(IMAGE_FILE_NAME);
+	signal ram_block			: mem_type := (others => (others => '0'));
 	signal read_address_reg		: std_logic_vector((ADDR_WIDTH-1) downto 0) := (others=>'0');
 	  
 	begin
