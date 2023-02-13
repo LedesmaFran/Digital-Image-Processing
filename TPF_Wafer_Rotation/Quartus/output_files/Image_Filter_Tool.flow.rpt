@@ -1,5 +1,5 @@
 Flow report for Image_Filter_Tool
-Mon Feb 13 08:25:35 2023
+Mon Feb 13 11:14:31 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Feb 13 08:25:26 2023       ;
+; Flow Status                        ; Successful - Mon Feb 13 11:14:20 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Image_Filter_Tool                           ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 13,225 / 22,320 ( 59 % )                    ;
-;     Total combinational functions  ; 8,906 / 22,320 ( 40 % )                     ;
-;     Dedicated logic registers      ; 8,974 / 22,320 ( 40 % )                     ;
-; Total registers                    ; 8974                                        ;
+; Total logic elements               ; 13,020 / 22,320 ( 58 % )                    ;
+;     Total combinational functions  ; 8,753 / 22,320 ( 39 % )                     ;
+;     Dedicated logic registers      ; 8,896 / 22,320 ( 40 % )                     ;
+; Total registers                    ; 8896                                        ;
 ; Total pins                         ; 8 / 154 ( 5 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 524,288 / 608,256 ( 86 % )                  ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/13/2023 08:23:23 ;
+; Start date & time ; 02/13/2023 11:12:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Image_Filter_Tool   ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value     ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 48710647188424.167628740306064         ; --                ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 48710647188424.167629753608524         ; --                ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_signal_integrity ;
@@ -100,11 +100,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:40     ; 1.0                     ; 4937 MB             ; 00:00:49                           ;
-; Fitter                    ; 00:01:15     ; 1.1                     ; 5737 MB             ; 00:02:11                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4718 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.7                     ; 4949 MB             ; 00:00:08                           ;
-; Total                     ; 00:02:05     ; --                      ; --                  ; 00:03:10                           ;
+; Analysis & Synthesis      ; 00:00:37     ; 1.0                     ; 4923 MB             ; 00:00:46                           ;
+; Fitter                    ; 00:01:18     ; 1.1                     ; 5737 MB             ; 00:02:10                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4714 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.9                     ; 4984 MB             ; 00:00:09                           ;
+; Total                     ; 00:02:06     ; --                      ; --                  ; 00:03:07                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

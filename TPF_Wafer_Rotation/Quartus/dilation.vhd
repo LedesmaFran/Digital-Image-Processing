@@ -39,6 +39,9 @@ architecture behavioral of kernel_dilation is
 	--sum
 	signal sum : integer := 0;
 	
+	--sum temp
+	signal sum_temp : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0'); 
+	
 	signal sum_signed 			: std_logic_vector(DATA_WIDTH*2-1 downto 0) := (others => '0');
 	signal sum_signed_scaled 	: std_logic_vector(DATA_WIDTH*2-2 downto 0) := (others => '0');
 	signal isOverflow 			: std_logic := '0';

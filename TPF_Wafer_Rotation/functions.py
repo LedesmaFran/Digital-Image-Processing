@@ -3,6 +3,7 @@ import serial
 import numpy as np
 import cv2
 from skimage.transform import hough_line, hough_line_peaks
+from time import sleep
 
 def compare(images,size=(14,10)):
     fig=plt.figure(figsize=size)
@@ -54,7 +55,7 @@ def process_in_fpga(img, w, h, baudrate, port):
         written = uart.write(data)
     except serial.SerialTimeoutException:
         print('Timeout catch')
-
+    sleep(15)
     rx = uart.read(uart.in_waiting)
     if len(rx) == ((h-4)*(w-4)):
         result = np.frombuffer(rx, dtype=np.uint8).reshape((h-4,w-4))
