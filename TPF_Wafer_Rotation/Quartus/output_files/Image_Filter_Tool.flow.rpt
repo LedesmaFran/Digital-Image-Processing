@@ -1,6 +1,6 @@
 Flow report for Image_Filter_Tool
-Mon Feb 13 04:23:19 2023
-Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Mon Feb 13 08:25:35 2023
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -21,42 +21,42 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Feb 13 04:23:18 2023       ;
-; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Flow Status                        ; Successful - Mon Feb 13 08:25:26 2023       ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Image_Filter_Tool                           ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 22,302                                      ;
-;     Total combinational functions  ; 13,741                                      ;
-;     Dedicated logic registers      ; 17,423                                      ;
-; Total registers                    ; 17423                                       ;
-; Total pins                         ; 8                                           ;
+; Total logic elements               ; 13,225 / 22,320 ( 59 % )                    ;
+;     Total combinational functions  ; 8,906 / 22,320 ( 40 % )                     ;
+;     Dedicated logic registers      ; 8,974 / 22,320 ( 40 % )                     ;
+; Total registers                    ; 8974                                        ;
+; Total pins                         ; 8 / 154 ( 5 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 524,288                                     ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total memory bits                  ; 524,288 / 608,256 ( 86 % )                  ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/13/2023 04:22:36 ;
+; Start date & time ; 02/13/2023 08:23:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Image_Filter_Tool   ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value     ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 150461130022783.167627295618692        ; --                ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 48710647188424.167628740306064         ; --                ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                ; --          ; eda_board_design_signal_integrity ;
@@ -95,29 +95,38 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:40     ; 1.0                     ; 4992 MB             ; 00:00:53                           ;
-; Total                ; 00:00:40     ; --                      ; --                  ; 00:00:53                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:40     ; 1.0                     ; 4937 MB             ; 00:00:49                           ;
+; Fitter                    ; 00:01:15     ; 1.1                     ; 5737 MB             ; 00:02:11                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4718 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.7                     ; 4949 MB             ; 00:00:08                           ;
+; Total                     ; 00:02:05     ; --                      ; --                  ; 00:03:10                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; fruitSalad       ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-6807NAA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-6807NAA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-6807NAA  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-6807NAA  ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Image_Filter_tool -c Image_Filter_Tool
+quartus_fit --read_settings_files=off --write_settings_files=off Image_Filter_tool -c Image_Filter_Tool
+quartus_asm --read_settings_files=off --write_settings_files=off Image_Filter_tool -c Image_Filter_Tool
+quartus_sta Image_Filter_tool -c Image_Filter_Tool
 
 
 

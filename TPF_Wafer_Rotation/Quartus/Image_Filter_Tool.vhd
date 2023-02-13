@@ -92,14 +92,14 @@ ARCHITECTURE behavior OF Image_Filter_Tool IS
 	signal enable2			: std_logic := '1';
 	signal data_out2		: std_logic_vector(DATA_WIDTH-1 downto 0);
 	signal filter_sel2 	: std_logic_vector(1 downto 0) := "00";
-	signal type_sel2 		: std_logic_vector(1 downto 0) := "00";	 -- 00 => kernel / 01 => erosion / 10 => dilation 
+	signal type_sel2 		: std_logic_vector(1 downto 0) := "01";	 -- 00 => kernel / 01 => erosion / 10 => dilation 
 	signal counter_out2	: std_logic_vector(17 downto 0);
 	signal out_valid2		: std_logic;
 	signal filter2_out	:std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 	
 	-- Binarization signals
 	signal bin_out				: std_logic_vector(DATA_WIDTH-1 downto 0);
-	signal bin_enable_test 	: std_logic := '1';
+	signal bin_enable_test 	: std_logic := '0';
 	
 	-- AUX signals
 	signal i 		: integer := 0;

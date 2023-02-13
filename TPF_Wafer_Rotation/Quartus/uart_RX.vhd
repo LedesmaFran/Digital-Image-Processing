@@ -57,7 +57,7 @@ end component;
 
 signal DATAFLL			: std_logic_vector(9 downto 0);
 signal RX_FLG 			: std_logic:='0';
-signal PRSCL			: integer range 0 to 900:=0;
+signal PRSCL			: integer range 0 to 110:=0;
 signal INDEX			: integer range 0 to 9:=0;
 signal INT_UART_CLK	: std_logic := '1';
 
@@ -76,7 +76,7 @@ begin
 	generic map
 	(
 		DATA_WIDTH	=> 8,
-		STACK_SIZE	=> 512
+		STACK_SIZE	=> 256
 	)
 	port map(
 		clock => CLK,
@@ -119,14 +119,14 @@ begin
 		  
 		  
       when SAMPLE =>
-        PRSCL <= 434;
+        PRSCL <= 54;
         INDEX <= 0;
         INT_UART_CLK <= '1';
         current_state <= COLLECT;
 		  
 		  
       when COLLECT =>
-        if PRSCL < 868 then
+        if PRSCL < 108 then
           PRSCL <= PRSCL + 1;
         else
 			 PRSCL <= 0;

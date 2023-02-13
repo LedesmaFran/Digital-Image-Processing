@@ -49,7 +49,7 @@ port
 end component;
 
 
-signal PRSCL: integer range 0 to 900:=0;
+signal PRSCL: integer range 0 to 110:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
 signal flag : std_logic := '0';
@@ -66,7 +66,7 @@ begin
 	generic map
 	(
 		DATA_WIDTH	=> 8,
-		STACK_SIZE	=> 512
+		STACK_SIZE	=> 256
 	)
 	port map(
 		clock => CLK,
@@ -101,13 +101,13 @@ begin
 					end if;
 				
 					if(tx_ready = '0')then
-						if(PRSCL<868)then	
+						if(PRSCL<108)then	
 							PRSCL <= PRSCL+1;
 						else
 							PRSCL <= 0;
 						end if;
 				
-						if(PRSCL = 434)then
+						if(PRSCL = 54)then
 							TX_LINE<=DATAFLL(INDEX);
 							if(INDEX<9)then
 								INDEX<=INDEX+1;
