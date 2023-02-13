@@ -112,8 +112,6 @@ ARCHITECTURE behavior OF Image_Filter_Tool IS
 	signal valid_out_flag : std_logic := '0';
 	signal ready_out_flag : std_logic := '1';
 	
-	-- Prescaled clock
-	signal prscl_clock : std_logic := '0';
 	
 BEGIN
 	
@@ -177,35 +175,23 @@ BEGIN
 		out_valid => out_valid2
 	);										 							 
 	
-	prescaler_process: process (clock)
-	variable PRSCL : integer := 108;
-	begin
-		if rising_edge(clock) then
-			if(PRSCL<216)then
-				PRSCL:=PRSCL+1;
-				if (PRSCL = 108) then
-					prscl_clock <= not prscl_clock;
-				end if;
-				
-			else
-				PRSCL := 0; 
-			end if;
-		end if;	
-	end process;
-	
+
 	-- AXI in process
 	axi_in_proc: process (clock, valid_in, ready_out_flag, counter_out1)
 	begin
-		if (ready_out_flag = '1' and valid_in = '1') then
-			-- se recibe un dato
-			enable1 <= '0';
-			q <= pixel_in;
-			input_counter <= input_counter + 1;
-		elsif (input_counter = 3*IMAGE_WIDTH*IMAGE_HEIGHT 
-			   and (to_integer(unsigned(counter_out1)) <= ((IMAGE_WIDTH-1)*(IMAGE_HEIGHT-1)+2*(IMAGE_HEIGHT-1)))) then
-			enable1 <= '0';
-		else 
-			enable1 <= '1';
+		if (rising_edge(clock)) then	
+			if (ready_out_flag = '1' and valid_in = '1') then
+				-- se recibe un dato
+				enable1 <= '0';
+				q <= pixel_in;
+				input_counter <= input_counter + 1;
+			elsif (input_counter = IMAGE_WIDTH*IMAGE_HEIGHT 
+				   and (to_integer(unsigned(counter_out1)) <= ((IMAGE_WIDTH-1)*(IMAGE_HEIGHT-1)+2*(IMAGE_HEIGHT-1)))) then
+				enable1 <= '0';
+			else 
+				enable1 <= '1';
+			end if;
+		else null;
 		end if;
 	end process;
 	
@@ -214,7 +200,7 @@ BEGIN
 	begin
 		if (rising_edge(clock)) then
 			we2 <= out_valid1;
-			if (out_valid1 = '1'and valid_in = '1') then
+			if (out_valid1 = '1' and enable1 = '0') then
 				j <= j + 1;
 				data2 <= data_out;
 				wraddress2 <= std_logic_vector(to_unsigned(j, ADDR_WIDTH));
@@ -228,7 +214,7 @@ BEGIN
 	
 	-- control enable2, control the output
 	
-   	axi_out_proc: process (clock, enable2, ready_in, prscl_clock, counter_out1, counter_out2, out_valid1, out_valid2, valid_out_flag)
+   	axi_out_proc: process (clock, enable2, ready_in, counter_out1, counter_out2, out_valid1, out_valid2, valid_out_flag)
 	begin
 		if (rising_edge(clock)) then									  --(IMAGE_HEIGHT*IMAGE_WIDTH-2*IMAGE_HEIGHT-3)
 			valid_out <= out_valid2;

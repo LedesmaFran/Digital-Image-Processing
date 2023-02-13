@@ -94,7 +94,7 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	END COMPONENT;
 	
    	-- Clock period definitions
-   	constant clock_period 	: time := 20 ns;
+   	constant clock_period 	: time := 160 ns;
 	signal clock 			: std_logic := '1';
 	
 	
@@ -170,8 +170,8 @@ BEGIN
 	port map( 
 			CLK			=> clock,
 			
-			READY_OUT	=> ready_RX_Filter,
-			VALID_IN	=> valid_RX_Filter,
+			READY_OUT	=> ready_Filter_TX,
+			VALID_IN	=> valid_Filter_TX,
 			
 			DATA_IN	=> pixel_out,
 			
@@ -181,25 +181,6 @@ BEGIN
 			READY_IN	=> ready2,
 			
 			UART_TX_FIFO_FULL => UART_TX_FIFO_FULL
-	);
-	
-	uart_out_end : uart_RX
-	port map( 
-			CLK			=> clock,
-			
-			UART_CLK	=> UART_CLK2,
-			
-			VALID_IN 	=> valid2,
-			READY_OUT	=> ready2,
-			
-			RX_LINE		=> TX_LINE,
-			
-			DATA_OUT	=> data2,
-			
-			READY_IN	=> RX2_READY_IN,
-			VALID_OUT	=> RX2_VALID_OUT,
-			
-			UART_RX_FIFO_FULL => UART_RX2_FIFO_FULL
 	);
 	
 	filter: Image_Filter_Tool
@@ -233,12 +214,12 @@ BEGIN
    	end process;
 	
 	prescaler_process: process (clock)
-	variable PRSCL : integer := 108;
+	variable PRSCL : integer := 216;
 	begin
 		if rising_edge(clock) then
-			if(PRSCL<216)then
+			if(PRSCL<432)then
 				PRSCL:=PRSCL+1;
-				if (PRSCL = 108) then
+				if (PRSCL = 216) then
 					prscl_clock <= not prscl_clock;
 				end if;
 				

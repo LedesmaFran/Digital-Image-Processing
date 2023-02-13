@@ -32,7 +32,7 @@ component AXI_FIFO is
 generic
 (
 	DATA_WIDTH	: integer := 8;
-	STACK_SIZE	: integer := 512
+	STACK_SIZE	: integer := 900
 );
 port
 (
@@ -55,13 +55,18 @@ end component;
 
 signal DATAFLL			: std_logic_vector(9 downto 0);
 signal RX_FLG 			: std_logic:='0';
-signal PRSCL			: integer range 0 to 450:=0;
+signal PRSCL			: integer range 0 to 900:=0;
 signal INDEX			: integer range 0 to 9:=0;
-signal INT_UART_CLK	: std_logic := '0';
+signal INT_UART_CLK	: std_logic := '1';
 
 -- fifo signals
 signal data_valid 	: std_logic := '0';
 signal fifo_ready		: std_logic := '1';
+
+
+type state_type is (IDLE, SAMPLE, COLLECT, CHECK, STORE, SEND);
+signal current_state : state_type := IDLE;
+
 
 begin
 
@@ -81,50 +86,77 @@ begin
 		full => UART_RX_FIFO_FULL		
 	);
 
-	process(CLK)
-	begin
-		if rising_edge(CLK) then
-			if(RX_FLG = '0') then
-				if(RX_LINE = '0') then
-					INDEX<=0;
-					PRSCL<=0;
-					RX_FLG<='1';
-					--BUSY<='1';
-				end if;
-			end if;
 	
-			if(RX_FLG='1')then
-				DATAFLL(INDEX)<=RX_LINE;
-				if(PRSCL<432)then
-					PRSCL<=PRSCL+1;
-				else
-					PRSCL <= 0; 
-				end if;
-			
+
+process (CLK)
+--variable COUNT : integer range 0 to 7:=0;
+begin
+  if rising_edge(CLK) then
+  
+    --current_state <= next_state;
+	 
+    case current_state is
+	 
+      when IDLE =>
 		
-				if(PRSCL=216)then
-					INT_UART_CLK <= not INT_UART_CLK;
-					UART_CLK <= INT_UART_CLK;
-					if(INDEX<9)then
-						INDEX<=INDEX+1;
-					else
-						if(DATAFLL(0) = '0' AND DATAFLL(9) = '1')then
-							data_valid <= '1';
-							--DATA_OUT<=DATA_OUTFLL(8 downto 1);
-						else
-							data_valid <= '0';
---							DATA_OUT<=(OTHERS=>'0');
-							--DATA_OUT <= "11100111";
-						end if;
-						RX_FLG<='0';
-						--BUSY<='0';
-					end if;
-				end if;
-			end if;
-			if (data_valid = '1' and fifo_ready = '1') then
-				data_valid <= '0';
-			end if;
-		end if;
-	end process;
+        if RX_LINE = '0' then
+		     --COUNT := COUNT+1;
+			  --if (COUNT = 1) then
+				-- UART_RX_RECIEVED_NONE <= '1';
+			  --else
+				-- UART_RX_RECIEVED_NONE <= '0';
+			  --end if;
+			  
+          current_state <= SAMPLE;
+        end if;
+		  
+		  
+      when SAMPLE =>
+        PRSCL <= 434;
+        INDEX <= 0;
+        INT_UART_CLK <= '1';
+        current_state <= COLLECT;
+		  
+		  
+      when COLLECT =>
+        if PRSCL < 868 then
+          PRSCL <= PRSCL + 1;
+        else
+			 PRSCL <= 0;
+          DATAFLL(INDEX) <= RX_LINE;
+          INT_UART_CLK <= not INT_UART_CLK;
+          UART_CLK <= INT_UART_CLK;
+          if INDEX < 9 then
+            INDEX <= INDEX + 1;
+          else
+            current_state <= CHECK;
+          end if;
+        end if;
+		  
+		  
+      when CHECK =>
+        if DATAFLL(0) = '0' and DATAFLL(9) = '1' then
+		    --UART_RX_RECIEVED_ALL <= '1';
+          current_state <= STORE;
+        else
+			 data_valid <= '0';
+          current_state <= IDLE;
+        end if;
+		  
+		  
+      when STORE =>
+        data_valid <= '1';
+        current_state <= SEND;
+		  
+		  
+      when SEND =>
+        if data_valid = '1' AND fifo_ready = '1' then
+          data_valid <= '0';
+          current_state <= IDLE;
+        end if;
+    end case;
+	 
+  end if;
+end process;
 end architecture;
 	

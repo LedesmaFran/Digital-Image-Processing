@@ -1,4 +1,4 @@
-MESSAGE "File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_filter.vhd" 
-MESSAGE "Compile Entity "tb_uart_filter"" 
-MESSAGE "Compile Architecture "behavior" of Entity "tb_uart_filter"" 
+MESSAGE "File: D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd" 
+MESSAGE "Compile Entity "uart_TX"" 
+MESSAGE "Compile Architecture "arch_TX" of Entity "uart_TX"" 
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]" 
