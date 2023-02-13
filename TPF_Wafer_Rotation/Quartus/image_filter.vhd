@@ -251,7 +251,7 @@ begin
 			not_enable1 <= '0';
 			not_enable2 <= '0';
 			kernel_not_enable <= '0';
-		else  
+		else 
 			not_enable1 <= '1';
 			not_enable2 <= '1';
 			kernel_not_enable <= '1';
@@ -334,8 +334,8 @@ begin
 			
 			case type_sel is 
 					when "00" => pixel_out <= kernel_out_reg;
-					when "01" => pixel_out <= erosion_out_reg;	   -- type_sel = 01 => erosion
-					when "10" => pixel_out <= dilation_out_reg;   -- type_sel = 10 => dilation
+					when "01" => pixel_out <= erosion_out_reg;		-- type_sel = 01 => erosion                 
+					when "10" => pixel_out <= dilation_out_reg;   	-- type_sel = 10 => dilation
 					when "11" => pixel_out <= kernel_out_reg;
 					when others => pixel_out <= kernel_out_reg;
 				end case;

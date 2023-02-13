@@ -24,11 +24,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "UART_RXD",
 					"strict" : false
 				},
 				{
-					"name" : "UART_RXD",
+					"name" : "CLOCK_50",
 					"strict" : false
 				}
 			]
