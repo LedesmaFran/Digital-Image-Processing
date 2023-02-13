@@ -41,17 +41,20 @@ begin
 					stack_pointer <= stack_pointer - 1;
 					if (stack_pointer = 1) then
 						full <= '1';
-					else null;
+						ready_out <= '0';
+					else 
+						ready_out <= '1';
 					end if;
 				-- output when ready and valid
-				elsif (ready_in = '1' and valid_out_flag = '1') then
+				elsif (valid_out_flag = '1') then
 					for counter in STACK_SIZE-1 downto 1 loop
 						stack(counter) <= stack(counter-1);
 					end loop;
 					stack_pointer <= stack_pointer + 1;
+					ready_out <= '1';
 					valid_out_flag <= '0';
 					valid_out <= '0';
-				elsif (stack_pointer < STACK_SIZE-1) then
+				elsif (ready_in = '1' and stack_pointer < STACK_SIZE-1) then
 					data_out <= stack(STACK_SIZE-1);
 					valid_out_flag <= '1';
 					valid_out <= '1';

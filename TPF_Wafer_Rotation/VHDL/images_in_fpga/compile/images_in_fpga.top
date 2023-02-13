@@ -1,3 +1,6 @@
 tb_fifo ENTITY
-tb_image_filter ENTITY
+tb_uart_axi ENTITY
+tb_uart_filter ENTITY
+reg ENTITY
+tb_image_double_filter ENTITY
 tb_read_image_vhdl ENTITY

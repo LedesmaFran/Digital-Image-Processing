@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2023-02-12 21:50:38
+Active-HDL 13.0.376.8320 2023-02-13 04:07:34
 
 Elaboration top modules:
 Architecture                  behavior(tb_uart_filter)
@@ -40,3 +40,9 @@ ieee                             | Standard IEEE packages library
 images_in_fpga                   | None
 std                              | Standard VHDL library
 -----------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+tb_uart_filter tb_uart_filter behavior
+
+
+The performance of simulation is reduced. Version Student Edition

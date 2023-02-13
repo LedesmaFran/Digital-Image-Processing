@@ -63,6 +63,11 @@ signal fifo_data		: std_logic_vector(7 downto 0);
 begin
 
 	fifo : AXI_FIFO
+	generic map
+	(
+		DATA_WIDTH	=> 8,
+		STACK_SIZE	=> 256
+	)
 	port map(
 		clock => CLK,
 		

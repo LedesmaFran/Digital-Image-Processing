@@ -1,2 +1,19 @@
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image_tb.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/read_image.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/binarization.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/fifo.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_fifo.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/image_filter.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/kernel_multiply_adder.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/RAM_block.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/register.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/erosion.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/dilation.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_double_filter.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/Image_Filter_Tool.vhd" VHDL images_in_fpga 1 0 0 -02
 "D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_TX.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/uart_RX.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/axi_fifo.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_axi.vhd" VHDL images_in_fpga 1 0 0 -02
+"D:/Documents/repos/Digital-Image-Processing/TPF_Wafer_Rotation/VHDL/images_in_fpga/src/tb_uart_filter.vhd" VHDL images_in_fpga 1 0 0 -02
 . . 0 0 0

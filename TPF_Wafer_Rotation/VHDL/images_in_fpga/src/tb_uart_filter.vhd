@@ -50,33 +50,13 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	);
 	END COMPONENT;
 	
-	-- RAM block to emulate input
-	COMPONENT RAM_block
-	GENERIC (
-	    ADDR_WIDTH     		: integer := 8;        
-	    DATA_WIDTH     		: integer := 8;
-	    IMAGE_HEIGHT		: integer := 9;
-		IMAGE_WIDTH			: integer := 9;
-		IMAGE_FILE_NAME 	: string  := "desired_output.mif"       
-  	);	
-	PORT (
-		clock 		: IN  std_logic;
-		data 		: IN  std_logic_vector(DATA_WIDTH-1 downto 0);
-		rdaddress 	: IN  std_logic_vector(ADDR_WIDTH-1 downto 0);
-		wraddress 	: IN  std_logic_vector(ADDR_WIDTH-1 downto 0);
-		we 			: IN  std_logic;
-		re 			: IN  std_logic;
-		q 			: OUT  std_logic_vector(DATA_WIDTH-1 downto 0)
-	);
-    END COMPONENT;
-	
 	-- Image Filter Tool component
 	COMPONENT Image_Filter_Tool IS
 	GENERIC (
 	   	ADDR_WIDTH     	: integer := 16;        
 	   	DATA_WIDTH     	: integer := 8;
-	   	IMAGE_HEIGHT	: integer := 8;
-		IMAGE_WIDTH		: integer := 8;
+	   	IMAGE_HEIGHT	: integer := 130;
+		IMAGE_WIDTH		: integer := 130;
 		IMAGE_FILE_NAME : string  := "desired_output.mif"       
   	);	
 	PORT( 
@@ -143,7 +123,7 @@ ARCHITECTURE behavior OF tb_uart_filter IS
 	   
 	-- AUX signals
 	
-	signal prscl_clock : std_logic := '0';													 
+	signal prscl_clock : std_logic := '1';													 
 														 
 BEGIN
 	
@@ -181,6 +161,25 @@ BEGIN
 			READY_IN	=> ready2,
 			
 			UART_TX_FIFO_FULL => UART_TX_FIFO_FULL
+	); 
+	
+	uart_out_end : uart_RX
+	port map( 
+			CLK			=> clock,
+			
+			UART_CLK	=> UART_CLK2,
+			
+			VALID_IN 	=> valid2,
+			READY_OUT	=> ready2,
+			
+			RX_LINE		=> TX_LINE,
+			
+			DATA_OUT	=> data2,
+			
+			READY_IN	=> RX2_READY_IN,
+			VALID_OUT	=> RX2_VALID_OUT,
+			
+			UART_RX_FIFO_FULL => UART_RX2_FIFO_FULL
 	);
 	
 	filter: Image_Filter_Tool
@@ -255,5 +254,7 @@ BEGIN
 				end if;
 			end if;
 		end if;
-	end process;
+	end process; 
+
+	
 END;
