@@ -95,6 +95,7 @@ ARCHITECTURE behavior OF Image_Filter_Tool IS
 	signal type_sel2 		: std_logic_vector(1 downto 0) := "00";	 -- 00 => kernel / 01 => erosion / 10 => dilation 
 	signal counter_out2	: std_logic_vector(17 downto 0);
 	signal out_valid2		: std_logic;
+	signal filter2_out	:std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 	
 	-- Binarization signals
 	signal bin_out				: std_logic_vector(DATA_WIDTH-1 downto 0);
@@ -103,7 +104,9 @@ ARCHITECTURE behavior OF Image_Filter_Tool IS
 	-- AUX signals
 	signal i 		: integer := 0;
 	signal j 		: integer := 0;	
+	signal j2 		: integer := 0;
 	signal k 		: integer := 0;
+	signal k2 		: integer := 0;
 	signal q			: std_logic_vector(DATA_WIDTH-1 downto 0); 
 	signal q_reg2	: std_logic_vector(DATA_WIDTH-1 downto 0);
 	signal input_counter : integer := 0;
@@ -112,6 +115,13 @@ ARCHITECTURE behavior OF Image_Filter_Tool IS
 	signal valid_out_flag : std_logic := '0';
 	signal ready_out_flag : std_logic := '1';
 	
+	-- RAM flag
+	signal RAM_flag : std_logic := '0';
+	
+	-- AUX signals
+	signal prscl_clock : std_logic := '0';
+	signal out_flag : std_logic := '0';
+	signal out_flag2 : std_logic := '0';
 	
 BEGIN
 	
@@ -170,12 +180,20 @@ BEGIN
 		not_enable => enable2,
 		clock => clock,
 		pixel_in => q2,
-		pixel_out => pixel_out,
+		pixel_out => filter2_out,
 		counter_out => counter_out2,
 		out_valid => out_valid2
 	);										 							 
 	
-
+	prescaler_process: process (clock)
+	begin
+		if rising_edge(clock) then
+			prscl_clock <= not prscl_clock;
+		else null;
+		end if;
+	end process;
+	
+	
 	-- AXI in process
 	axi_in_proc: process (clock, valid_in, ready_out_flag, counter_out1)
 	begin
@@ -196,29 +214,46 @@ BEGIN
 	end process;
 	
 	-- Middleman process
-	middle_proc: process (clock, out_valid1, valid_in, data_out)
+	middle_proc: process (clock, out_valid1, counter_out1, RAM_flag, enable1, data_out, out_valid2, enable2, RAM_flag, filter2_out)
 	begin
 		if (rising_edge(clock)) then
-			we2 <= out_valid1;
-			if (out_valid1 = '1' and enable1 = '0') then
-				j <= j + 1;
-				data2 <= data_out;
-				wraddress2 <= std_logic_vector(to_unsigned(j, ADDR_WIDTH));
-			else null;	
+			if (rising_edge(clock)) then
+				if to_integer(unsigned(counter_out1)) >= ((IMAGE_WIDTH-1)*(IMAGE_HEIGHT-1)+2*(IMAGE_HEIGHT-1)) then
+					RAM_flag <= '1';
+				else
+					RAM_flag <= '0';
+				end if;
+			else null;
 			end if;
+			
+			if (RAM_flag = '0') then
+				we2 <= out_valid1;
+				if (out_valid1 = '1' and enable1 = '0') then
+					j <= j + 1;
+					data2 <= data_out;
+					wraddress2 <= std_logic_vector(to_unsigned(j, ADDR_WIDTH));
+				else null;	
+				end if;
+			else
+				we2 <= out_valid2;
+				if (out_valid2 = '1' and enable2 = '0') then
+					j2 <= j2 + 1;		  
+					data2 <= filter2_out;  
+					wraddress2 <= std_logic_vector(to_unsigned(j2, ADDR_WIDTH));
+				else null;	
+				end if;	
+			end if;
+			
 		else null;
 		end if;
 	end process;
 	
-	-- -- AXI out process
+	-- Stimulus process 2 -- AXI out
 	
-	-- control enable2, control the output
-	
-   	axi_out_proc: process (clock, enable2, ready_in, counter_out1, counter_out2, out_valid1, out_valid2, valid_out_flag)
+   	stim_proc2: process (clock, prscl_clock, enable2, counter_out1, counter_out2, out_valid1, out_valid2, valid_out_flag, ready_in)
 	begin
 		if (rising_edge(clock)) then									  --(IMAGE_HEIGHT*IMAGE_WIDTH-2*IMAGE_HEIGHT-3)
-			valid_out <= out_valid2;
-			if ((ready_in = '1') and (to_integer(unsigned(counter_out1)) >= ((IMAGE_WIDTH-1)*(IMAGE_HEIGHT-1)+2*(IMAGE_HEIGHT-1)-1)) 
+			if ((to_integer(unsigned(counter_out1)) >= ((IMAGE_WIDTH-1)*(IMAGE_HEIGHT-1)+2*(IMAGE_HEIGHT-1)-2)) 
 				and (to_integer(unsigned(counter_out2)) <= ((IMAGE_HEIGHT-2)*(IMAGE_WIDTH-2)-2*(IMAGE_HEIGHT-2)))) then
 				re2 <= '1';
 				rdaddress2 <= std_logic_vector(to_unsigned(k, ADDR_WIDTH));	
@@ -227,14 +262,41 @@ BEGIN
 			else 				   		 				  	  			  		 	   	 
 				enable2 <= '1';
 			end if;
-			if ((ready_in = '1') and (to_integer(unsigned(counter_out1)) >= ((IMAGE_WIDTH-1)*(IMAGE_HEIGHT-1)+2*(IMAGE_HEIGHT-1))) 
+			if ((to_integer(unsigned(counter_out1)) >= ((IMAGE_WIDTH-1)*(IMAGE_HEIGHT-1)+2*(IMAGE_HEIGHT-1))) 
 				and (to_integer(unsigned(counter_out2)) <= ((IMAGE_HEIGHT-2)*(IMAGE_WIDTH-2)-2*(IMAGE_HEIGHT-2)))) then
 				enable2 <= '0';	
 			else 				   		 				  	  			  		 	   	 
 				enable2 <= '1';
 			end if;
+		
+			if (ready_in = '1') then
+				if valid_out_flag = '1' then
+					valid_out <= '0';
+					valid_out_flag <= '0';
+				else null;
+				end if;
+				if (enable2 = '1' and (valid_out_flag = '0') and k2 <= ((IMAGE_WIDTH-4)*(IMAGE_WIDTH-4)) and (to_integer(unsigned(counter_out2)) > ((IMAGE_HEIGHT-2)*(IMAGE_WIDTH-2)-2*(IMAGE_HEIGHT-2)+1))) then
+					out_flag <= '1';
+					re2 <= '1';
+					rdaddress2 <= std_logic_vector(to_unsigned(k2, ADDR_WIDTH));	
+					if out_flag = '1' then
+						k2 <= k2 + 1;
+						out_flag2 <= '1';
+						if out_flag2 = '1' then
+							valid_out <= '1';
+							valid_out_flag <= '1';
+							pixel_out <= q_reg2;
+						else null;
+						end if;
+					else null;
+					end if;
+				else null;
+				end if;																								   	
+			else null;
+			end if;
 		else null;
 		end if;
+		
   	end process;
 
 END;
